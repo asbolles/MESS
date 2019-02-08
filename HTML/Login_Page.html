@@ -18,21 +18,25 @@
         <label>Password:</label>
         <input type="password" id="myInput" class="textbox" size="20" placeholder="Enter Password"/><br>
         <input type="checkbox" class ="passbutton" onclick="myFunction()">
-        <label>Show Password</label><br>
+        <label class="passlabel">show password</label><br>
         <button>Login</button>
     </div>
 </header>
 <script>
-        function myFunction() {
-          var x = document.getElementById("myInput");
-          if (x.type === "password") {
-            x.type = "text";
-          } else {
-            x.type = "password";
-          }
-        }
-        </script>
-        
-        
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>      
 </body>
+<footer>
+  <h1></h1>
+  <figure>
+    <img src="Images/Copyright.png" class="footer" alt="Copyright">
+  </figure>
+</footer>
 </html>
