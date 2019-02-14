@@ -43,14 +43,23 @@ button
 
 .footer
 { 
+     
      bottom: 0px;
      left: 3in;
      transform: scale(2,2);
      padding-left: 100px;
      padding-right: 100px;
      background-color: white;
+     
 }
 h1
 {
      padding: .95in;
+}
+.logo
+{
+     height: auto;
+     width: auto;
+     transform: scale(.80,.80);
+     
 }
