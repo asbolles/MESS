@@ -1,18 +1,45 @@
-
-h1, h2
+html 
 {
-     text-align: center;
-     color: white;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-html {background-color: darkslategray}
-
-img
-{
-     text-align: center;
+     background-color: darkslategray
 }
 
-p1
+img.center
 {
-     
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 40%;
+}
+
+img.footer
+{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     height: 75%;
+     width: 100%;
+}
+
+p.header
+{
+     color: whitesmoke;
+     font-family: Cambria;
+     font-size: 28px;
+     text-align: left;
+}
+
+p.topL
+{
+     color: whitesmoke;
+     font-family: Cambria;
+     font-size: 18px;
+     text-align: left;
+}
+
+p.topR
+{
+     color: whitesmoke;
+     font-family: Cambria;
+     font-size: 18px;
+     text-align: right;
 }
