@@ -1,0 +1,28 @@
+.red{
+color: red;
+background-color: red;
+}
+.yellow{
+    color: yellow;
+    background-color: yellow;
+}
+.green{
+    color: green;
+    background-color: green;
+}
+#course{
+    width: auto;
+    margin-right: 0px;
+    margin-left: auto;
+}
+#coord{
+  text-align: right;
+}
+html{
+    background-color: darkslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.table tr td,.table {
+    border: 1pt solid black;
+    border-collapse: collapse;
+}
