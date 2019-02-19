@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="em">
+<head>
+    <meta charset="utf-8">
+    <title>Math Emporium Student Scheduler</title>
+    <link rel="stylesheet" href="CSS/Master.css" />
+</head>
+<body>
+<table>
+    <tr><td><h2>Master Schedule</h2></td></tr>
+    <tr><td>Term: spring 2020 </td><td id="coord">Coordinator: Mark Wahlburg</td></tr>
+    
+    
+    <tr><td><div>
+        <table class="table">
+            <caption>Assistant Shift Schedule for MWF</caption>
+            <script>
+            var SAs =["Anna","Austin","Evan","Sam","Maria","Despacito",];
+            var Anna=[0,1,1,2,0,1,0,2,2,2];
+            var Austin=[0,1,1,2,0,1,0,2,2,2];
+            var Evan=[0,1,1,2,0,1,0,2,2,2];
+            var Sam=[0,1,1,2,0,1,0,2,2,2];
+            var Maria=[0,1,1,2,0,1,0,2,2,2];
+            var Despacito=[0,1,1,2,0,1,0,2,2,2];
+            document.write("<tr>");
+            for (i=0; i<SAs.length;i++){
+            document.write("<th>"+SAs[i]+"</th>")
+            }
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Anna);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Austin);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Evan);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Sam);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Maria);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Despacito);
+            document.write("</tr>");
+            function CreateChart(person){
+            for(j=0;j<person.length;j++){
+              
+                if (person[j]==0){
+                    document.write("<td class='red'>red</td>")
+                }
+                if (person[j]==1){
+                    document.write("<td class='yellow'>yellow</td>")
+                }if (person[j]==2){
+                    document.write("<td class='green'>green</td>")
+                }
+            }}
+            </script>
+
+        </table><!--end of first table--></div>
+    </td></tr>
+    
+    <tr><td><div><table class="table"> 
+        <script>
+
+            var SAs =["Anna","Austin","Evan","Sam","Maria","Despacito",]
+           
+            var Anna=[0,1,1,2,0,1,0,2,2,2];
+            var Austin=[0,1,1,2,0,1,0,2,2,2];
+            var Evan=[0,1,1,2,0,1,0,2,2,2];
+            var Sam=[0,1,1,2,0,1,0,2,2,2];
+            var Maria=[0,1,1,2,0,1,0,2,2,2];
+            var Despacito=[0,1,1,2,0,1,0,2,2,2];
+            document.write("<tr>");
+            for (i=0; i<SAs.length;i++){
+            document.write("<th>"+SAs[i]+"</th>")
+            }
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Anna);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Austin);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Evan);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Sam);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Maria);
+            document.write("</tr>");
+            document.write("<tr>");
+            CreateChart(Despacito);
+            document.write("</tr>");
+            function CreateChart(person){
+            for(j=0;j<person.length;j++){
+              
+                if (person[j]==0){
+                    document.write("<td class='red'>red</td>")
+                }
+                if (person[j]==1){
+                    document.write("<td class='yellow'>yellow</td>")
+                }if (person[j]==2){
+                    document.write("<td class='green'>green</td>")
+                }
+            }}
+            document.write("</table>");
+            </script>
+            </table></div></td></tr>
+<!--end of second table-->
+
+
+    <tr><td>
+        View: <a href="#">Mon</a> | <a href="#">Tues</a> | <a href="#">Weds</a> | <a href="#">Thurs</a> 
+        | <a href="#">Fri</a> | <a href="#">Full</a>
+    </td></tr>
+    <tr><td><table id="course" class="table">
+        <caption>Course Schedule</caption>
+        <tr>
+            <th>#</th><th>Course</th><th>Section</th><th>Teacher</th><th>Start</th><th>End</th><th>Days</th>
+        </tr>
+
+            <script>
+                for(i=0;i<5;i++){
+            document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
+        }
+            </script>
+
+    </table></td></tr>
+<tr>
+    <td><button>Edit Availibility</button><button>Request Proposed Schedule</button></td>
+</tr>
+</table><!--end of full table-->
+
+
+
+
+
+</body>
+</html>
