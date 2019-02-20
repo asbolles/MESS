@@ -2,70 +2,48 @@
 <html lang="em">
 <head>
     <meta name= "viewport" content="width=device-width">
-    <style>
-        body{font-family: "Cambria"} 
-        html
-        {
-            padding-left: 2.67in;
-        }
-
-        .sidenav{
-            height: 100%;
-            width: 160px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: dimgray;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
-
-        .sidenav a{
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            color:black;
-            display: block;
-        }
-
-        .sidenav a:hover{
-            color: #f1f1f1;
-        }
-
-        .main{
-            margin-left: 0px;
-            padding: 0px 10px;
-        }
-        
-        .Instructions{
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 200px;
-            width: 415px;
-            border: 2px solid #73AD21;
-        }
-
-        .footer{
-            position:fixed;
-            bottom:0;
-        }
-    </style>
+    <link rel="stylesheet" href=CSS/SA_AvailSheet.css/>
 </head>
 
 <body>
-    <style>
-        body{background-color:rgb(68, 65, 65)}
-        body{color:linen}
-    </style>
-
     <div class="sidenav">
-        <img src="Images/MESS Login Logo.jpg" alt="MESS Login Logo" style="width:160px;height:100px;">
-        <a href= "#Availability">My Availability</a>
+        <img src="Images/MESS Logo.jpg" alt="MESS Logo"/>
+        <a href= "#availability">My Availability</a>
         <a href= "#SASchedule">My Schedule</a>
         <a href= "#LogOut">Log Out</a>
     </div>
+
+    <h1>Assistant Availability</h1>
+
+    <table>
+        <tr>
+            <th colspan="3"><h2>Student Assistant: [insert student name]</h2></th>
+            <th colspan="2"><button>Submit</button></th>
+        </tr>
+        <tr>
+            <td> </td>
+            <td colspan="2"> Minimum</td>
+            <td> </td>
+            <td> Maximum</td>
+        </tr>
+        <tr class="hours">
+            <td class="question">Hours willing to Work:</td>
+            <td colspan="2"><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+            <td>to</td>
+            <td><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+        </tr>
+        
+        <tr class="returning">
+            <td class="question">Are you a returning Assistant?</td>
+            <td>Yes</td>
+            <td><input type="checkbox"></td>
+            <td>No</td>
+            <td><input type="checkbox"></td>
+        </tr>
+            
+    </table>
+
+
 
     <div class="Instructions">
         <p> Click on the shift that you can work on the day week to cycle
@@ -76,31 +54,6 @@
         <p> Note: Student Assistants are mostly needed on M - W - F</p>
     </div>
 
-    <div class="main">
-        <h2>Assistant Availability</h2>
-        <h3>Student Assistant: [insert student name]</h3><button>Submit</button>
-        <!--implement JS code to grab the schedule for right student-->
-        
-        <!--This is where the main body of the html will go-->
-    </div>
-
-    <table>
-        <tr>
-            <td>
-                <p>Hours wanted:</p>
-            </td>
-            <td>
-            </td>
-            <td>
-                <input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" />
-            </td>
-            <td>
-            </td>
-            <td>
-                <input type="number" min="0" max="20" value="0" step="1" onkeyup="return false" />
-            </td>
-        </tr>
-    </table>
 
 
     <div class="footer">

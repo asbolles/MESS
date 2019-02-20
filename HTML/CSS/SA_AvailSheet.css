@@ -1,0 +1,67 @@
+body
+{
+    font-family: "Cambria"
+}       
+html
+{
+    padding-left: 2.67in;
+}
+body
+{
+    background-color:rgb(68, 65, 65);
+    color:linen;
+}
+.sidenav
+{
+    height: 100%;
+    width: 2.67in;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #808080;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+}
+.sidenav a
+{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+    display: block;
+}
+.sidenav a:hover
+{
+    color: #f1f1f1;
+}
+.main
+{
+    margin-left: 0px;
+    padding: 0px 10px;
+}
+.Instructions
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 415px;
+    border: 2px solid #73AD21;
+}
+.footer
+{
+    position:fixed;
+    bottom:0;
+}
+
+table, tr, th, td
+{
+    border: 1px solid Black;
+    padding: 5px;
+    margin: 5px;
+}
+.question
+{
+    
+}
