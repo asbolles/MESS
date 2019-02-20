@@ -41,14 +41,18 @@ button
       
 }
 
+div.img
+{
+     background-color: white;
+}
 .footer
 { 
-     
+     position: fixed;
      bottom: 0px;
-     left: 3in;
-     transform: scale(2,2);
-     padding-left: 100px;
-     padding-right: 100px;
+     margin-top: -50px;
+     margin-right: -200px;
+     padding-left: 7.5in;
+     padding-right: 7in;
      background-color: white;
      
 }
