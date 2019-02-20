@@ -1,6 +1,7 @@
 html 
 {
-     background-color: darkslategray
+     background-color: darkslategray;
+     padding-left: 2.67in;
 }
 
 img.center
@@ -42,4 +43,28 @@ p.topR
      font-family: Cambria;
      font-size: 18px;
      text-align: right;
+}
+
+/*The following is from Proposed_Schedule.css - Sidebar*/
+.sidebar 
+{
+    height: 100%;
+    width: 2.67in;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #808080;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    
+}
+
+a
+{
+    font-size: 25px;
+    padding: 20px;
+    border-block-end-color: black;
+    color: white;
+    
 }
