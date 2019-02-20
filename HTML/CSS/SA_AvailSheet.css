@@ -11,7 +11,7 @@ body
     background-color:rgb(68, 65, 65);
     color:linen;
 }
-.sidenav
+.sidebar 
 {
     height: 100%;
     width: 2.67in;
@@ -21,24 +21,25 @@ body
     left: 0;
     background-color: #808080;
     overflow-x: hidden;
-    padding-bottom: 20px;
+    
 }
-.sidenav a
+a
 {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color:black;
-    display: block;
+    font-size: 25px;
+    padding: 20px;
+    border-block-end-color: black;
+    color: white;
+    font-family: Cambria; 
 }
-.sidenav a:hover
+h1, h2 
 {
-    color: #f1f1f1;
+    padding-left: 25px;
+    font-family: Cambria;
+    color: whitesmoke;
 }
-.main
+.sidebar a:hover
 {
-    margin-left: 0px;
-    padding: 0px 10px;
+    color: black;
 }
 .Instructions
 {
@@ -51,17 +52,41 @@ body
 }
 .footer
 { 
-    a
-    background-color: white;
+ position: fixed;
+ bottom: 0px;
+
+}
+.SAname
+{
+    padding-bottom: .5in;    
 }
 
-table, tr, th, td
+
+.question, .returning
 {
-    border: 1px solid Black;
-    padding: 5px;
-    margin: 5px;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 20px;
 }
-.question
+.answer
 {
-    
+    text-align: center;
+}
+input[type=number]
+{
+    width: 80px;
+} 
+.box
+{
+    text-align: left;
+    width: 18px
+}
+.size
+{
+    font-size: 20px;
+    text-align: center;
+}
+.size1
+{
+    font-size: 20px;
 }

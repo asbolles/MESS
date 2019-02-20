@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="em">
 <head>
+    <title>Math Emporium Student Scheduler</title>
     <meta name= "viewport" content="width=device-width">
     <link rel="stylesheet" href=CSS/SA_AvailSheet.css/>
 </head>
 
 <body>
-    <div class="sidenav">
-        <img src="Images/MESS Logo.jpg" alt="MESS Logo"/>
-        <a href= "#availability">My Availability</a>
-        <a href= "#SASchedule">My Schedule</a>
-        <a href= "#LogOut">Log Out</a>
+    <div class="sidebar">
+        <img class="logo" src="images/MESS Logo.jpg">
+        <a href="#semesterSchedule">Semester Schedule</a><br>
+        <a href="#masterSchedule">Master Schedule</a><br>
+        <a href="#studentAssistants">Student Assistants</a><br>
+        <a href="#courses">Courses</a><br>
+        <a href="#startNewSemester">Start New Schedule</a><br>
+        <a href="#logout">Logout</a>
     </div>
 
-    <h1>Assistant Availability</h1>
+<h1>Assistant Availability</h1>
 
-    <table>
+    <table style="width:30%" " class="SAname">
         <tr>
-            <th colspan="3"><h2>Student Assistant: [insert student name]</h2></th>
-            <th colspan="2"><button>Submit</button></th>
+            <th><h2>Student Assistant: [insert student name]</h2></th>
+            <th><button>Submit</button></th>
         </tr>
+    </table>
+    
+
+    <table style="width:30%">
         <tr>
             <td> </td>
-            <td colspan="2"> Minimum</td>
+            <td colspan="3" class="size1"> Minimum</td>
             <td> </td>
-            <td> Maximum</td>
+            <td class="size"> Maximum</td>
         </tr>
         <tr class="hours">
             <td class="question">Hours willing to Work:</td>
-            <td colspan="2"><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
-            <td>to</td>
+            <td colspan="3"><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+            <td class="returning">to</td>
             <td><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
         </tr>
         
         <tr class="returning">
             <td class="question">Are you a returning Assistant?</td>
-            <td>Yes</td>
-            <td><input type="checkbox"></td>
-            <td>No</td>
-            <td><input type="checkbox"></td>
+            <td colspan="2" class="answer">Yes</td>
+            <td class="box"><input type="checkbox"></td>
+            <td class="answer">No</td>
+            <td class="box"><input type="checkbox"></td>
         </tr>
             
     </table>
@@ -53,12 +61,10 @@
         <p> University Policy, Student employees cannot work over 20 hours a week.</p>
         <p> Note: Student Assistants are mostly needed on M - W - F</p>
     </div>
-
-
-
-    <div class="footer">
-        <figure>
-            <img src="Images/Copyright.jpg" alt="MESS project copyright UMA 2019">
-        </figure>
-    </div>
-</body>
+        <footer class="footer">
+            <figure>
+                <img src="Images/Copyright.jpg" alt="MESS project copyright UMA 2019">
+            </figure>
+        </footer>
+</body>    
+</html>
