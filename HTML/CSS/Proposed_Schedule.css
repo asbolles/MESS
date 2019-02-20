@@ -1,6 +1,8 @@
 html
 {
     background-color: #505050;
+    padding-left: 2.67in;
+    font-family: Cambria;
 }
 
 
@@ -18,16 +20,22 @@ html
     
 }
 
-.logo
-{
-
-}
-
 a
 {
     font-size: 25px;
     padding: 20px;
     border-block-end-color: black;
     color: white;
-    
+    font-family: Cambria; 
+}
+h1, h2
+{
+    padding-left: 25px;
+    font-family: Cambria;
+    color: whitesmoke;
+}
+table, tr, th
+{
+    border: 1px solid black;
+    color: whitesmoke;
 }
