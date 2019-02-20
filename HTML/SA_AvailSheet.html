@@ -3,7 +3,11 @@
 <head>
     <meta name= "viewport" content="width=device-width">
     <style>
-        body{font-family: "Cambria"}
+        body{font-family: "Cambria"} 
+        html
+        {
+            padding-left: 2.67in;
+        }
 
         .sidenav{
             height: 100%;
@@ -30,7 +34,7 @@
         }
 
         .main{
-            margin-left: 190px;
+            margin-left: 0px;
             padding: 0px 10px;
         }
         
@@ -41,6 +45,11 @@
             height: 200px;
             width: 415px;
             border: 2px solid #73AD21;
+        }
+
+        .footer{
+            position:fixed;
+            bottom:0;
         }
     </style>
 </head>
@@ -69,13 +78,33 @@
 
     <div class="main">
         <h2>Assistant Availability</h2>
-        <h3>Student Assistant: [insert student name]</h3>
-        <button>Submit</button>
+        <h3>Student Assistant: [insert student name]</h3><button>Submit</button>
         <!--implement JS code to grab the schedule for right student-->
         
         <!--This is where the main body of the html will go-->
     </div>
+
     <table>
-        
+        <tr>
+            <td>
+                <p>Hours wanted:</p>
+            </td>
+            <td>
+            </td>
+            <td>
+                <input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" />
+            </td>
+            <td>
+            </td>
+            <td>
+                <input type="number" min="0" max="20" value="0" step="1" onkeyup="return false" />
+            </td>
+        </tr>
     </table>
+
+
+    <div class="footer">
+        <img src="Images/Copyright.jpg" alt="MESS project copyright UMA 2019"
+        style="width:100%; height:50px">
+    </div>
 </body>
