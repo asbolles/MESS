@@ -1,7 +1,7 @@
 html 
 {
      background-color: darkslategray;
-     padding-left: 2.67in;
+    
 }
 
 img.center
@@ -12,40 +12,37 @@ img.center
      width: 40%;
 }
 
-img.footer
+.footer
 {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     height: 75%;
-     width: 100%;
+    bottom: 0px;
+    position: fixed; 
+    padding-left: .90in;
+ 
 }
 
-p.header
+h1.header
 {
      color: whitesmoke;
      font-family: Cambria;
-     font-size: 28px;
+     padding-left: 2.90in;
+}
+
+h2.topL
+{
+     color: whitesmoke;
+     font-family: Cambria;
+     font-size: 20px;
      text-align: left;
 }
 
-p.topL
+h2.topR
 {
      color: whitesmoke;
      font-family: Cambria;
-     font-size: 18px;
-     text-align: left;
-}
-
-p.topR
-{
-     color: whitesmoke;
-     font-family: Cambria;
-     font-size: 18px;
+     font-size: 20px;
      text-align: right;
 }
 
-/*The following is from Proposed_Schedule.css - Sidebar*/
 .sidebar 
 {
     height: 100%;
@@ -57,7 +54,6 @@ p.topR
     background-color: #808080;
     overflow-x: hidden;
     padding-bottom: 20px;
-    
 }
 
 a
@@ -66,5 +62,22 @@ a
     padding: 20px;
     border-block-end-color: black;
     color: white;
-    
+}
+
+td, tr
+{
+     border: 1px Solid Black;
+     color: whitesmoke;
+}
+
+td
+{
+     text-align: center;
+     
+
+}
+table
+{
+     padding-left: 50px;
+     padding-left: 2.9in;
 }
