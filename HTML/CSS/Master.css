@@ -10,11 +10,7 @@ background-color: red;
     color: green;
     background-color: green;
 }
-#course{
-    width: auto;
-    margin-right: 0px;
-    margin-left: auto;
-}
+
 #coord{
   text-align: right;
 }
@@ -25,4 +21,8 @@ html{
 .table tr td,.table {
     border: 1pt solid black;
     border-collapse: collapse;
+}
+button{
+    padding: 5px;
+    margin-left: 15px;
 }
