@@ -120,7 +120,7 @@ td
 }
 .TR
 {
-    padding-bottom: .4in;
+    padding-bottom: .25in;
     
 }
 .legend
@@ -158,5 +158,6 @@ td
     position: fixed;
     bottom: 0;
     left: 0;
-    transform: scale(.75,.75);
+    padding-left: 2in;
+    padding-right: 20in;
 }
