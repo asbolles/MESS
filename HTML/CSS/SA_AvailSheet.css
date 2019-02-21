@@ -161,3 +161,10 @@ td
 {
     background-color: red;
 }
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: scale(.75,.75);
+}
