@@ -37,6 +37,15 @@ h1, h2
     font-family: Cambria;
     color: whitesmoke;
 }
+h3
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: .25in;
+    padding: .10in;
+    border: 2pt solid yellow;
+}
 .sidebar a:hover
 {
     color: black;
@@ -111,24 +120,22 @@ th
 }
 td
 {
-   text-align: center; 
-   
-   
+   text-align: center;
 }
-
 .MWF
 {
-    border: 1pt, solid black;
     padding-bottom: .25in;
 }
 .TR
 {
-    padding-bottom: .3in;
+    padding-bottom: .4in;
+    
 }
 .legend
 {
     text-align: center;
     color: black;  
+    
 }
 .dash
 {
@@ -154,7 +161,10 @@ td
 {
     background-color: red;
 }
-table, td, tr, th
+.footer
 {
-    border: 1pt solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: scale(.75,.75);
 }
