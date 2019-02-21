@@ -119,7 +119,7 @@ td
 .MWF
 {
     border: 1pt, solid black;
-    padding-top: in;
+    padding-bottom: .25in;
 }
 .TR
 {
@@ -153,4 +153,8 @@ td
 .busy
 {
     background-color: red;
+}
+table, td, tr, th
+{
+    border: 1pt solid black;
 }
