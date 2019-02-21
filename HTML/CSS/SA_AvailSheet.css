@@ -56,21 +56,32 @@ h1, h2
  bottom: 0px;
 
 }
-.SAname
+.name
 {
-    padding-bottom: .5in;    
+    text-align: left;
+
 }
+.hours
+{
+    padding-top: 10px; 
+    padding-bottom: 20px;
 
-
+}
 .question, .returning
 {
     text-align: right;
     padding-right: 15px;
-    font-size: 20px;
+    font-size: 12pt;
 }
-.answer
+.returning
+{
+    padding-bottom:.5in; 
+}
+.to
 {
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 input[type=number]
 {
@@ -79,14 +90,67 @@ input[type=number]
 .box
 {
     text-align: left;
-    width: 18px
 }
+
 .size
 {
-    font-size: 20px;
-    text-align: center;
+    font-size: 12pt;
+    text-align: left;
+    padding-left: 8pt;
 }
-.size1
+.space
 {
-    font-size: 20px;
+    padding-left: 20px;
+}
+
+th
+{
+    border: 1pt solid black;
+    background-color: whitesmoke;
+    color: black; 
+}
+td
+{
+   text-align: center; 
+   
+   
+}
+
+.MWF
+{
+    border: 1pt, solid black;
+    padding-top: in;
+}
+.TR
+{
+    padding-bottom: .3in;
+}
+.legend
+{
+    text-align: center;
+    color: black;  
+}
+.dash
+{
+    padding-left:20px;
+    padding-right: 20px;
+    font-size: 14pt;
+    color: white;
+}
+.text
+{
+    text-align: left;
+    color: white;
+}
+.preferred
+{
+    background-color: green;
+}
+.available
+{
+    background-color: yellow;
+}
+.busy
+{
+    background-color: red;
 }

@@ -5,7 +5,6 @@
     <meta name= "viewport" content="width=device-width">
     <link rel="stylesheet" href=CSS/SA_AvailSheet.css/>
 </head>
-
 <body>
     <div class="sidebar">
         <img class="logo" src="images/MESS Logo.jpg">
@@ -16,55 +15,165 @@
         <a href="#startNewSemester">Start New Schedule</a><br>
         <a href="#logout">Logout</a>
     </div>
-
 <h1>Assistant Availability</h1>
-
-    <table style="width:30%" " class="SAname">
+    <table style="width:50%">
         <tr>
-            <th><h2>Student Assistant: [insert student name]</h2></th>
-            <th><button>Submit</button></th>
+            <td class="name"><h2>Student Assistant: [insert student name]</h2></td>
+            <td class="name"><button type="button">Submit</button></td>
         </tr>
     </table>
-    
-
-    <table style="width:30%">
+    <table style="width:0%" class="hours">
         <tr>
             <td> </td>
-            <td colspan="3" class="size1"> Minimum</td>
+            <td class="size"> Minimum</td>
             <td> </td>
             <td class="size"> Maximum</td>
         </tr>
         <tr class="hours">
             <td class="question">Hours willing to Work:</td>
-            <td colspan="3"><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
-            <td class="returning">to</td>
-            <td><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+            <td ><input type="number" min="0" max="20" value="0" step="1" onkeydown="returån false" /></td>
+            <td class="to">to</td>
+            <td ><input type="number" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
         </tr>
-        
+    </table>
+    <table style="width:30%" class="returning">
         <tr class="returning">
             <td class="question">Are you a returning Assistant?</td>
             <td colspan="2" class="answer">Yes</td>
             <td class="box"><input type="checkbox"></td>
+            <td class="space"></td>
             <td class="answer">No</td>
             <td class="box"><input type="checkbox"></td>
         </tr>
-            
     </table>
 
-
-
-    <div class="Instructions">
-        <p> Click on the shift that you can work on the day week to cycle
-        through the options of availability.</p>
-
-        <p> When done filling out the tables and are satisfied, click Submit.</p>
-        <p> University Policy, Student employees cannot work over 20 hours a week.</p>
-        <p> Note: Student Assistants are mostly needed on M - W - F</p>
-    </div>
-        <footer class="footer">
-            <figure>
-                <img src="Images/Copyright.jpg" alt="MESS project copyright UMA 2019">
-            </figure>
-        </footer>
-</body>    
+    <table style="width:100%">
+        <td>
+            <table style="width:90%" class="MWF">
+                <tr class="avail">
+                    <th>Shifts</th>
+                    <th>Monday</th>
+                    <th>Wednesday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <th>8:00am - 8:50am</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>9:00am - 9:50am</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>10:00am - 10:50am</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>11:00am - 11:50am</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>12:00pm - 12:50pm</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>1:00pm - 1:50pm</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>2:00pm - 2:50pm</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>3:00pm - 3:50pm</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>4:00pm - 4:50pm</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                </tr>
+                <tr>
+                    <th>5:00pm - 6:15pm</th>
+                    <td>Busy</td>
+                    <td id="b">Busy</td>
+                    <td>Busy</td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table style="width:90%" class="TR">
+                <tr class="avail">
+                    
+                    <th>Shifts</th>
+                    <th>Tuesday</th>
+                    <th>Thurday</th>
+                </tr>
+                <tr>
+                    <th>8:00am - 9:15am</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>9:30am - 10:45am</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>11:00am - 12:15pm</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>12:30pm - 1:45pm</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>2:00pm - 3:15pm</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+                <tr>
+                    <th>3:30pm - 4:451pm</th> 
+                    <td>Busy</td>
+                    <td>Busy</td>  
+                </tr>
+            </table>
+            <table style="width:90%" class="legend">
+                <tr>
+                    <td class="preferred">Preferred</td> 
+                    <td class="dash"> - </td>
+                    <td class="text"> Shift that you prefer to work</td>
+                </tr>
+                <tr>
+                    <td class="available">Available</td>
+                    <td class="dash"> - </td>
+                    <td class="text"> Shift that you could work</td>
+                </tr>
+                <tr>
+                    <td class="busy">Busy</td>
+                    <td class="dash"> - </td>
+                    <td class="text"> Shift tha you cannot work</td>
+                </tr>
+             </td>
+        </table>
+    </body>    
 </html>
