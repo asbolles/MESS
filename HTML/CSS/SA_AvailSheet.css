@@ -37,15 +37,7 @@ h1, h2
     font-family: Cambria;
     color: whitesmoke;
 }
-h3
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: .25in;
-    padding: .10in;
-    border: 2pt solid yellow;
-}
+
 .sidebar a:hover
 {
     color: black;
@@ -53,8 +45,8 @@ h3
 .Instructions
 {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 35pt;
+    right: 75pt;
     height: 200px;
     width: 415px;
     border: 2px solid #73AD21;
