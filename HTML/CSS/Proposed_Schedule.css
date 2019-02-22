@@ -1,7 +1,7 @@
 html
 {
     background-color: #505050;
-    padding-left: 2.67in;
+    padding-left: 2.6in;
     font-family: Cambria;
 }
 
@@ -33,6 +33,11 @@ h1, h2
     padding-left: 25px;
     font-family: Cambria;
     color: whitesmoke;
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    /* padding-right: 1in; */
 }
 table, tr, th
 {
