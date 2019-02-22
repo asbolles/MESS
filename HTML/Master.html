@@ -15,101 +15,94 @@
         <table class="table">
             <caption>Assistant Shift Schedule for MWF</caption>
             <script>
-            var SAs =["Anna","Austin","Evan","Sam","Maria","Despacito",];
-            var Anna=[0,1,1,2,0,1,0,2,2,2];
+            var titles =["Anna","Austin","Evan","Sam","Maria","Despacito",]
+            var Anna=[2,1,1,2,0,1,0,2,2,2];
             var Austin=[0,1,1,2,0,1,0,2,2,2];
             var Evan=[0,1,1,2,0,1,0,2,2,2];
             var Sam=[0,1,1,2,0,1,0,2,2,2];
             var Maria=[0,1,1,2,0,1,0,2,2,2];
             var Despacito=[0,1,1,2,0,1,0,2,2,2];
+            var SAs =[Anna,Austin,Evan,Sam,Maria,Despacito];
             document.write("<tr>");
-            for (i=0; i<SAs.length;i++){
-            document.write("<th>"+SAs[i]+"</th>")
-            }
-            document.write("</tr>");
+            titles.forEach(function(title){
+                document.write("<th>"+title+"</th>")
+            })
             document.write("<tr>");
-            CreateChart(Anna);
+                var counter=0;
+                for(i=0;i<Anna.length;i++){
+                    CreateChart(counter);
+                    counter++;
+                }
+            
             document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Austin);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Evan);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Sam);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Maria);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Despacito);
-            document.write("</tr>");
-            function CreateChart(person){
-            for(j=0;j<person.length;j++){
-              
-                if (person[j]==0){
+            function CreateChart(counter){
+                SAs.forEach(function(sa){
+                    if (sa[counter]==0){
                     document.write("<td class='red'>red</td>")
                 }
-                if (person[j]==1){
+                if (sa[counter]==1){
                     document.write("<td class='yellow'>yellow</td>")
-                }if (person[j]==2){
+                }
+                if (sa[counter]==2){
                     document.write("<td class='green'>green</td>")
                 }
-            }}
+                })
+                document.write("</tr><tr>");
+                
+            }
+           
             </script>
 
         </table><!--end of first table--></div>
     </td></tr>
     
-    <tr><td><div><table class="table"> 
-        <script>
 
-            var SAs =["Anna","Austin","Evan","Sam","Maria","Despacito",]
-           
-            var Anna=[0,1,1,2,0,1,0,2,2,2];
+
+
+
+
+
+    <tr><td><div><table class="table"> 
+        <caption>Assistant Shift Schedule for <TR></TR></caption>
+            <script>
+            var titles =["Anna","Austin","Evan","Sam","Maria","Despacito",]
+            var Anna=[2,1,1,2,0,1,0,2,2,2];
             var Austin=[0,1,1,2,0,1,0,2,2,2];
             var Evan=[0,1,1,2,0,1,0,2,2,2];
             var Sam=[0,1,1,2,0,1,0,2,2,2];
             var Maria=[0,1,1,2,0,1,0,2,2,2];
             var Despacito=[0,1,1,2,0,1,0,2,2,2];
+            var SAs =[Anna,Austin,Evan,Sam,Maria,Despacito];
             document.write("<tr>");
-            for (i=0; i<SAs.length;i++){
-            document.write("<th>"+SAs[i]+"</th>")
-            }
-            document.write("</tr>");
+            titles.forEach(function(title){
+                document.write("<th>"+title+"</th>")
+            })
             document.write("<tr>");
-            CreateChart(Anna);
+                var counter=0;
+                for(i=0;i<Anna.length;i++){
+                    CreateChart(counter);
+                    counter++;
+                }
+            
             document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Austin);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Evan);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Sam);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Maria);
-            document.write("</tr>");
-            document.write("<tr>");
-            CreateChart(Despacito);
-            document.write("</tr>");
-            function CreateChart(person){
-            for(j=0;j<person.length;j++){
-              
-                if (person[j]==0){
+            function CreateChart(counter){
+                SAs.forEach(function(sa){
+                    if (sa[counter]==0){
                     document.write("<td class='red'>red</td>")
                 }
-                if (person[j]==1){
+                if (sa[counter]==1){
                     document.write("<td class='yellow'>yellow</td>")
-                }if (person[j]==2){
+                }
+                if (sa[counter]==2){
                     document.write("<td class='green'>green</td>")
                 }
-            }}
-            document.write("</table>");
+                })
+                document.write("</tr><tr>");
+                
+            }
+           
             </script>
+
             </table></div></td></tr>
 <!--end of second table-->
 
