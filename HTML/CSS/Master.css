@@ -1,14 +1,29 @@
 .red{
 color: red;
 background-color: red;
+-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
-.yellow{
+.yellow{/*the last section is supposed to be repeated. do not try and condense*/
     color: yellow;
     background-color: yellow;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
-.green{
+.green{/*see above*/
     color: green;
     background-color: green;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 
 #coord{
@@ -26,3 +41,4 @@ button{
     padding: 5px;
     margin-left: 15px;
 }
+

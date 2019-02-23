@@ -6,6 +6,30 @@
     <link rel="stylesheet" href="CSS/Master.css" />
 </head>
 <body>
+    <script>//this is for the color changing. DO NOT MESS WITH THIS
+        function changePage(){
+        var boxlist=document.getElementsByClassName("box");
+        for(i=0;i<boxlist.length;i++){
+            boxlist[i].onclick=function(e){
+                if(e.target.classList.contains("red")){               
+                    e.target.classList.replace("red","green");
+                   e.target.style.color= "green";
+                   e.target.style.backgroundColor = "green";           
+                }
+                else if(e.target.classList.contains("yellow")){
+                    e.target.classList.replace("yellow","red");
+                    e.target.style.color= "red";
+                    e.target.style.backgroundColor = "red";           
+                }
+                else if(e.target.classList.contains("green")){
+                    e.target.classList.replace("green","yellow");
+                    e.target.style.color = "yellow";
+                    e.target.style.backgroundColor = "yellow";           
+                }
+            }
+        }
+        }
+    </script>
 <table>
     <tr><td><h2>Master Schedule</h2></td></tr>
     <tr><td>Term: spring 2020 </td><td id="coord">Coordinator: Mark Wahlburg</td></tr>
@@ -38,13 +62,13 @@
             function CreateChart(counter){
                 SAs.forEach(function(sa){
                     if (sa[counter]==0){
-                    document.write("<td class='red'>red</td>")
+                    document.write("<td class='box red'>Red</td>")
                 }
                 if (sa[counter]==1){
-                    document.write("<td class='yellow'>yellow</td>")
+                    document.write("<td class='box yellow'>Yellow</td>")
                 }
                 if (sa[counter]==2){
-                    document.write("<td class='green'>green</td>")
+                    document.write("<td class='box green'>Green</td>")
                 }
                 })
                 document.write("</tr><tr>");
@@ -88,13 +112,13 @@
             function CreateChart(counter){
                 SAs.forEach(function(sa){
                     if (sa[counter]==0){
-                    document.write("<td class='red'>red</td>")
+                    document.write("<td class='red box'>red</td>")
                 }
                 if (sa[counter]==1){
-                    document.write("<td class='yellow'>yellow</td>")
+                    document.write("<td class='yellow box'>yellow</td>")
                 }
                 if (sa[counter]==2){
-                    document.write("<td class='green'>green</td>")
+                    document.write("<td class='green box'>green</td>")
                 }
                 })
                 document.write("</tr><tr>");
@@ -130,7 +154,7 @@
 </tr>
     
 <tr>
-    <td><button>Edit Availibility</button><button>Request Proposed Schedule</button></td>
+    <td><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></td>
 </tr>
 </table><!--end of full table-->
 
