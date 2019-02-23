@@ -7,7 +7,8 @@ background-color: red;
    -ms-user-select: none;
    user-select: none;
 }
-.yellow{/*the last section is supposed to be repeated. do not try and condense*/
+.yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
+    clicking fast). It is not inheritable, so do not try and condense*/
     color: yellow;
     background-color: yellow;
     -moz-user-select: -moz-none;
