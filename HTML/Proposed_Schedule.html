@@ -6,6 +6,30 @@
     <link rel="stylesheet" href="CSS/Proposed_Schedule.css"/>
 </head>
 <body>
+    <script>//this is for the color changing. DO NOT MESS WITH THIS
+    function changePage(){
+    var boxlist=document.getElementsByClassName("box");
+    for(i=0;i<boxlist.length;i++){
+        boxlist[i].onclick=function(e){
+            if(e.target.classList.contains("red")){               
+                e.target.classList.replace("red","green");
+               e.target.style.color= "green";
+               e.target.style.backgroundColor = "green";           
+            }
+            else if(e.target.classList.contains("yellow")){
+                e.target.classList.replace("yellow","red");
+                e.target.style.color= "red";
+                e.target.style.backgroundColor = "red";           
+            }
+            else if(e.target.classList.contains("green")){
+                e.target.classList.replace("green","yellow");
+                e.target.style.color = "yellow";
+                e.target.style.backgroundColor = "yellow";           
+            }
+        }
+    }
+    }
+</script>
     <div class="sidebar">
         <img class="logo" src="images/MESS Logo.jpg">
         <a href="#semesterSchedule">Semester Schedule</a><br>
@@ -17,56 +41,60 @@
     </div>
     <h1>Proposed Schedule</h1>
     <h2>Term: Fall 2019</h2>
-    <table>
-
-        <script language="javascript" type="text/javascript">
-            for (var a=0; a < 8; a++) {
-                document.write("<tr>");
-                for(var b=0; b<10; b++) {
-                    document.write("<td>",a,"[",b,"]","</td>");
-            }
-            document.write("</tr>");
-            }
-        </script>
-    </table>
+   
     <table style="width:100%">
         <tr>
-          <th colspan="4">Course Info</th>
-          <th colspan="3">Class Duration</th> 
-          <th colspan="10">Student Assistents</th>
-        </tr>
-        <tr>
-            <th colspan="2">Course</th>
-            <th>Sect</th>
-            <th>Instuctor</th>
-            <th>Start</th>
-            <th>end</th>
-            <th>Days</th>
-            <th>Anna</th>
-            <th>Shanelle</th>
-            <th>Payton</th>
-            <th>Kevin</th>
-            <th>Carisa</th>
-            <th>Max</th>
-            <th>Holly</th>
-            <th>Monzur</th>
-            <th>#</th>
-            <th>Subs</th>
-        </tr>
-        <tr>
-          <td>Math</td>
-          <td>1</td>
-          <td>111</td>
-          <td>Gonzales</td>
-          <td>8:00</td>
-          <td>8:50</td>
-          <td>MWF</td>
-          <td>Anna</td>
-          <td> </td>
-          <td>Payton</td>
-          <td> </td>
-        </tr>
+          <th colspan="3" class='shrink'>Course Info</th>
+          <th colspan="3" class='shrink'>Class Duration</th> 
+          <script>
+                var titles =["Anna","Austin","Evan","Sam","Maria","Despacito",]
+                var Anna=[2,1,1,2,0,1,0,2,2,2];
+                var Austin=[0,1,1,2,0,1,0,2,2,2];
+                var Evan=[0,1,1,2,0,1,0,2,2,2];
+                var Sam=[0,1,1,2,0,1,0,2,2,2];
+                var Maria=[0,1,1,2,0,1,0,2,2,2];
+                var Despacito=[0,1,1,2,0,1,0,2,2,2];
+                var SAs =[Anna,Austin,Evan,Sam,Maria,Despacito];
+                var Sect=["1","1","1","1","1","1","1","1","1","1"];
+                var Instuctor=["Stark", "jones","gonsolez","Christine","Ross","Stark", "jones","gonsolez","Christine","Ross"]
+                var Start=["8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00"];
+                var end=["8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50"];
+                var days=["MWF","MWF","MWF","MWF","MWF","MWF","MWF","MWF","MWF","MWF"];
+                document.write(" <th colspan="+titles.length+" class='shrink'>Student Assistants</th> </tr>")
+                document.write("<tr><td class='shrink'>Course</td><td class='shrink'>Section</td><td class='shrink'>Instructor</td><td class='shrink'>Start Time</td><td class='shrink'>End time</td><td class='shrink'>Days</td>");
+                titles.forEach(function(title){
+                    document.write("<th>"+title+"</th>")
+                })
+                document.write("<tr>");
+                    var RowCounter=0;
+                    for(i=0;i<Anna.length;i++){
+                        document.write("<td class='shrink'>math</td><td class='shrink'>"+Sect[i]+"</td><td class='shrink'>"+Instuctor[i]+"</td><td class='shrink'>"+Start[i]+"</td><td class='shrink'>"+end[i]+"</td><td class='shrink'>"+days[i]+"</td>")
+                        CreateChart(RowCounter);
+                        RowCounter++;
+                    }
+                
+                document.write("</tr>");
+                function CreateChart(RowCounter){
+                    SAs.forEach(function(sa){
+                        if (sa[RowCounter]==0){
+                        document.write("<td class='box red'>Red</td>")
+                    }
+                    if (sa[RowCounter]==1){
+                        document.write("<td class='box yellow'>Yellow</td>")
+                    }
+                    if (sa[RowCounter]==2){
+                        document.write("<td class='box green'>Green</td>")
+                    }
+                    })
+                    document.write("</tr><tr>");
+                    
+                }
+               </script>
       </table>
+      <Div id="buttons">
+            <td><button onclick="changePage()">Edit</button>
+          <button>Finalize</button>
+      </Div>
         <div class="footer">
             <img src="Images/Copyright.jpg" class="footer" alt="Copyright"; width:100%;/>
         </div>
