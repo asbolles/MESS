@@ -82,9 +82,7 @@
                 document.write("</tr><tr>");
                 
             }
-           
             </script>
-
         </table><!--end of first table--></div>
     </td></tr>
     
@@ -139,31 +137,31 @@
 <!--end of second table-->
 
 
-    <tr><td>
-        View: <a href="#">Mon</a> | <a href="#">Tues</a> | <a href="#">Weds</a> | <a href="#">Thurs</a> 
-        | <a href="#">Fri</a> | <a href="#">Full</a>
-    </td>
-    <td><table id="course" class="table">
-            <caption>Course Schedule</caption>
-            <tr>
-                
-                <th>#</th><th>Course</th><th>Section</th><th>Instructor</th><th>Start</th><th>End</th><th>Days</th>
+    <tr>
+        <td>
+            View: <a href="#">Mon</a> | <a href="#">Tues</a> | <a href="#">Weds</a> | <a href="#">Thurs</a> 
+            | <a href="#">Fri</a> | <a href="#">Full</a>
+        </td>
+        <td>
+            <table id="course" class="table">
+                <caption>Course Schedule</caption>
+                    <tr>
+                        <th>#</th><th>Course</th><th>Section</th><th>Instructor</th><th>Start</th><th>End</th><th>Days</th>
+                    </tr>
     
-           
-            </tr>
+                    <script>
+                        for(i=0;i<5;i++){
+                        document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
+                        }
+                    </script>
     
-                <script>
-                    for(i=0;i<5;i++){
-                document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
-            }
-                </script>
+            </table>
+        </td>
+    </tr>
     
-        </table></td>
-</tr>
-    
-<tr>
-    <td><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></td>
-</tr>
+    <tr>
+        <td><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></td>
+    </tr>
 </table><!--end of full table-->
 
 
