@@ -39,8 +39,43 @@ h1, h2
     bottom: 0px;
     /* padding-right: 1in; */
 }
-table, tr, th
+table, tr, th,td
 {
     border: 1px solid black;
     color: whitesmoke;
+    border-collapse: collapse;
 }
+.shrink{
+    
+    white-space:nowrap;
+}
+
+.red{
+    color: red;
+    background-color: red;
+    -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    .yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
+        clicking fast). It is not inheritable, so do not try and condense*/
+        color: yellow;
+        background-color: yellow;
+        -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    .green{/*see above*/
+        color: green;
+        background-color: green;
+        -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    
