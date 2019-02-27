@@ -5,6 +5,14 @@
     <title>Math Emporium Student Scheduler</title>
     <link rel="stylesheet" href="CSS/Master.css" />
 </head>
+<div class="sidebar">
+    <img src="Images/MESS Logo.jpg"/>
+    <a href="#semesterSchedule">Semester Schedule</a><br>
+    <a href="#masterSchedule">Master Schedule</a><br>
+    <a href="#studentAssistants">Student Assistants</a><br>
+    <a href="startNewSemester">Start New Semester</a>        
+    <a href="logout">Logout</a>
+</div>
 <body>
     <script>//this is for the color changing. DO NOT MESS WITH THIS
         function changePage(){
@@ -28,147 +36,175 @@
                 }
             }
         }
-        }
+    }
     </script>
-    <div class="sidebar">
-        <img src="Images/MESS Logo.jpg"/>
-        <a href="#semesterSchedule">Semester Schedule</a><br>
-        <a href="#masterSchedule">Master Schedule</a><br>
-        <a href="#studentAssistants">Student Assistants</a><br>
-        <a href="startNewSemester">Start New Semester</a>        
-        <a href="logout">Logout</a>
-    </div>
 <table>
-    <tr><td><h2>Master Schedule</h2></td></tr>
-    <tr><td>Term: spring 2020 </td><td id="coord">Coordinator: Mark Wahlburg</td></tr>
+    <tr>
+        <td>
+            <h1>Master Schedule</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>Term: spring 2020 </td>
+        <td id="coord" class="cord">Coordinator: Mark Wahlburg</td>
+    </tr>
+</table>
     
-    
-    <tr><td><div>
-        <table class="table">
-            <caption>Assistant Shift Schedule for MWF</caption>
-            <script>
-            var titles =["Anna","Austin","Evan","Sam","Maria","Despacito",]
-            var Anna=[2,1,1,2,0,1,0,2,2,2];
-            var Austin=[0,1,1,2,0,1,0,2,2,2];
-            var Evan=[0,1,1,2,0,1,0,2,2,2];
-            var Sam=[0,1,1,2,0,1,0,2,2,2];
-            var Maria=[0,1,1,2,0,1,0,2,2,2];
-            var Despacito=[0,1,1,2,0,1,0,2,2,2];
-            var SAs =[Anna,Austin,Evan,Sam,Maria,Despacito];
-            document.write("<tr>");
+ 
+<table class="table">
+    <td class="head">Assistant Shift Schedule for MWF</td>
+    <script>
+    var titles =["Anna","Shanelle","Payton","Kevin","Carisa","Max","Holly","Manzur"]
+    var AnnaM=[2,1,1,2,0,1,0,2,2,2];
+    var AnnaW=[2,1,1,2,0,1,0,2,2,2];
+    var AnnaF=[2,1,1,2,0,1,0,2,2,2];
+    var AustinM=[0,1,1,2,0,1,0,2,2,2];
+    var AustinW=[0,1,1,2,0,1,0,2,2,2];
+    var AustinF=[0,1,1,2,0,1,0,2,2,2];
+    var EvanM=[0,1,1,2,0,1,0,2,2,2];
+    var EvanW=[0,1,1,2,0,1,0,2,2,2];
+    var EvanF=[0,1,1,2,0,1,0,2,2,2];
+    var SamM=[0,1,1,2,0,1,0,2,2,2];
+    var SamW=[0,1,1,2,0,1,0,2,2,2];
+    var SamF=[0,1,1,2,0,1,0,2,2,2];
+    var MariaM=[0,1,1,2,0,1,0,2,2,2];
+    var MariaW=[0,1,1,2,0,1,0,2,2,2];
+    var MariaF=[0,1,1,2,0,1,0,2,2,2];
+    var MaxM=[0,1,1,2,0,1,0,2,2,2];
+    var MaxW=[0,1,1,2,0,1,0,2,2,2];
+    var MaxF=[0,1,1,2,0,1,0,2,2,2];
+    var HollyM=[0,1,1,2,0,1,0,2,2,2];
+    var HollyW=[0,1,1,2,0,1,0,2,2,2];
+    var HollyF=[0,1,1,2,0,1,0,2,2,2];
+    var ManzurM=[0,1,1,2,0,1,0,2,2,2];
+    var ManzurW=[0,1,1,2,0,1,0,2,2,2];
+    var ManzurF=[0,1,1,2,0,1,0,2,2,2];
+    var Manzur
+    var SAs =[AnnaM,AnnaW,AnnaF,AustinM,AustinW,AustinF,EvanM,EvanW,EvanF,SamM,SamW,SamF,MariaM,MariaW,MariaF,MaxM,MaxW,MaxF,HollyM,HollyW,HollyF,ManzurM,ManzurW,ManzurF];
+    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
+    var days=["M","W","F",]
+    document.write("<tr>");
+        document.write("<td class='test'>Assistants</td>")
+    titles.forEach(function(title){
+        document.write("<td colspan='3' class='test'>"+title+"</td>")
+    })
+    document.write("<tr>");
+        document.write("<tr class='test'><td>Day of the Week</<td>");
             titles.forEach(function(title){
-                document.write("<th>"+title+"</th>")
-            })
-            document.write("<tr>");
-                var counter=0;
-                for(i=0;i<Anna.length;i++){
-                    CreateChart(counter);
-                    counter++;
-                }
-            
-            document.write("</tr>");
-            function CreateChart(counter){
-                SAs.forEach(function(sa){
-                    if (sa[counter]==0){
-                    document.write("<td class='box red'>Red</td>")
-                }
-                if (sa[counter]==1){
-                    document.write("<td class='box yellow'>Yellow</td>")
-                }
-                if (sa[counter]==2){
-                    document.write("<td class='box green'>Green</td>")
-                }
-                })
-                document.write("</tr><tr>");
-                
-            }
-           
-            </script>
-
-        </table><!--end of first table--></div>
-    </td></tr>
+                days.forEach(function(day){
+                document.write("<td>"+day+"</td>");
+            })    
+        }) 
+        document.write("</tr>");
+        var counter=0;
+        for(i=0;i<AnnaM.length;i++){
+            document.write("<td class='days'>"+times[counter]+"</td>")
+            CreateChart(counter);
+            counter++;
+        }
     
-
-
-
-
-
-
-    <tr><td><div><table class="table"> 
-        <caption>Assistant Shift Schedule for <TR></TR></caption>
-            <script>
-            var titles =["Anna","Austin","Evan","Sam","Maria","Despacito",]
-            var Anna=[2,1,1,2,0,1,0,2,2,2];
-            var Austin=[0,1,1,2,0,1,0,2,2,2];
-            var Evan=[0,1,1,2,0,1,0,2,2,2];
-            var Sam=[0,1,1,2,0,1,0,2,2,2];
-            var Maria=[0,1,1,2,0,1,0,2,2,2];
-            var Despacito=[0,1,1,2,0,1,0,2,2,2];
-            var SAs =[Anna,Austin,Evan,Sam,Maria,Despacito];
-            document.write("<tr>");
+    document.write("</tr>");
+    function CreateChart(counter){
+        SAs.forEach(function(sa){
+            if (sa[counter]==0){
+            document.write("<td class='box red'>Red</td>")
+        }
+        if (sa[counter]==1){
+            document.write("<td class='box yellow'>Yellow</td>")
+        }
+        if (sa[counter]==2){
+            document.write("<td class='box green'>Green</td>")
+        }
+        })
+        document.write("</tr><tr>");    
+    }  
+    </script>
+</table><!--end of first table-->
+<p></p>
+<table class="table"> 
+    <td class="head"> Assistant Shift Schedule for TR </td>
+        <script>
+        var titles =["Anna","Shanelle","Payton","Kevin","Carisa","Max","Holly","Manzur"]
+        var AnnaT=[2,1,1,2,0,1,0,2,2];
+        var AnnaR=[2,1,1,2,0,1,0,2,2,2];
+        var AustinT=[0,1,1,2,0,1,0,2,2,2];
+        var AustinR=[0,1,1,2,0,1,0,2,2,2];
+        var EvanT=[0,1,1,2,0,1,0,2,2,2];
+        var EvanR=[0,1,1,2,0,1,0,2,2,2];  
+        var SamT=[0,1,1,2,0,1,0,2,2,2];
+        var SamR=[0,1,1,2,0,1,0,2,2,2];
+        var MariaT=[0,1,1,2,0,1,0,2,2,2];
+        var MariaR=[0,1,1,2,0,1,0,2,2,2];
+        var SAs =[AnnaM,AnnaW,AnnaF,AustinM,AustinW,AustinF,EvanM,EvanW,EvanF,SamM,SamW,SamF,MariaM,MariaW,MariaF,MaxM];
+        var times=["8:00am - 9:15am","9:30am - 10:45am","11:00am - 11:15am","12:30am - 1:45pm","2:00pm - 3:15pm","3:30pm - 4:45pm"];
+        var days=["T","R"]
+        document.write("<tr>");
+        document.write("<td class='test2'>Assistants</td>")
+    titles.forEach(function(title){
+        document.write("<td colspan='2' class='test2'>"+title+"</td>")
+    })
+    document.write("<tr>");
+        document.write("<tr class='test2'><td>Day of the Week</<td>");
             titles.forEach(function(title){
-                document.write("<th>"+title+"</th>")
+                days.forEach(function(day){
+                document.write("<td>"+day+"</td>");
+            })    
+        }) 
+        document.write("</tr>");
+        var counter=0;
+        for(i=0;i<AnnaM.length;i++){
+            document.write("<td class='days2'>"+times[counter]+"</td>")
+            CreateChart(counter);
+            counter++;
+        }
+        
+        document.write("</tr>");
+        function CreateChart(counter){
+            SAs.forEach(function(sa){
+                if (sa[counter]==0){
+                document.write("<td class='red box'>red</td>")
+            }
+            if (sa[counter]==1){
+                document.write("<td class='yellow box'>yellow</td>")
+            }
+            if (sa[counter]==2){
+                document.write("<td class='green box'>green</td>")
+            }
             })
-            document.write("<tr>");
-                var counter=0;
-                for(i=0;i<Anna.length;i++){
-                    CreateChart(counter);
-                    counter++;
-                }
+            document.write("</tr><tr>");
             
-            document.write("</tr>");
-            function CreateChart(counter){
-                SAs.forEach(function(sa){
-                    if (sa[counter]==0){
-                    document.write("<td class='red box'>red</td>")
-                }
-                if (sa[counter]==1){
-                    document.write("<td class='yellow box'>yellow</td>")
-                }
-                if (sa[counter]==2){
-                    document.write("<td class='green box'>green</td>")
-                }
-                })
-                document.write("</tr><tr>");
-                
+        }
+        
+        </script>
+
+    </table>
+    <!--end of second table-->
+<p></p>
+<table>
+    <td>
+        <tr>
+            View: <a href="#">Mon</a> | <a href="#">Tues</a> | <a href="#">Weds</a> | <a href="#">Thurs</a> | <a href="#">Fri</a> | <a href="#">Full</a>
+        </tr>
+    </td><tr><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></tr>
+</table>
+<table id="course" class="last">
+    <tr class="head"> Course Schedule</tr>
+    <tr class="th">
+        <td>#</td>
+        <td>Course</td>
+        <td>Section</td>
+        <td>Teacher</td>
+        <td>Start</td>
+        <td>End</td>
+        <td>Days</td>
+    </tr>
+        
+    </tr>
+    <script>
+        for(i=0;i<5;i++){
+            document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
             }
-           
-            </script>
-
-            </table></div></td></tr>
-<!--end of second table-->
-
-
-    <tr><td>
-        View: <a href="#">Mon</a> | <a href="#">Tues</a> | <a href="#">Weds</a> | <a href="#">Thurs</a> 
-        | <a href="#">Fri</a> | <a href="#">Full</a>
-    </td>
-    <td><table id="course" class="table">
-            <caption>Course Schedule</caption>
-            <tr>
-                
-                <th>#</th><th>Course</th><th>Section</th><th>Teacher</th><th>Start</th><th>End</th><th>Days</th>
-    
-           
-            </tr>
-    
-                <script>
-                    for(i=0;i<5;i++){
-                document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
-            }
-                </script>
-    
-        </table></td>
-</tr>
-    
-<tr>
-    <td><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></td>
-</tr>
+    </script>
 </table><!--end of full table-->
-
-
-
-
-
 </body>
 </html>
