@@ -1,7 +1,7 @@
 html
 {
     background-color: #505050;
-    padding-left: 2.6in;
+    padding-left: 2.67in;
     font-family: Cambria;
 }
 
@@ -19,7 +19,6 @@ html
     padding-bottom: 20px;
     
 }
-
 a
 {
     font-size: 25px;
@@ -42,6 +41,9 @@ h1, h2
 table{
     border-collapse: collapse;
     border-style: hidden;   
+}
+.chart{
+    padding-left: 2.70in;
 }
 table, tr, th, td
 {
