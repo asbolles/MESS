@@ -1,21 +1,16 @@
 <?php
 
-if (isset($_POST['submitted'])) {
+include('connect.php');
 
-    include('connect-mysql.php');
+$username = $_POST['username'];
+$password = $_POST['password'];
+$sqlinsert = "INSERT INTO accounts (username, password) VALUES ('$username', '$password')";
 
-    $username = $_POST['usename'];
-    $password = $_POST['password'];
-    $sqlinsert = "INSERT INTO accounts (username, password) VALUES ('$username', '$password')";
-
-    if(!mysqli_query(#dbcon, $sqlinsert)) {
-        die('error inserting new record');
-    }
-
-    $newrecord = "New record added to the database";
+if(!mysqli_query(#dbcon, $sqlinsert)) {
+    die('error inserting new record');
 }
 
-
+$newrecord = "New record added to the database";
 ?>
 
 <html>
@@ -25,12 +20,11 @@ if (isset($_POST['submitted'])) {
 <body>
     <h1>Insert Data into DB</h1>
 
-    <form method="post" action="insert-data.php">
-    <input type="hidden" name="submitted" value = "true" />
+    <form method="post" action="Insert-data.php">
     <fieldset>
         <legend>New People</legend>
-        <input type="text" name="username" />Username</label>
-        <input type="text" name="password" />Password</label>
+        <label>Username: <input type="text" name="username" /></label>
+        <label>Password: <input type="text" name="password" /></label>
     </fieldset>
     <br />
     <input type="submit" value="add new person" />  
