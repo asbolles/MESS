@@ -9,7 +9,7 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
  $host = "csums.dhcp.bsu.edu";
     $dbUsername = "MESS";
     $dbPassword = "mess";
-    $dbname = "register";
+    $dbname = "mess_test";
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
     if (mysqli_connect_error()) {
