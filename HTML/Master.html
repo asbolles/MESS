@@ -60,18 +60,13 @@
     listofSa.forEach(function(sa){
         titles.push(sa.name);
     })
-    listofSa.forEach(function(sa){
-        var string =sa.splitString(sa.green);
-        //document.write(sa.green); 
-    });
-    listofSa
-    var SAs =[];
+    
     var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
     var days=["M","W","F",]
     document.write("<tr>");
-        document.write("<td class='test'>Assistants</td>")
+    document.write("<td class='test'>Assistants</td>")
     titles.forEach(function(title){
-        document.write("<td colspan='3' class='test'>"+title+"</td>")
+        document.write("<td colspan='3' class='test'>"+title+"</td>");
     })
     document.write("<tr>");
         document.write("<tr class='test'><td>Day of the Week</<td>");
@@ -80,29 +75,45 @@
                 document.write("<td>"+day+"</td>");
             })    
         }) 
-        document.write("</tr>");
+
+    document.write("</tr>");
         var counter=0;
+        var classesCounter=0;
         for(i=0;i<MWFnumber;i++){
-            document.write("<td class='days'>"+times[counter]+"</td>")
-            CreateChart(counter);
+            document.write("<tr>")
+            CreateChartMWF(counter);
             counter++;
+            classesCounter=counter*3;
+            document.write("</tr>"); 
         }
     
-    document.write("</tr>");
-    function CreateChart(counter){
-        SAs.forEach(function(sa){
-            if (sa[counter]==0){
-            document.write("<td class='box red'>Red</td>")
-        }
-        if (sa[counter]==1){
-            document.write("<td class='box yellow'>Yellow</td>")
-        }
-        if (sa[counter]==2){
-            document.write("<td class='box green'>Green</td>")
-        }
-        })
-        document.write("</tr><tr>");    
-    }  
+    
+    
+    function CreateChartMWF(counter){
+        document.write("<td class='days'>"+times[counter]+"</td>");
+        listofSa.forEach(function(sa){
+            x=0;
+            while(x<3){//the times 3 is for MWF
+            var greenAV=sa.green.split(",");
+            var yellowAV= sa.yellow.split(",");
+            if(greenAV.includes(MWFclasses[classesCounter])){
+                document.write("<td class='box green'>Green</td>");
+            }
+            else if(yellowAV.includes(MWFclasses[classesCounter])){
+                document.write("<td class='box yellow'>Yellow</td>");
+            }
+            else {
+                document.write("<td class='box red'>Red</td>");
+            }
+            x++;
+            classesCounter++;
+        }//end of while 
+        classesCounter=counter*3;
+    })
+       
+    }
+        
+    
     </script>
 </table><!--end of first table-->
 <p></p>
@@ -139,12 +150,14 @@
         var counter=0;
         for(i=0;i<AnnaM.length;i++){
             document.write("<td class='days2'>"+times[counter]+"</td>")
-            CreateChart(counter);
+            CreateChartMWF
+    (counter);
             counter++;
         }
         
         document.write("</tr>");
-        function CreateChart(counter){
+        function CreateChartMWF
+(counter){
             SAs.forEach(function(sa){
                 if (sa[counter]==0){
                 document.write("<td class='red box'>red</td>")
