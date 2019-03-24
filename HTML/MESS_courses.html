@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Start New Semester - MESS</title>
-    <link rel="stylesheet" href="CSS/EditListOfStudents.css" />
+    <link rel="stylesheet" href="CSS/SA_AvailSheet.css" />
 </head>
 <body>
     <div class="sidebar">
@@ -11,11 +11,82 @@
         <a href="MESS_finalized.html">Semester Schedule</a><br>
         <a href="MESS_master.html">Master Schedule</a><br>
         <a href="MESS_assistants.html">Student Assistants</a><br>
-        <a href="#">Start New Semester</a>        
+        <a href="MESS_courses.html">Start New Semester</a>        
         <a href="MESS_login.html">Logout</a>
     </div>
     <h1 class="header">Add New Semester</h1>
-      
+    <table style="width:100%">
+        <tr>
+            <td>Current term: [term of finalized schedule] </td>
+            <td>Coordinator: [Coordinator name]</td>
+        </tr>
+       
+        <tr>
+            <table style="width:30%" class="returning">
+                <tr class="returning">
+                    <td class="question">What term are you planning for?</td>
+                    <td colspan="2" class="answer">Fall</td>
+                    <td class="box"><input type="checkbox"></td>
+                    <td class="space"></td>
+                    <td class="answer">Spring</td>
+                    <td class="box"><input type="checkbox"></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <td>
+            <table style="width:100%">
+                <tr>
+                    <th>Course</th>
+                    <th>Section</th>
+                    <th>Instructor</th>
+                    <th>Days</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th># SAs</th>
+                </tr>
+                <tr>
+                    <td><select id = "course">
+                        <option value = "MATH 108">MATH 108</option>
+                        <option value = "MATH 111">MATH 111</option>
+                        <option value = "MATH 112">MATH 112</option>
+                        <option value = "Other">Other</option>
+                      </select></td> 
+                    <td><p>
+                        <input type = "text"
+                               id = "section"
+                               value = "Section" />
+                      </p></td>
+                    <td><p>
+                        <input type = "text"
+                               id = "instructor"
+                               value = "Instructor" />
+                      </p></td>
+                    <td><select id = "days">
+                        <option value = "MW">MW</option>
+                        <option value = "MWF">MWF</option>
+                        <option value = "TR">TR</option>
+                      </select></td>  
+                    <td><p>
+                        <input type = "text"
+                               id = "start"
+                               value = "Start" />
+                      </p></td>
+                    <td><p>
+                        <input type = "text"
+                               id = "end"
+                               value = "End" />
+                      </p></td>
+                    <td><p>
+                        <input type = "text"
+                               id = "numsa"
+                               value = "#SAs" />
+                      </p></td>
+                </tr>
+            </table>
+        </td>
+    </table>
     
 </body>
    
