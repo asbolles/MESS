@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Start New Semester - MESS</title>
     <link rel="stylesheet" href="CSS/SA_AvailSheet.css" />
+    <script type="text/javascript" src="../Data/Functions.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -64,9 +65,9 @@
                                value = "Instructor" />
                       </p></td>
                     <td><select id = "days">
-                        <option value = "MW">MW</option>
                         <option value = "MWF">MWF</option>
                         <option value = "TR">TR</option>
+                        <option value = "MW">MW</option>
                       </select></td>  
                     <td><p>
                         <input type = "text"
@@ -86,6 +87,11 @@
                 </tr>
             </table>
         </td>
+    </table>
+    <table>
+        </td><tr>
+            <button onclick="addClassListing()">Add Class</button><button>Delete Class</button>
+        </tr></td>
     </table>
     
 </body>

@@ -69,6 +69,10 @@ function FullMWF(){
     return div;
 }
 
+function addClassListing(){
+    
+}
+
 
 function CreateChartMWF(counter,classesCounter){
     var div ="";
