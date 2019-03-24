@@ -22,6 +22,10 @@ for(i=0;i<boxlist.length;i++){
 }
 }
 
+function addClassListing(){
+    
+}
+
 
 function CreateChartMWF(counter){
     document.write("<td class='days'>"+times[counter]+"</td>");
