@@ -16,12 +16,17 @@ table{
     overflow-x: hidden;
     
 }
+.sidebar a:hover{
+    color: black;
+    
+}
 a{
     font-size: 25px;
     padding: 20px;
     border-block-end-color: black;
     color: white;
     font-family: Cambria; 
+    border: 1pt, solid black;
 }
 .cord{
     right:0px;

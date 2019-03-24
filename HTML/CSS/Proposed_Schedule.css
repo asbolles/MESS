@@ -1,7 +1,7 @@
 html
 {
     background-color: #505050;
-    padding-left: 2.6in;
+    padding-left: 2.67in;
     font-family: Cambria;
 }
 
@@ -19,7 +19,6 @@ html
     padding-bottom: 20px;
     
 }
-
 a
 {
     font-size: 25px;
@@ -39,15 +38,59 @@ h1, h2
     bottom: 0px;
     /* padding-right: 1in; */
 }
-table, tr, th,td
-{
-    border: 1px solid black;
-    color: whitesmoke;
+table{
     border-collapse: collapse;
+    border-style: hidden;   
+}
+.chart{
+    padding-left: 2.70in;
+}
+table, tr, th, td
+{
+    border  : 1px solid black;
+    color: whitesmoke;
+    border-right: 1px solid black;
+    empty-cells: hide;
 }
 .shrink{
-    
+    width: 0%;
     white-space:nowrap;
+}
+#buttons{
+    padding: 2%;
+}
+.inbetween, .inbetween2, .inbetween3{
+    background-color: #505050;
+    color: #505050;
+    
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.inbetween{
+   
+    border-left: 1pt solid #505050;  
+    border-right: 1pt solid #505050;
+
+
+       
+}
+.inbetween2{
+ 
+   border-top: 1pt solid #505050;
+   border-bottom: 1pt solid #505050;
+    border-left: 1pt solid #505050;
+ 
+       
+}
+.inbetween3{
+    border-right: 1pt solid #505050;
+
+   border-bottom: 1pt solid #505050;
+    border-left: 1pt solid #505050;
+   
 }
 
 .red{
