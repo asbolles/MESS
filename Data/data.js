@@ -1,9 +1,6 @@
 //MWF8, MWF 10, MWF 11, MWF 12, MWF 1, MWF 2, MWF 3, MWF 4, MWF 5
 //TR 8, TR 9:30, TR 11, TR 12:30, TR 1:30, TR 3,
 
-
-
-
 class SA{
     constructor(name, GreenAvail, YellowAvail){
         this.green=GreenAvail;
