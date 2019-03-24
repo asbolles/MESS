@@ -49,10 +49,10 @@ div.img
 { 
      position: fixed;
      bottom: 0px;
-     margin-top: -50px;
-     margin-right: -200px;
-     padding-left: 7.5in;
-     padding-right: 7in;
+     margin-top: 20px;
+     margin-right: -100px;
+     padding-left: 5in;
+     padding-right: 6.5in;
      background-color: white;
      
 }

@@ -1,0 +1,107 @@
+html
+{
+    background-color: #505050;
+    padding-left: 2.67in;
+    font-family: Cambria;
+}
+
+
+.sidebar 
+{
+    height: 100%;
+    width: 2.67in;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #808080;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    
+}
+a
+{
+    font-size: 25px;
+    padding: 20px;
+    border-block-end-color: black;
+    color: white;
+    font-family: Cambria; 
+}
+h1, h2
+{
+    padding-left: 25px;
+    font-family: Cambria;
+    color: whitesmoke;
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    /* padding-right: 1in; */
+}
+table{
+    border-collapse: collapse;
+    border-style: hidden;
+    padding-left: 2.67in;   
+}
+.chart{
+    padding-left: 25px;
+}
+table, tr, th, td
+{
+    border  : 1px solid black;
+    color: whitesmoke;
+    border-right: 1px solid black;
+    empty-cells: hide;
+    
+}
+.shrink{
+    width: 0%;
+    white-space:nowrap;
+}
+
+.inbetween, .inbetween2, .inbetween3{
+    background-color: #505050;
+    color: #505050;
+}
+.inbetween{
+   
+    border-left: 1pt solid #505050;  
+    border-right: 1pt solid #505050;
+       
+}
+.inbetween2{
+ 
+    border-top: 1pt solid #505050;
+    border-bottom: 1pt solid #505050;
+    border-left: 1pt solid #505050;
+ 
+       
+}
+.inbetween3{
+    border-right: 1pt solid #505050;
+
+    border-bottom: 1pt solid #505050;
+    border-left: 1pt solid #505050;
+   
+}
+
+.red{
+    color: red;
+    background-color: red;
+}
+.yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
+    clicking fast). It is not inheritable, so do not try and condense*/
+    color: yellow;
+    background-color: yellow;
+}
+.green{/*see above*/
+    color: green;
+    background-color: green;
+}
+body{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
