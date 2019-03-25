@@ -23,12 +23,122 @@ for(i=0;i<boxlist.length;i++){
 }//end of changepage
 
 function createFull(){
-   
-    //string += " but not this"
-    //FullMWF();
     var div = document.getElementById('tableLocation');
-        div.innerHTML += FullMWF()+"<p></p>"+FullTR();
+        div.innerHTML = FullMWF()+"<p></p>"+FullTR();
+}
+
+function createMon(weekday){
+    var div = document.getElementById('tableLocation');
+    div.innerHTML = mon(weekday);
+}
+function createTues(weekday){
+    var div = document.getElementById('tableLocation');
+    div.innerHTML = tues(weekday);
+}
+
+function tues(weekday){
+    var div = "";
+    div += "<table class='table'><td class='head'>Assistant Shift Schedule for Tuesday</td>";
+    var titles =[];
+    listofSa.forEach(function(sa){
+        titles.push(sa.name);
+    })
+    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
+    div += "<tr>";
+    div += "<td class='test'>Assistants</td>";
+    titles.forEach(function(title){
+        div +="<td class='test'>"+title+"</td>";
+    })
+    div +="</tr>";
+    var counter=0;
+    var tuesdays=[];
+    TRclasses.forEach(function(day){
+        if(day.charAt(0)==weekday){
+            tuesdays.push(day);
+        }
+    })    
+    for(i=0;i<tuesdays.length;i++){
+        div +="<tr>";
         
+        div +="<td class='days'>"+times[counter]+"</td>";
+        div +=createChartTues(counter,tuesdays);
+        counter++;
+     
+        div +="</tr>"; 
+    }
+div +="</table>"
+return div;
+
+}
+function createChartTues(classesCounter,tuesdays){
+    var div ="";
+    listofSa.forEach(function(sa){
+        var greenAV=sa.green.split(",");
+        var yellowAV= sa.yellow.split(",");
+        if(greenAV.includes(tuesdays[classesCounter])){
+            div +="<td class='box green'>Green</td>";
+        }
+        else if(yellowAV.includes(tuesdays[classesCounter])){
+            div +="<td class='box yellow'>Yellow</td>";
+        }
+        else {
+            div +="<td class='box red'>Red</td>";
+        }
+        classesCounter++;
+    })
+    return div;
+}
+function mon(weekday){
+    var div = "";
+    div += "<table class='table'><td class='head'>Assistant Shift Schedule for MWF</td>";
+    var titles =[];
+    listofSa.forEach(function(sa){
+        titles.push(sa.name);
+    })
+    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
+    div += "<tr>";
+    div += "<td class='test'>Assistants</td>";
+    titles.forEach(function(title){
+        div +="<td class='test'>"+title+"</td>";
+    })
+    div +="</tr>";
+    var counter=0;
+    var mondays=[];
+    MWFclasses.forEach(function(day){
+        if(day.charAt(0)==weekday){
+            mondays.push(day);
+        }
+    })    
+    for(i=0;i<mondays.length;i++){
+        div +="<tr>";
+        div +="<td class='days'>"+times[counter]+"</td>";
+        div +=createChartMon(counter,mondays);
+        counter++;
+     
+        div +="</tr>"; 
+    }
+div +="</table>"
+return div;
+
+}//end of mon
+
+function createChartMon(classesCounter, mondays){
+    var div ="";
+    listofSa.forEach(function(sa){
+        var greenAV=sa.green.split(",");
+        var yellowAV= sa.yellow.split(",");
+        if(greenAV.includes(mondays[classesCounter])){
+            div +="<td class='box green'>Green</td>";
+        }
+        else if(yellowAV.includes(mondays[classesCounter])){
+            div +="<td class='box yellow'>Yellow</td>";
+        }
+        else {
+            div +="<td class='box red'>Red</td>";
+        }
+        classesCounter++;
+    })
+    return div;
 }
 
 function FullMWF(){
@@ -69,9 +179,6 @@ function FullMWF(){
     return div;
 }
 
-function addClassListing(){
-    
-}
 
 
 function CreateChartMWF(counter,classesCounter){
