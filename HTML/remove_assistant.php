@@ -18,7 +18,7 @@ $id=$_POST['$td'];
 $sql = "DELETE FROM users WHERE id VALUES ('$id');";
 
 if ($link->query($sql) === TRUE){
-    echo "Asistant Removed";
+    echo "Assistant Removed";
 } else {
     echo 'Error: '.$sql ."<br>". $link->error;
 }
