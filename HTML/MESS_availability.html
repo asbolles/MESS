@@ -5,6 +5,8 @@
     <title>Availability Sheet - MESS</title>
     <meta name= "viewport" content="width=device-width">
     <link rel="stylesheet" href="CSS/SA_AvailSheet.css"/>
+    <script type="text/javascript" src="../Data/Functions.js"></script>
+
 </head>
 <body>
     <div class="sidebar">
@@ -66,133 +68,28 @@
         </table>
     </tr>
 </table>
-    <table style="width:100%">
-        <td>
-            <table style="width:100%" class="MWF">
-                <tr class="avail">
-                    <th>Shifts</th>
-                    <th>Monday</th>
-                    <th>Wednesday</th>
-                    <th>Friday</th>
-                </tr>
-                <tr>
-                    <th>8:00am - 8:50am</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>9:00am - 9:50am</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>10:00am - 10:50am</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>11:00am - 11:50am</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>12:00pm - 12:50pm</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>1:00pm - 1:50pm</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>2:00pm - 2:50pm</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>3:00pm - 3:50pm</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>4:00pm - 4:50pm</th>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                    <td>Busy</td>
-                </tr>
-                <tr>
-                    <th>5:00pm - 6:15pm</th>
-                    <td>Busy</td>
-                    <td id="b">Busy</td>
-                    <td>Busy</td>
-                </tr>
-            </table>
-        </td>
-        <td>
-            <table style="width:90%" class="TR">
-                <tr class="avail">
-                    
-                    <th>Shifts</th>
-                    <th>Tuesday</th>
-                    <th>Thurday</th>
-                </tr>
-                <tr>
-                    <th>8:00am - 9:15am</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>9:30am - 10:45am</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>11:00am - 12:15pm</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>12:30pm - 1:45pm</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>2:00pm - 3:15pm</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-                <tr>
-                    <th>3:30pm - 4:451pm</th> 
-                    <td>Busy</td>
-                    <td>Busy</td>  
-                </tr>
-            </table>
-            <table style="width:90%" class="legend">
-                <tr>
-                    <td class="preferred">Preferred</td> 
-                    <td class="dash"> - </td>
-                    <td class="text"> Shift that you prefer to work</td>
-                </tr>
-                <tr>
-                    <td class="available">Available</td>
-                    <td class="dash"> - </td>
-                    <td class="text"> Shift that you could work</td>
-                </tr>
-                <tr>
-                    <td class="busy">Busy</td>
-                    <td class="dash"> - </td>
-                    <td class="text"> Shift tha you cannot work</td>
-                </tr>
-             </td>
+    <div id="tableLocation">
+        <!-- <script>
+            createFull();
+        </script> -->
+    </div>
+        <table style="width:90%" class="legend">
+            <tr>
+                <td class="preferred">Preferred</td> 
+                <td class="dash"> - </td>
+                <td class="text"> Shift that you prefer to work</td>
+            </tr>
+            <tr>
+                <td class="available">Available</td>
+                <td class="dash"> - </td>
+                <td class="text"> Shift that you could work</td>
+            </tr>
+            <tr>
+                <td class="busy">Busy</td>
+                <td class="dash"> - </td>
+                <td class="text"> Shift tha you cannot work</td>
+            </tr>
+            </td>
         </table>
     </body> 
     <div>
