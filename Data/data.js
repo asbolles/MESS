@@ -20,9 +20,10 @@ class hour{
         this.candidatelist=candidatelist;
         this.numRequired=numRequired;
         this.priority=priority;
+        this.workingHours=[];
+        this.sublist=[];
     }
 }
-listofHours(hours);
 
 
 
