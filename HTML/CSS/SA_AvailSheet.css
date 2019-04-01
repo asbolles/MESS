@@ -103,16 +103,7 @@ input[type=number]
     padding-left: 20px;
 }
 
-th
-{
-    border: 1pt solid black;
-    background-color: whitesmoke;
-    color: black; 
-}
-td
-{
-   text-align: center;
-}
+
 .MWF
 {
     padding-bottom: .25in;
@@ -173,3 +164,43 @@ td
     padding-left: 2in;
     padding-right: 2in;
 }
+.red{
+    color: red;
+    background-color: red;
+    -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    .yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
+        clicking fast). It is not inheritable, so do not try and condense*/
+        color: yellow;
+        background-color: yellow;
+        -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    .green{/*see above*/
+        color: green;
+        background-color: green;
+        -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+    }
+    .table tr td, .table {
+        border: 1pt solid black;
+        border-collapse: collapse;
+        border-spacing: 3%;
+        width: 30%;
+    }
+    .TRtable{
+       display: inline-block;
+    }
+    .MWFtable{
+        display: inline-block;
+    }

@@ -16,7 +16,8 @@ class SA{
     }
 }
 class hour{
-    constructor(candidatelist,numRequired,priority){
+    constructor(name,candidatelist,numRequired,priority){
+        this.name = name;
         this.candidatelist=candidatelist;
         this.numRequired=numRequired;
         this.priority=priority;

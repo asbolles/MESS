@@ -180,11 +180,12 @@ function FullMWF(){
         div +="</tr>";
             var counter=0;
             var classesCounter=0;
-            for(i=0;i<MWFnumber;i++){
+            for(i=0;i<MWFnumber; i++){
                 div +="<tr>";
                 div +="<td class='days'>"+times[counter]+"</td>";
                 div +=CreateChartMWF(counter,classesCounter);
                 counter++;
+                
                 classesCounter=counter*3;
                 div +="</tr>"; 
             }
