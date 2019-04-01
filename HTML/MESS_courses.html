@@ -55,7 +55,7 @@
                         <option value = "Other">Other</option>
                       </select></td> 
                     <td><p>
-                        <input type = "text"
+                        <input type = "number" min="1" max="30" value="1" step="1" onkeydown="return false"
                                id = "section"
                                value = "Section" />
                       </p></td>
@@ -69,18 +69,20 @@
                         <option value = "TR">TR</option>
                         <option value = "MW">MW</option>
                       </select></td>  
+                    <td><select id = "start">
+                            <option value = "8">8:00</option>
+                            <option value = "9">9:00</option>
+                            <option value = "10">10:00</option>
+                            <option value = "11">11:00</option>
+                            <option value = "12">12:00</option>
+                            <option value = "13">1:00</option>
+                            <option value = "14">2:00</option>
+                            <option value = "15">3:00</option>
+                            <option value = "16">4:00</option>
+                            <option value = "17">5:00</option>
+                          </select></td>  
                     <td><p>
-                        <input type = "text"
-                               id = "start"
-                               value = "Start" />
-                      </p></td>
-                    <td><p>
-                        <input type = "text"
-                               id = "end"
-                               value = "End" />
-                      </p></td>
-                    <td><p>
-                        <input type = "text"
+                        <input type = "number" min="1" max="5" value="3" step="1" onkeydown="return false" 
                                id = "numsa"
                                value = "#SAs" />
                       </p></td>
