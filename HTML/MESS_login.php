@@ -10,17 +10,16 @@
     <figure>
         <img src="Images/MESS Login Logo.jpg" class="logo" alt="Mess Logo"/>
     </figure>
-    <div class="details">
-        <label>Username:</label>
-        <input type="text" name="username" class="textbox" placeholder="Enter Username"/><br><br>
-    </div>
-    <div class="details">
-        <label>Password:</label>
-        <input type="password" id="myInput" class="textbox" size="20" placeholder="Enter Password"/><br>
-        <input type="checkbox" class ="passbutton" onclick="myFunction()">
-        <label class="passlabel">show password</label><br>
-        <button>Login</button>
-    </div>
+    <form action="validate.php" method="post">
+        <div class="details">
+            <label>Username:</label>
+            <label>Password:</label>
+            <input type="password" name="password" id="myInput" class="textbox" size="20" placeholder="Enter Password"/><br>
+            <input type="checkbox" class ="passbutton" onclick="myFunction()">
+            <label class="passlabel">show password</label><br>
+            <input type="submit" value="login">
+        </div>
+    </form>
 </header>
 <script>
   function myFunction() {
