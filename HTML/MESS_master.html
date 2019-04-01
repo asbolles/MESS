@@ -5,7 +5,7 @@
     <title>Master Schedule - MESS</title>
     <link rel="stylesheet" href="CSS/Master.css" />
     <script type="text/javascript" src="../Data/data.js"></script>
-    <script type="text/javascript" src="../Data/Functions.js"></script>
+    <script type="text/javascript" src="../Data/Master_Functions.js"></script>
 </head>
 <div class="sidebar">
     <img src="Images/MESS Logo.jpg"/>
@@ -37,7 +37,7 @@
         <tr>
             View: <button onclick="createMon('M')">Mon</button> | <button onclick="createTues('T')">Tues</button> | <button onclick="createMon('W')">Weds</button> | <button onclick="createTues('R')">Thurs</button> | <button onclick="createMon('W')">Fri</button> | <button onclick="createFull()">Full</button>
         </tr>
-    </td><tr><button onclick="changePage()">Edit Availibility</button><button>Request Proposed Schedule</button></tr>
+    </td><tr><button onclick="changePage()">Edit Availibility</button><button onclick="window.location.href='MESS_proposed.html'">Request Proposed Schedule</button></tr>
 </table>
 <table id="course" class="last">
     <tr class="head"> Course Schedule</tr>
