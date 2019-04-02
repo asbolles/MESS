@@ -13,8 +13,8 @@
     <form action="validate.php" method="post">
         <div class="details">
             <label>Username:</label>
-            <input type="username" name="username" class="textbox" size="20" placeholder="Enter Username"/><br>
-            <label>Password:</label>
+            <input type="text" name="username" class="textbox" placeholder="Enter Username"/><br><br>
+            <label>Password:</label
             <input type="password" name="password" id="myInput" class="textbox" size="20" placeholder="Enter Password"/><br>
             <input type="checkbox" class ="passbutton" onclick="myFunction()">
             <label class="passlabel">show password</label><br>

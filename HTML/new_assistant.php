@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/EditListOfStudents.css" />
+    //<link rel="stylesheet" href="CSS/EditListOfStudents.css" />
 </head>
 <body>
 
