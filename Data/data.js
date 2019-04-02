@@ -36,7 +36,37 @@ var Anna = new SA("Anna","M0800,F0800,M1000,W1000,F1000,M1100,W1100,F1100,M1200,
 var sam = new SA("Sam","M0800,F0800,M1000,W1000,F1100,M1200,W1200,F1200,T0800,R0800,T0930,R0930,T1100","M0100,W0100,F0100,M0200,W0200,F0200",9,15,"V","");
 var Austin = new SA("Austin","M0800,W0800,F0800,M1000,W1000,F1000,M1100,W1100,F1100","M0100,W0100,F0100,M0200,W0200,F0200,T0800,R0800,T0930,R0930,T1100",9,12,"V","");
 var evan = new SA("Evan","M1000,W1000,F1000,M1100,W1100,F1100,M1200,W1200,F1200","M0100,W0100,F0100,M0200,W0200,F0200,T0800,R0800,T0930,R0930,T1100",11,17,"N","");
-var MWFnumber= MWFclasses.length;
-var TRnumber = TRclasses.length;
+
 var listofSa=[Anna,sam,Austin,evan];
-"T0800,R0800,T0930,R0930,T1100"
+var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"];
+var timesStartMWF =["08:00","09:00","10:00","11:00","12:00","01:00","02:00","03:00","04:00","05:00"];
+var timesEndMWF=["08:50","09:50","10:50","11:50","12:50","01:50","02:50","03:50","04:50","06:15"];
+var timesStartTR =["08:00","09:30","11:00","12:00","02:00","03:30","05:00"];
+var timesEndTR =["09:15","10:45","12:15","01:45","03:15","04:45","06:15"];
+var MWFnumber= timesStartMWF.length;
+var TRnumber = timesStartTR.length;
+
+function updateDatabaseTimes(){
+    var serverTimeStart="";//server call
+    var courseStartTimes=serverTimeStart.split(",");
+    var serverTimeEnd="";//server call
+    var courseEndTimes=serverTimeEnd.split(",");
+    
+    var strings=[];
+    courseStartTimes.forEach(function(time){
+        newtime=time.slice(0,2)+":"+time.slice(2);
+        strings.push(newtime);
+    })
+    courseEndTimes.forEach(function(time){
+        newtime=time.slice(0,2)+":"+time.slice(2);
+        strings.push(newtime);
+    })
+}
+function updateDatabaseClasses(){
+//MWFclasses
+//TRclasses
+//
+}
+function updateDatabaseSAs(){
+
+}

@@ -56,7 +56,6 @@ function tues(weekday){
     listofSa.forEach(function(sa){
         titles.push(sa.name);
     })
-    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
     div += "<tr>";
     div += "<td class='test'>Assistants</td>";
     titles.forEach(function(title){
@@ -73,7 +72,7 @@ function tues(weekday){
     for(i=0;i<tuesdays.length;i++){
         div +="<tr>";
         
-        div +="<td class='days'>"+times[counter]+"</td>";
+        div +="<td class='days'>"+timesStartTR[counter]+" - "+timesEndTR[counter]+"</td>";
         div +=createChartTues(counter,tuesdays);
         counter++;
      
@@ -108,7 +107,6 @@ function mon(weekday){
     listofSa.forEach(function(sa){
         titles.push(sa.name);
     })
-    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
     div += "<tr>";
     div += "<td class='test'>Assistants</td>";
     titles.forEach(function(title){
@@ -124,7 +122,7 @@ function mon(weekday){
     })    
     for(i=0;i<mondays.length;i++){
         div +="<tr>";
-        div +="<td class='days'>"+times[counter]+"</td>";
+        div +="<td class='days'>"+timesStartMWF[counter]+" - "+timesEndMWF[counter]+"</td>";
         div +=createChartMon(counter,mondays);
         counter++;
      
@@ -161,8 +159,6 @@ function FullMWF(){
         listofSa.forEach(function(sa){
             titles.push(sa.name);
         })
-        
-        var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
         var daysMWF=["M","W","F",];
         div += "<tr>";
         div += "<td class='test'>Assistants</td>";
@@ -182,7 +178,7 @@ function FullMWF(){
             var classesCounter=0;
             for(i=0;i<MWFnumber; i++){
                 div +="<tr>";
-                div +="<td class='days'>"+times[counter]+"</td>";
+                div +="<td class='days'>"+timesStartMWF[counter]+" - "+timesEndMWF[counter]+"</td>";
                 div +=CreateChartMWF(counter,classesCounter);
                 counter++;
                 
@@ -229,7 +225,6 @@ function FullTR(){
         titles.push(sa.name);
     })
     
-    var times=["8:00am - 8:50am","9:00am - 9:50am","10:00am - 10:50am","11:00am - 11:50am","12:00pm - 12:50pm","1:00pm - 1:50pm","2:00pm - 2:50pm","3:00pm - 3:50pm","4:00pm - 4:50pm","5:00pm - 6:15pm"]
     var daysTR=["T","R"]
     div +="<tr><td class='test'>Assistants</td>";
     titles.forEach(function(title){
@@ -248,7 +243,7 @@ function FullTR(){
         var classesCounter=0;
         for(i=0;i<TRnumber;i++){
             div +="<tr>";
-            div +="<td class='days'>"+times[counter]+"</td>";
+            div +="<td class='days'>"+timesStartTR[counter]+" - "+timesEndTR[counter]+"</td>";
             div += CreateChartTR(counter,classesCounter);
             counter++;
             classesCounter=counter*2;
