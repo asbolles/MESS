@@ -9,15 +9,14 @@
 </html>
 <?php
 
-$firstname = filter_input(INPUT_POST, 'firstname');
-$lastname = filter_input(INPUT_POST, 'lastname');
+$name = filter_input(INPUT_POST, 'name');
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
 
 include("connect.php");
 
-$sql = "INSERT INTO users (username, password, firstname, lastname) 
-VALUES ('$username', '$password', '$firstname', '$lastname');";
+$sql = "INSERT INTO users (name, username, password) 
+VALUES ('$name','$username','$password');";
 
 if ($link->query($sql) === TRUE){
     echo 'New assistant added successfully';

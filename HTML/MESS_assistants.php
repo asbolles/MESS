@@ -36,7 +36,7 @@ if (!$link) {
 }
 echo 'connection established <br>';
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT username, password, name FROM users";
 
 $result = $link->query($sql) or die("error getting data");
 
