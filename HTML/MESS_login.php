@@ -1,3 +1,29 @@
+<?php
+include ("connect.php");
+session_start();
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $myusername = mysqli_real_escape_string($link,$_POST['username']);
+    $mypassword = mysqli_real_escape_string($link,$_POST['password']);
+
+    $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
+    $result = mysqli_query($link,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $active = $row['active'];
+
+    $count = mysqli_num_rows($result);
+
+    if($count == 1) {
+
+        $_SESSION['login_user'] = $myusername;
+
+        header("Location: MESS_availability.html");
+    }else {
+        $error = "Your Login Name or Password is invalid";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="em">
 <head>
