@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <figure>
         <img src="Images/MESS Login Logo.jpg" class="logo" alt="Mess Logo"/>
     </figure>
-    <form action="validate.php" method="post">
+    <form action="MESS_login.php" method="post">
         <div class="details">
             <label>Username:</label>
             <input type="text" name="username" class="textbox" placeholder="Enter Username"/><br><br>
