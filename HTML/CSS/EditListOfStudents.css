@@ -69,6 +69,10 @@ td, tr
      border: 1px Solid Black;
      color: whitesmoke;
 }
+.sidebar a:hover
+{
+    color: black;
+}
 
 td
 {
