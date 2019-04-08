@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['login_user'] = $myusername;
 
-        header("Location: MESS_availability.html");
+        header("Location: MESS_availability.php");
     }else {
         $error = "Your Login Name or Password is invalid";
     }
