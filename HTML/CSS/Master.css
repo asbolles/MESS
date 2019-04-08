@@ -31,6 +31,16 @@ a{
 .cord{
     right:0px;
 }
+
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 2in;
+    padding-right: 2in;
+}
+
 .red{
 color: red;
 background-color: red;
