@@ -35,7 +35,6 @@
                 <tr>
                     <td class="name"><h2>Student Assistant: 
                     <?php
-                    session_start();
                     include "session.php";
                     DEFINE ('DB_USER', 'MESS');
                     DEFINE ('DB_PASD', 'mess');
