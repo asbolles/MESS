@@ -24,7 +24,7 @@
     </tr>
     <tr>
         <td>Term: Spring 2020 </td>
-        <td id="coord" class="cord">Coordinator: Mark Wahlburg</td>
+        <td id="coord" class="cord">Logged in as: Coordinator</td>
     </tr>
 </table>
 <div id="tableLocation">

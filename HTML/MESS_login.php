@@ -5,19 +5,31 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($link,$_POST['username']);
     $mypassword = mysqli_real_escape_string($link,$_POST['password']);
-
+    
     $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
+    $sql2 = "SELECT coord FROM users WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($link,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
+    $result2 = mysqli_query($link,$sql2);
 
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $row2 = mysqli_fetch_array($result2,MYSQLI_ASSOC);
+
+    $active = $row['active'];
+    $thecoord = $row2["coord"];
     $count = mysqli_num_rows($result);
 
     if($count == 1) {
 
         $_SESSION['login_user'] = $myusername;
 
-        header("Location: MESS_availability.php");
+        if($thecoord == 1) {
+            header("Location: MESS_master.php");
+        }
+        else {
+            header("Location: MESS_availability.php");
+        }
+
+
     }else {
         $error = "Your Login Name or Password is invalid";
     }

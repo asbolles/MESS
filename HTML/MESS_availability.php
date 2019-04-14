@@ -33,7 +33,26 @@
         <tr>
             <table style="width:50%">
                 <tr>
-                    <td class="name"><h2>Student Assistant: [insert student name]</h2></td>
+                    <td class="name"><h2>Student Assistant: 
+                    <?php
+                    include "session.php";
+
+                    $query = "SELECT fname FROM users WHERE username = '$user_check'";
+                    
+                    $result = $link->query($query) or die('error getting name');
+                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                        
+                    echo $user_check;
+                    
+                    
+                    mysqli_close($link);
+
+                    
+                    
+                    ?></h2></td>
+
+                    
+
                     <td class="name"><button type="button" style="width:75px; height:35px;" onclick="compileInfo(document.getElementById('min').value,document.getElementById('min').value,document.getElementById('vet1'),document.getElementById('vet2'))">Submit</button></td>
                 </tr>
 
