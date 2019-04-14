@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4387f02f-be59-472d-8150-57bb0ae4e8c5" name="Default Changelist" comment="">
+    <list default="true" id="4387f02f-be59-472d-8150-57bb0ae4e8c5" name="Default Changelist" comment="error fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/MESS_availability.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/MESS_availability.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/session.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -44,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/MESS_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -53,17 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/MESS_availability.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="41" column="72" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="80" />
+            <state relative-caret-position="105">
+              <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HTML/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            <state relative-caret-position="60">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -89,25 +90,25 @@
         <option value="$PROJECT_DIR$/HTML/MESS_assistants.php" />
         <option value="$PROJECT_DIR$/HTML/MESS_assistants.html" />
         <option value="$PROJECT_DIR$/HTML/validate.php" />
-        <option value="/Applications/MAMP/htdocs/HTML/MESS_login.html" />
-        <option value="/Applications/MAMP/htdocs/HTML/MESS_login.php" />
-        <option value="/Applications/MAMP/htdocs/HTML/validate.php" />
+        <option value="$PROJECT_DIR$/../HTML/MESS_login.html" />
+        <option value="$PROJECT_DIR$/../HTML/MESS_login.php" />
+        <option value="$PROJECT_DIR$/../HTML/validate.php" />
         <option value="$PROJECT_DIR$/HTML/success.php" />
         <option value="$PROJECT_DIR$/HTML/Login.php" />
         <option value="$PROJECT_DIR$/HTML/logout.php" />
-        <option value="$PROJECT_DIR$/HTML/connect.php" />
         <option value="$PROJECT_DIR$/HTML/MESS_login.php" />
         <option value="$PROJECT_DIR$/HTML/MESS_availability.html" />
         <option value="$PROJECT_DIR$/HTML/MESS_availabilitiy.php" />
         <option value="$PROJECT_DIR$/Data/data.js" />
         <option value="$PROJECT_DIR$/HTML/MESS_availability.php" />
         <option value="$PROJECT_DIR$/HTML/session.php" />
+        <option value="$PROJECT_DIR$/HTML/connect.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1339" />
+    <option name="width" value="894" />
     <option name="height" value="683" />
   </component>
   <component name="ProjectView">
@@ -187,6 +188,7 @@
       <workItem from="1554681221748" duration="1883000" />
       <workItem from="1555195795682" duration="1357000" />
       <workItem from="1555207661599" duration="572000" />
+      <workItem from="1555208779503" duration="498000" />
     </task>
     <task id="LOCAL-00001" summary="remove test.txt file">
       <created>1554075445573</created>
@@ -311,13 +313,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19035000" />
+    <option name="totallyTimeSpent" value="19533000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1339" height="683" extended-state="0" />
+    <frame x="0" y="23" width="894" height="683" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20431766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3157277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -377,7 +379,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/validate.php" />
-    <entry file="file:///Applications/MAMP/htdocs/HTML/MESS_login.html" />
+    <entry file="file://$PROJECT_DIR$/../HTML/MESS_login.html" />
     <entry file="file://$PROJECT_DIR$/HTML/new_assistant.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -385,9 +387,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Applications/MAMP/htdocs/HTML/connect.php" />
-    <entry file="file:///Applications/MAMP/htdocs/HTML/MESS_login.php" />
-    <entry file="file:///Applications/MAMP/htdocs/HTML/validate.php" />
+    <entry file="file://$PROJECT_DIR$/../HTML/connect.php" />
+    <entry file="file://$PROJECT_DIR$/../HTML/MESS_login.php" />
+    <entry file="file://$PROJECT_DIR$/../HTML/validate.php" />
     <entry file="file://$PROJECT_DIR$/HTML/success.php" />
     <entry file="file://$PROJECT_DIR$/HTML/login.php" />
     <entry file="file://$PROJECT_DIR$/HTML/remove_assistant.php">
@@ -420,29 +422,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/MESS_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/MESS_availability.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="41" column="72" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="80" />
+        <state relative-caret-position="105">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
