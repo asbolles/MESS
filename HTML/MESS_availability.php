@@ -202,6 +202,9 @@
 
     </table>
 
+    <div hidden id="JSgreen" name="PHPgreen" class="JS"></div>
+    <div hidden id="JSyellow" name="PHPyellow" class="JS" ></div>
+
     <table style="width:90%" class="legend">
         <tr>
             <td class="preferred">Preferred</td>

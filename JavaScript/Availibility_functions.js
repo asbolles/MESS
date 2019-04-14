@@ -62,5 +62,20 @@ function compileInfo(min,max, vet1, vet2){
     alert("You must check your Vet Status")
     return;        
     }
+    greenAvail="";
+    yellowAvail="";
+    availInfo[0].forEach(function(avail){
+        greenAvail +=avail;
+    });
+    availInfo[1].forEach(function(avail){
+        yellowAvail +=avail;
+    });
     //Sa(min, max, vet, availInfo[0],availInfo[1])
+
+}
+function finalCompile(green, yellow){
+        var varg= document.getElementById("JSgreen");
+        var vary= document.getElementById("JSyellow");
+        varg.classList.add(green);
+        vary.classList.add(yellow);
 }

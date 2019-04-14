@@ -1,0 +1,63 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.2
+-------------------------------------------------------------------------------
+count time : 2019-04-04 17:55:59
+count workspace : c:\Users\Sam\Desktop\Stuff and things\Coding\Web Projects\Git Repository\Math-Emporium-Student-Scheduler
+total files : 39
+total code lines : 2452
+total comment lines : 93
+total blank lines : 258
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|             19|              0|              0|   0.77|
+   |            .md|              4|              0|              2|   0.16|
+   |           .xml|             25|              0|              0|    1.0|
+   |            .js|            830|             82|             93|     34|
+   |           .php|            248|              3|             52|     10|
+   |               |             81|              1|             10|    3.3|
+   |          .html|            615|              0|             37|     25|
+   |           .css|            630|              7|             64|     26|
+   -------------------------------------------------------------------------
+.idea\dataSources.xml, code is 19, comment is 0, blank is 0.
+.idea\vcs.xml, code is 6, comment is 0, blank is 0.
+Connnect test\connect.php, code is 11, comment is 2, blank is 2.
+Connnect test\form.html, code is 13, comment is 0, blank is 0.
+Data\data.js, code is 55, comment is 7, blank is 12.
+Data\Functions.js, code is 255, comment is 12, blank is 31.
+Data\Master_Functions.js, code is 255, comment is 12, blank is 31.
+HTML\connect.php, code is 11, comment is 0, blank is 0.
+HTML\CSS\EditListOfStudents.css, code is 75, comment is 0, blank is 13.
+HTML\CSS\Finalized.css, code is 92, comment is 2, blank is 13.
+HTML\CSS\Insert-data.php, code is 30, comment is 0, blank is 7.
+HTML\CSS\Login Page.css, code is 60, comment is 0, blank is 9.
+HTML\CSS\Master.css, code is 101, comment is 1, blank is 6.
+HTML\CSS\Proposed_Schedule.css, code is 107, comment is 2, blank is 14.
+HTML\CSS\SA_AvailSheet.css, code is 195, comment is 2, blank is 9.
+HTML\data, code is 81, comment is 1, blank is 10.
+HTML\databasepull.php, it is a binary file.
+HTML\enter_info.php, it is a binary file.
+HTML\Images\Copyright.jpg, it is a binary file.
+HTML\Images\MESS Login Logo.jpg, it is a binary file.
+HTML\Images\MESS Logo.jpg, it is a binary file.
+HTML\logout.php, code is 6, comment is 0, blank is 1.
+HTML\MESS_assistants.php, code is 75, comment is 0, blank is 17.
+HTML\MESS_availability.html, code is 204, comment is 0, blank is 10.
+HTML\MESS_courses.html, code is 100, comment is 0, blank is 3.
+HTML\MESS_finalized.html, code is 109, comment is 0, blank is 8.
+HTML\MESS_login.php, code is 60, comment is 0, blank is 7.
+HTML\MESS_master.html, code is 59, comment is 0, blank is 3.
+HTML\MESS_personal.html, code is 17, comment is 0, blank is 3.
+HTML\MESS_proposed.html, code is 113, comment is 0, blank is 10.
+HTML\new_assistant.php, code is 21, comment is 1, blank is 8.
+HTML\remove_assistant.php, code is 22, comment is 0, blank is 5.
+HTML\session.php, code is 12, comment is 0, blank is 5.
+JavaScript\Availibility_functions.js, code is 64, comment is 3, blank is 0.
+JavaScript\Box.js, code is 20, comment is 7, blank is 1.
+JavaScript\EditListOfStudents.js, code is 3, comment is 0, blank is 0.
+JavaScript\MESS_algorithm.js, code is 178, comment is 41, blank is 18.
+package.json, code is 19, comment is 0, blank is 0.
+README.md, code is 4, comment is 0, blank is 2.
+===============================================================================
