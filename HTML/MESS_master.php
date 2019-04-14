@@ -13,7 +13,7 @@
     <a href="MESS_master.html">Master Schedule</a><br>
     <a href="MESS_assistants.html">Student Assistants</a><br>
     <a href="MESS_courses.html">Start New Semester</a>        
-    <a href="MESS_login.html">Logout</a>
+    <a href="logout.php">Logout</a>
 </div>
 <body>
 <table>
@@ -58,5 +58,10 @@
             }
     </script>
 </table><!--end of full table-->
+<div>
+    <image>
+        <img src="Images/Copyright.jpg" alt="Copyright" class="footer" width:100%>
+    </image>
+</div>
 </body>
 </html>
