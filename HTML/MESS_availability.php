@@ -36,7 +36,6 @@
                     <td class="name"><h2>Student Assistant: 
                     <?php
                     include "session.php";
-                    include "connect.php";
 
                     $query = "SELECT fname FROM users WHERE username = '$user_check'";
                     
