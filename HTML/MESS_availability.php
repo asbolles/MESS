@@ -36,13 +36,7 @@
                     <td class="name"><h2>Student Assistant: 
                     <?php
                     include "session.php";
-                    //DEFINE ('DB_USER', 'MESS');
-                    //DEFINE ('DB_PASD', 'mess');
-                    //DEFINE ('DB_HOST', 'csums.dhcp.bsu.edu');
-                    //DEFINE ('DB_NAME', 'mess');
-                    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
-                    
-                    
+
                     $query = "SELECT fname FROM users WHERE username = '$user_check'";
                     
                     $result = $link->query($query) or die('error getting name');
