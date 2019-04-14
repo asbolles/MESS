@@ -1,0 +1,298 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.2",
+    "workspace": "c:\\Users\\Sam\\Desktop\\Stuff and things\\Coding\\Web Projects\\Git Repository\\Math-Emporium-Student-Scheduler",
+    "linecount": [
+        {
+            "version": "0.2.2",
+            "counttime": "2019-04-04 17:55:59",
+            "filesum": 39,
+            "codesum": 2452,
+            "commentsum": 93,
+            "blanksum": 258,
+            "statistics": {
+                ".json": {
+                    "code": 19,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".md": {
+                    "code": 4,
+                    "comment": 0,
+                    "blank": 2
+                },
+                ".xml": {
+                    "code": 25,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".js": {
+                    "code": 830,
+                    "comment": 82,
+                    "blank": 93
+                },
+                ".php": {
+                    "code": 248,
+                    "comment": 3,
+                    "blank": 52
+                },
+                "": {
+                    "code": 81,
+                    "comment": 1,
+                    "blank": 10
+                },
+                ".html": {
+                    "code": 615,
+                    "comment": 0,
+                    "blank": 37
+                },
+                ".css": {
+                    "code": 630,
+                    "comment": 7,
+                    "blank": 64
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": ".idea\\dataSources.xml"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": ".idea\\vcs.xml"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 2,
+                    "filename": "Connnect test\\connect.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "Connnect test\\form.html"
+                },
+                {
+                    "blank": 12,
+                    "code": 55,
+                    "comment": 7,
+                    "filename": "Data\\data.js"
+                },
+                {
+                    "blank": 31,
+                    "code": 255,
+                    "comment": 12,
+                    "filename": "Data\\Functions.js"
+                },
+                {
+                    "blank": 31,
+                    "code": 255,
+                    "comment": 12,
+                    "filename": "Data\\Master_Functions.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "HTML\\connect.php"
+                },
+                {
+                    "blank": 13,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "HTML\\CSS\\EditListOfStudents.css"
+                },
+                {
+                    "blank": 13,
+                    "code": 92,
+                    "comment": 2,
+                    "filename": "HTML\\CSS\\Finalized.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "HTML\\CSS\\Insert-data.php"
+                },
+                {
+                    "blank": 9,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "HTML\\CSS\\Login Page.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 101,
+                    "comment": 1,
+                    "filename": "HTML\\CSS\\Master.css"
+                },
+                {
+                    "blank": 14,
+                    "code": 107,
+                    "comment": 2,
+                    "filename": "HTML\\CSS\\Proposed_Schedule.css"
+                },
+                {
+                    "blank": 9,
+                    "code": 195,
+                    "comment": 2,
+                    "filename": "HTML\\CSS\\SA_AvailSheet.css"
+                },
+                {
+                    "blank": 10,
+                    "code": 81,
+                    "comment": 1,
+                    "filename": "HTML\\data"
+                },
+                {
+                    "filename": "HTML\\databasepull.php",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "HTML\\enter_info.php",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "HTML\\Images\\Copyright.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "HTML\\Images\\MESS Login Logo.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "HTML\\Images\\MESS Logo.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "HTML\\logout.php"
+                },
+                {
+                    "blank": 17,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_assistants.php"
+                },
+                {
+                    "blank": 10,
+                    "code": 204,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_availability.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 100,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_courses.html"
+                },
+                {
+                    "blank": 8,
+                    "code": 109,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_finalized.html"
+                },
+                {
+                    "blank": 7,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_login.php"
+                },
+                {
+                    "blank": 3,
+                    "code": 59,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_master.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_personal.html"
+                },
+                {
+                    "blank": 10,
+                    "code": 113,
+                    "comment": 0,
+                    "filename": "HTML\\MESS_proposed.html"
+                },
+                {
+                    "blank": 8,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "HTML\\new_assistant.php"
+                },
+                {
+                    "blank": 5,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "HTML\\remove_assistant.php"
+                },
+                {
+                    "blank": 5,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "HTML\\session.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 64,
+                    "comment": 3,
+                    "filename": "JavaScript\\Availibility_functions.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 20,
+                    "comment": 7,
+                    "filename": "JavaScript\\Box.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "JavaScript\\EditListOfStudents.js"
+                },
+                {
+                    "blank": 18,
+                    "code": 178,
+                    "comment": 41,
+                    "filename": "JavaScript\\MESS_algorithm.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 2,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "README.md"
+                }
+            ]
+        }
+    ]
+}

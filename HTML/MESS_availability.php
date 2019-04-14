@@ -53,7 +53,7 @@
 
                     
 
-                    <td class="name"><button type="button" style="width:75px; height:35px;" onclick="compileInfo(document.getElementById('min').value,document.getElementById('min').value,document.getElementById('vet1'),document.getElementById('vet2'))">Submit</button></td>
+                    <td class="name"><button type="button" style="width:75px; height:35px;" onclick="compileInfo(document.getElementById('min').value)">Submit</button></td>
                 </tr>
 
             </table>
@@ -77,12 +77,12 @@
         <tr>
             <table style="width:30%" class="returning">
                 <tr class="returning">
-                    <td class="question">Are you a returning Assistant?</td>
-                    <td colspan="2" class="answer">Yes</td>
-                    <td class="box"><input type="checkbox" id="vet1"></td>
-                    <td class="space"></td>
-                    <td class="answer">No</td>
-                    <td class="box"><input type="checkbox" id="vet2"></td>
+                    <td class="question"></td>
+                    <select name="status" value = "Status" id="vet1">Status
+                        <option value = "rookie">Rookie</option>
+                        <option value = "veteran">Veteran</option>
+                    </select>
+                    </td>
                 </tr>
             </table>
         </tr>
@@ -201,6 +201,9 @@
         </tr>
 
     </table>
+
+    <div hidden id="JSgreen" name="PHPgreen" class="JS"></div>
+    <div hidden id="JSyellow" name="PHPyellow" class="JS" ></div>
 
     <table style="width:90%" class="legend">
         <tr>
