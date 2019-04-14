@@ -77,12 +77,12 @@
         <tr>
             <table style="width:30%" class="returning">
                 <tr class="returning">
-                    <td class="question">Are you a returning Assistant?</td>
-                    <td colspan="2" class="answer">Yes</td>
-                    <td class="box"><input type="checkbox" id="vet1"></td>
-                    <td class="space"></td>
-                    <td class="answer">No</td>
-                    <td class="box"><input type="checkbox" id="vet2"></td>
+                    <td class="question"></td>
+                    <select name="status" value = "Status" id="vet1">Status
+                        <option value = "rookie">Rookie</option>
+                        <option value = "veteran">Veteran</option>
+                    </select>
+                    </td>
                 </tr>
             </table>
         </tr>
