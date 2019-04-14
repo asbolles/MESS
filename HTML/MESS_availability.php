@@ -53,7 +53,7 @@
 
                     
 
-                    <td class="name"><button type="button" style="width:75px; height:35px;" onclick="compileInfo(document.getElementById('min').value,document.getElementById('min').value,document.getElementById('vet1'),document.getElementById('vet2'))">Submit</button></td>
+                    <td class="name"><button type="button" style="width:75px; height:35px;" onclick="compileInfo(document.getElementById('min').value)">Submit</button></td>
                 </tr>
 
             </table>
