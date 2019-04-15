@@ -1,10 +1,7 @@
-body
-{
-    font-family: "Cambria"
-}       
 html
 {
     padding-left: 2.67in;
+    position: fixed;
 }
 body
 {
@@ -15,6 +12,7 @@ body
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: "Cambria"
 }
 .sidebar 
 {
@@ -43,45 +41,101 @@ h1, h2
     color: whitesmoke;
 }
 
+
+.intro
+{
+    border: 2pt solid yellow;
+    font-size: 14pt;
+    margin: 10px;
+    padding-left: 5px;
+    width: 60%;
+}
+.class{
+    width: 100%;
+    padding-left: 5pt;
+    padding-bottom: 10pt;`
+    }
+    .hours
+    {
+        width:90%;
+        padding: 10px; 
+        border: 2pt solid green;   
+    }
+    .to
+    {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .size
+    {
+        font-size: 12pt;
+        text-align: left;
+        padding-left: 8pt;
+    }
+    .status
+    {
+        width: 60%;
+        text-align: center;
+        Border: 2pt solid orange;
+        padding: 10pt;
+    }
+    .legend
+    {
+        width:100%;
+        text-align: center;
+        color: black; 
+        border: 2pt solid white;
+        padding: 5pt; 
+    }
+    .button
+    {
+        margin-left: 10pt; 
+        width: 2in;
+        height: .6in;
+        font-size: 15pt;
+    }
+    .dash
+    {
+        padding-left:20px;
+        padding-right: 20px;
+        font-size: 14pt;
+        color: white;
+        text-align: center;
+    }
+    .text
+    {
+        text-align: left;
+        color: white;
+    }
+    .preferred
+    {
+        background-color: green;
+    }
+    .available
+    {
+        background-color: yellow;
+    }
+    .busy
+    {
+        background-color: red;
+    }
+    .red{
+        color: red;
+        background-color: red;
+    }
+    .yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
+        clicking fast). It is not inheritable, so do not try and condense*/
+        color: yellow;
+        background-color: yellow;
+    }
+    .green{/*see above*/
+        color: green;
+        background-color: green;
+    }
 .sidebar a:hover
 {
     color: black;
-}
-.Instructions
-{
-    position: fixed;
-    top: 35pt;
-    right: 75pt;
-    height: 200px;
-    width: 415px;
-    border: 2px solid #73AD21;
-}
-.name
-{
-    text-align: left;
-
-}
-.hours
-{
-    padding-top: 10px; 
-    padding-bottom: 20px;
-
-}
-.question, .returning
-{
-    text-align: right;
-    padding-right: 15px;
-    font-size: 12pt;
-}
-.returning
-{
-    padding-bottom:.5in; 
-}
-.to
-{
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 input[type=number]
 {
@@ -91,71 +145,6 @@ input[type=number]
 {
     text-align: left;
 }
-
-.size
-{
-    font-size: 12pt;
-    text-align: left;
-    padding-left: 8pt;
-}
-.space
-{
-    padding-left: 20px;
-}
-
-
-.MWF
-{
-    padding-bottom: .25in;
-}
-.TR
-{
-    padding-bottom: .25in;
-    
-}
-.legend
-{
-    text-align: center;
-    color: black;  
-    
-}
-.dash
-{
-    padding-left:20px;
-    padding-right: 20px;
-    font-size: 14pt;
-    color: white;
-}
-.text
-{
-    text-align: left;
-    color: white;
-}
-.preferred
-{
-    background-color: green;
-}
-.available
-{
-    background-color: yellow;
-}
-.busy
-{
-    background-color: red;
-}
-.red{
-    color: red;
-    background-color: red;
-}
-.yellow{/*the last section is supposed to be repeated. It makes the text of color boxes unselectable (which happens when 
-    clicking fast). It is not inheritable, so do not try and condense*/
-    color: yellow;
-    background-color: yellow;
-}
-.green{/*see above*/
-    color: green;
-    background-color: green;
-}
 .footer
 {
     position: fixed;
@@ -164,7 +153,6 @@ input[type=number]
     padding-left: 2in;
     padding-right: 2in;
 }
-
 .red{
     color: red;
     background-color: red;
@@ -193,15 +181,33 @@ input[type=number]
        -ms-user-select: none;
        user-select: none;
     }
-    .table tr td, .table {
+    .chart
+    {
+        width: 100%;
         border: 1pt solid black;
-        border-collapse: collapse;
-        border-spacing: 3%;
-        width: 30%;
-    }
-    .TRtable{
-       display: inline-block;
     }
     .MWFtable{
         display: inline-block;
+    }
+    .TRtable{
+       display: inline-block;
+       padding-bottom: .7in;  
+    }
+    .days{
+        background-color: blue;
+        width:30%
+    }`
+    td
+    {
+        border: 1pt solid black;
+    }
+    .test
+    {
+        padding-left: .5in;
+        padding-right: .5in;
+        text-align: center;
+        border: 1pt solid black;
+        color: black;
+        background-color: white;
+        font-size: 13pt;
     }

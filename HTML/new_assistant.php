@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    //<link rel="stylesheet" href="CSS/EditListOfStudents.css" />
+    <link rel="stylesheet" href="CSS/EditListOfStudents.css" />
 </head>
 <body>
 
@@ -9,13 +9,13 @@
 </html>
 <?php
 
-$name = filter_input(INPUT_POST, 'name');
+$name = filter_input(INPUT_POST, 'fname');
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
 
 include("connect.php");
 
-$sql = "INSERT INTO users (name, username, password) 
+$sql = "INSERT INTO users (fname, username, password) 
 VALUES ('$name','$username','$password');";
 
 if ($link->query($sql) === TRUE){

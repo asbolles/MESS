@@ -46,13 +46,13 @@ echo "<tr><th>Student Name</th><th>Username</th><th>Password</th>";
 
 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
     echo "<tr><td>";
-    echo $row['name'];
+    echo $row['fname'];
     echo "</td><td>";
     echo $row['username'];
     echo "</td><td>";
     echo $row['password'];
     echo "</td>";
-    echo "<td><button onclick='okToDelete()'>Remove</button></td></tr>";};
+    echo "<td><button onclick='okToDelete()' name='delete' >Remove</button></td></tr>";};
 echo "</table>";
 
 
@@ -62,7 +62,7 @@ mysqli_close($link);
     <form method="post" action="new_assistant.php">
         <h3>Add New Assistant</h3>
         <p>To add a new assistant to the list, you need to create a username and password for the assistant to login with.</p>
-        New Assistant Name: <input type="text" name="name">
+        New Assistant Name: <input type="text" name="fname">
         <br>
         Create Username: <input type="text" name="username"><br>
         Create Password: <input type="password" name="password"><br>
@@ -76,11 +76,16 @@ mysqli_close($link);
     function okToDelete() {
     var txt;
     if (confirm("Are you sure you would like to remove this assistant?")) {
+        <?php
+            if ($SERVER["REQUEST_METHOD"] === "POST") {
 
-
-
+                if (isset($_POST['delete'])) {
+                    header("location:remove_assistant.php");
+                }
+            }
+        ?>
     } else {
-        txt = "You pressed Cancel!";
+        txt = "";
     }
     document.getElementById("demo").innerHTML = txt;
     }
