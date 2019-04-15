@@ -197,10 +197,6 @@ input[type=number]
         background-color: blue;
         width:30%
     }
-    td
-    {
-        border: 1pt solid black;
-    }
     .test
     {
         padding-left: .5in;
