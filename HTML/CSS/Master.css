@@ -80,6 +80,7 @@ html{
 .table tr td,.table {
     border: 1pt solid black;
     border-collapse: collapse;
+    
 }
 button{
     padding: 5px;
@@ -113,6 +114,15 @@ p{
     width: 50%;
     
 }
-.th{
+th, tr, table{
     border: 1pt solid black;
+}
+.coursetable
+{
+    object-position: center;
+    border: 1pt solid black;
+}
+.php
+{
+    padding-bottom: 1in;
 }

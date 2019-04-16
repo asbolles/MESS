@@ -44,24 +44,8 @@ function submitAvail(min){
     }
     //austin the greenAvail=green and yellowAvail=yellow;
 }
-function compileInfo(min,max, vet1, vet2){
+function compileInfo(min){
     var availInfo= submitAvail(min);
-    var vet = true; 
-    if(vet1.checked&&vet2.checked){
-        alert("Choose one Vet status only");
-    }
-    else if (vet1.checked||vet2.checked){
-        if (vet1.checked){
-            vet=true;
-        }
-        if ((vet2).checked){
-            vet=false;
-        }
-    }
-    else{
-    alert("You must check your Vet Status")
-    return;        
-    }
     greenAvail="";
     yellowAvail="";
     availInfo[0].forEach(function(avail){
@@ -70,12 +54,15 @@ function compileInfo(min,max, vet1, vet2){
     availInfo[1].forEach(function(avail){
         yellowAvail +=avail;
     });
-    //Sa(min, max, vet, availInfo[0],availInfo[1])
-
+    //(min, max, vet, availInfo[0],availInfo[1])
+    finalCompile(greenAvail,yellowAvail);
 }
 function finalCompile(green, yellow){
         var varg= document.getElementById("JSgreen");
         var vary= document.getElementById("JSyellow");
-        varg.classList.add(green);
-        vary.classList.add(yellow);
+        varg.value =green;
+        vary.value=yellow;
+}
+function testing(){
+    compileInfo();
 }

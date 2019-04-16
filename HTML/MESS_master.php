@@ -39,29 +39,61 @@
         </tr>
     </td><tr><button onclick="changePage()">Edit Availibility</button><button onclick="window.location.href='MESS_proposed.html'">Request Proposed Schedule</button></tr>
 </table>
-<table id="course" class="last">
-    <tr class="head"> Course Schedule</tr>
-    <tr class="th">
-        <td>#</td>
-        <td>Course</td>
-        <td>Section</td>
-        <td>Teacher</td>
-        <td>Start</td>
-        <td>End</td>
-        <td>Days</td>
-    </tr>
-        
-    </tr>
-    <script>
-        for(i=0;i<5;i++){
-            document.write("<tr><td>Math</td><td>101</td><td>1</td><td>Dinkleburg</td><td>9:00am</td><td>10:15pm</td><td>TR</td></tr>")
-            }
-    </script>
-</table><!--end of full table-->
+
+<?php
+DEFINE ('DB_USER', 'MESS');
+DEFINE ('DB_PASD', 'mess');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME', 'mess_test');
+$link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
+if (!$link) {
+    die('error connecting to database');
+}
+
+
+$sql = "SELECT * FROM Courses";
+
+$result = $link->query($sql) or die("error getting course data");
+
+
+echo "<table style='width:70%'>";
+echo "<tr>
+<th>Course</th>
+<th>Section</th>
+<th>Instructor</th>
+<th>Days</th>
+<th>Start Time</th>
+<th>End Time</th>
+<th>#SAs</th>";
+
+while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo $row['Course'];
+    echo "</td><td>";
+    echo $row['Section'];
+    echo "</td><td>";
+    echo $row['Instructor'];
+    echo "</td><td>";
+    echo $row['Days'];
+    echo "</td><td>";
+    echo $row['Start'];
+    echo "</td><td>";
+    echo $row['End'];
+    echo "</td><td>";
+    echo $row['#ofSAs'];
+    echo "</td><td>";
+    echo "</td></tr>";};
+echo "</table>";
+mysqli_close($link);
+?>
+<div class="php">
+</div>
 <div>
     <image>
         <img src="Images/Copyright.jpg" alt="Copyright" class="footer" width:100%>
     </image>
 </div>
+
 </body>
+
 </html>

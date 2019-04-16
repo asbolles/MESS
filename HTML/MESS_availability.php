@@ -28,8 +28,8 @@
         mysqli_close($link);
         ?>
     !</h2>
-
-    <div class = "intro">
+    <button onclick="">the</button>
+    <!-- <div class = "intro">
         <p>---INSTRUCTIONS----</p>
         <p>Click on the shift that you can work on the day week to cycle through the options of availability.</p>
         <p>When done filling out the tables and satisfied, click Submit.</p>
@@ -38,7 +38,8 @@
         <p>Please select what your Assistant Status is for this semester.<br>
         Rookie - Newly hired assistant<br>
         Veteran - Returning assistant from previous semtester
-    </div>
+    </div> -->
+    <form method ="post" action="Submit_SA_availability.php">
     <table class = 'class'>
         <tr>
             <td>
@@ -51,9 +52,9 @@
                     </tr>
                     <tr>
                         <td class="question">Hours willing to work:</td>
-                        <td><input type="number" id="min" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+                        <td><input type="number" name="Min" id="min" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
                         <td class="to">to</td>
-                        <td><input type="number" id="max" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
+                        <td><input type="number" name="Max" id="max" min="0" max="20" value="0" step="1" onkeydown="return false" /></td>
                         <td>  
                     </tr>
                 </table>
@@ -61,7 +62,7 @@
             <td>
                 <div class="status"> 
                     Please indicate your Assistant Status
-                    <select name="status" id="vet1"> 
+                    <select name="Status" id="vet1"> 
                         <option value = "rookie">Rookie</option>
                         <option value = "veteran">Veteran</option>
                     </select>
@@ -86,9 +87,13 @@
                     </tr>
                 </table>
             </td>
-            <td><button class = "button " action = "onbuttonpress">Submit Semester Availability</td>
+            
+            <td><input type = "submit" class = "button" onsubmit="compileInfo(document.getElementById('min').value" value ="Submit Semester Availability"></td>
         </tr>
     </table>
+    <input type="text" hidden id="JSgreen" name="PHPgreen" value = "green value">
+    <input type="text" hidden id="JSyellow" name="PHPyellow" value = "yellow value">
+    </form>
         
         
     <table class = "chart">
@@ -209,19 +214,15 @@
             </td>
         </tr>
     </table>
+    <div class="bottom"> </div>
 
     
 
-    <div hidden id="JSgreen" name="PHPgreen" class="JS"></div>
-    <div hidden id="JSyellow" name="PHPyellow" class="JS" ></div>
+   
 </body>
 <script>
     changePage();
 </script>
 </form>
-<div>
-    <image>
-        <img src="Images/Copyright.jpg" alt="Copyright" class="footer" width:100%>
-    </image>
-</div>
+
 </html>
