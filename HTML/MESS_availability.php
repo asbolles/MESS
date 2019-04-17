@@ -28,7 +28,7 @@
         mysqli_close($link);
         ?>
     !</h2>
-    <button onclick="">the</button>
+
     <!-- <div class = "intro">
         <p>---INSTRUCTIONS----</p>
         <p>Click on the shift that you can work on the day week to cycle through the options of availability.</p>
@@ -87,15 +87,16 @@
                     </tr>
                 </table>
             </td>
+            <!--onsubmit="compileInfo(document.getElementById('min').value)"||||<input type = "submit" class = "button" value ="Submit Semester Availability">-->
             
-            <td><input type = "submit" class = "button" onsubmit="compileInfo(document.getElementById('min').value" value ="Submit Semester Availability"></td>
+           <td><button onclick="compileInfo(document.getElementById('min').value)">test</button></td>
         </tr>
     </table>
     <input type="text" hidden id="JSgreen" name="PHPgreen" value = "green value">
     <input type="text" hidden id="JSyellow" name="PHPyellow" value = "yellow value">
     </form>
         
-        
+   
     <table class = "chart">
         <tr>
             <td>

@@ -21,16 +21,16 @@ function changePage(){
     }
     }//end of changepage
 function submitAvail(min){
-   min=parseInt(min,10);
+    min=parseInt(min,10);
     var green=[];
     var yellow=[];
-    var boxlist=document.getElementsByClassName("box");
-   for(var i=0; i<boxlist.length; i++){
-        if(boxlist[i].classList.contains("green")){
-            green.push(boxlist[i].id);
+    var boxlist2=document.getElementsByClassName("box");
+   for(var i=0; i<boxlist2.length; i++){
+        if(boxlist2[i].classList.contains("green")){
+            green.push(boxlist2[i].id);
         }
-        else if(boxlist[i].classList.contains("yellow")){
-            yellow.push(boxlist[i].id);
+        else if(boxlist2[i].classList.contains("yellow")){
+            yellow.push(boxlist2[i].id);
         }
     }
     if (min>green.length+yellow.length){
@@ -46,8 +46,9 @@ function submitAvail(min){
 }
 function compileInfo(min){
     var availInfo= submitAvail(min);
-    greenAvail="";
-    yellowAvail="";
+    
+    var greenAvail='';
+    var yellowAvail='';
     availInfo[0].forEach(function(avail){
         greenAvail +=avail;
     });
@@ -62,7 +63,4 @@ function finalCompile(green, yellow){
         var vary= document.getElementById("JSyellow");
         varg.value =green;
         vary.value=yellow;
-}
-function testing(){
-    compileInfo();
 }
