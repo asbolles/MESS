@@ -46,7 +46,6 @@ function submitAvail(min){
 }
 function compileInfo(min){
     var availInfo= submitAvail(min);
-    
     var greenAvail='';
     var yellowAvail='';
     availInfo[0].forEach(function(avail){

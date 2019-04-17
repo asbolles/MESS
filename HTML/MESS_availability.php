@@ -17,7 +17,6 @@
     </div>
     
     <h1>Assistant Availability</h1>
-    <h2> Term: [Insert Term]</h2>
     <h2> Hello
         <?php
         include "session.php";
@@ -27,7 +26,7 @@
         echo $user_check;
         mysqli_close($link);
         ?>
-    !</h2>
+    </h2>
 
     <!-- <div class = "intro">
         <p>---INSTRUCTIONS----</p>
@@ -178,38 +177,38 @@
                     </tr>
                     <tr>
                         <td class = "test">8:00-9:15</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T0800">red</td>
+                        <td class="box red" id="R0800">red</td>
                     </tr>
                     <tr>
                         <td class = "test">9:30-10:45</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T0930">red</td>
+                        <td class="box red" id="R0930">red</td>
                     </tr>
                     <tr>
                         <td class = "test">11:00-12:15</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T1100">red</td>
+                        <td class="box red" id="R1100">red</td>
                     </tr>
                     <tr>
                         <td class = "test">12:30-1:45</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T1230">red</td>
+                        <td class="box red" id="R1230">red</td>
                     </tr>
                     <tr>
                         <td class = "test">2:00-3:15</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T0200">red</td>
+                        <td class="box red" id="R0200">red</td>
                     </tr>
                     <tr>
                         <td class = "test">3:30-4:45</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T0330">red</td>
+                        <td class="box red" id="R0330">red</td>
                     </tr>
                     <tr>
                         <td class = "test"> 5:00-6:15</td>
-                        <td class="box red" id="M0500">red</td>
-                        <td class="box red" id="W0500">red</td>
+                        <td class="box red" id="T0500">red</td>
+                        <td class="box red" id="R0500">red</td>
                     </tr>
                 </table>  
             </td>
