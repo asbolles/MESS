@@ -63,4 +63,5 @@ function finalCompile(green, yellow){
         var vary= document.getElementById("JSyellow");
         varg.value =green;
         vary.value=yellow;
+        alert("Test final");
 }

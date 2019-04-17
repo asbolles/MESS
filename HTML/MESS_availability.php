@@ -88,15 +88,16 @@
                 </table>
             </td>
             <!--onsubmit="compileInfo(document.getElementById('min').value)"||||<input type = "submit" class = "button" value ="Submit Semester Availability">-->
-            
-           <td><button onclick="compileInfo(document.getElementById('min').value)">test</button></td>
+              <button onclick="compileInfo(document.getElementById('min').value)">test</button>
+           <td></td>
         </tr>
     </table>
     <input type="text" hidden id="JSgreen" name="PHPgreen" value = "green value">
     <input type="text" hidden id="JSyellow" name="PHPyellow" value = "yellow value">
     </form>
         
-   
+ 
+   <!---->
     <table class = "chart">
         <tr>
             <td>
