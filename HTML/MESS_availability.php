@@ -83,7 +83,7 @@
                     <tr>
                         <td class="busy">Busy</td>
                         <td class="dash"> - </td>
-                        <td class="text"> Shift tha you cannot work</td>
+                        <td class="text"> Shift that you cannot work</td>
                     </tr>
                 </table>
             </td>

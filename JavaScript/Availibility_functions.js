@@ -50,10 +50,10 @@ function compileInfo(min){
     var greenAvail='';
     var yellowAvail='';
     availInfo[0].forEach(function(avail){
-        greenAvail +=avail;
+        greenAvail +=avail+",";
     });
     availInfo[1].forEach(function(avail){
-        yellowAvail +=avail;
+        yellowAvail +=avail+",";
     });
     //(min, max, vet, availInfo[0],availInfo[1])
     finalCompile(greenAvail,yellowAvail);
