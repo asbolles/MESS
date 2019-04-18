@@ -4,7 +4,7 @@ function returnedCandidateList(hour,listofSAs){
     //add green candidates for the hour
     //add yellow candidates for the hour
     //return: returnedCandidateList
-    var returnedCandidateList =[]
+    var returnedCandidateList =[];
     listofSAs.forEach(function(sa){
         if (sa.green.includes(hour)){
             returnedCandidateList.push(sa);
@@ -12,25 +12,26 @@ function returnedCandidateList(hour,listofSAs){
         else if (sa.yellow.includes(hour)){
             returnedCandidateList.push(sa);
         }
-    })
+    });
     return returnedCandidateList;
-    
 }
 
 
 //sort hours by most needed to take care of
 
-function sortPriority(array){//array is array of hours
+function sortPriority(hourarray){//array is array of hours
     var sorted=[];
-    for(var i=0;i<array.length;i++){//for each hour
-        var current=array[i].priority;//priority
-        for(var j=0;j<sorted.length;j++){//searching sorted
-            if (current<= sorted[j]) {
-                sorted.splice(j,0,array[i]);
+    sorted.push(hourarray[0]);
+    for(var i=1;i<hourarray.length;i++){//for each hour
+        var current=hourarray[i].priority;//priority
+        for(var j=0;j<sorted.length;j++){//searching sorted sorts by [less, more]
+            if (current<= sorted[j].priority) {
+                sorted.splice(j,0,hourarray[i]);
                 break;
-            }       
-            if(j+1==sorted.length){
-                sorted.push(array[j]);
+            }  
+            else if(j+1==sorted.length){
+                sorted.push(hourarray[j]);
+                break;
             }
          }
     }
@@ -45,8 +46,15 @@ function sortSAsbyPercent(candidateList,hour){
     //sort SAs by availability for entire class
     //sort SAs by veteran/rookie status
     var sorted=[];
-    for(var i=0;i<candidateList.length;i++){//for each sa
+    if (candidateList.length==0){
+
+    }
+    else{
+    sorted.push(candidateList[0]);
+    for(var i=1;i<candidateList.length;i++){//for each sa
+       
         var current=candidateList[i].percent;//percent
+       
         for(var j=0;j<sorted.length;j++){//searching sorted
             if (current>sorted[j].percent-10 &&current>sorted[j].percent+10){
                 if (sortbyGreen(current,sorted[j],hour)==current){
@@ -59,9 +67,11 @@ function sortSAsbyPercent(candidateList,hour){
             }       
             if(j+1==sorted.length){
                 sorted.push(candidateList[j]);
+                break;
             }
          }
     }
+}//end of else 
     return sorted;
 }
 
@@ -163,27 +173,29 @@ function sortbyVetstatus(current,comparison){
 
 //
 function updatepercent(listofSAs){
-    listofSAs.array.forEach(function(sa){
-        sa.percent=workingHours.length/median(sa);       
+   
+    listofSAs.forEach(function(sa){
+        var num =median(sa);
+        sa.percent =(sa.workingHours.length)/num; 
+        
     });
 }
 
 function median (SA){
+    
     var bottom= Math.floor((SA.maxHr+SA.maxHr)/2);
+    
     return bottom;
 }
 
 //main function***********************************************************************************************************
 function algorithm(listofSAs, listofHours){
-    var sortedhourList=sortHours(listofHours);
-    //  hourlist
-    //      sortPriority
+    var sortedhourList=sortHours(listofHours,listofSAs);
     assignSAs(sortedhourList,listofSAs);
-    //  sortSAsbyPercent
-    //      
+    
 }
 
-function sortHours(arrayofHours){
+function sortHours(arrayofHours,listofSAs){
     //input: array of hours (class times)
     //for each hour, take cardinality of candidate list (hour)
     //for each hour, take cardinality - numrequired (hour)
@@ -191,29 +203,52 @@ function sortHours(arrayofHours){
     //return: sorted array of hours
     var hourList=[];
     arrayofHours.forEach(function(hour){
-        var cardinality = hour.candidatelist.length;
+        var candidateList = returnedCandidateList(hour.name,listofSAs);
+        hour.candidatelist= candidateList;
+        var cardinality = candidateList.length;
         var priority = cardinality-hour.numRequired;
         hour.priority=priority;
         hourList.push(hour);
     })
-    var sorted =sortPriority(hourList);
+    var sorted =sortPriority(arrayofHours);
     return sorted;
 }
 
 function assignSAs(sortedHours,listofSAs){
+  var redflag=[];
     sortedHours.forEach(function(hour){
-        var candidateList =returnedCandidateList(hour,listofSAs); //returns unsorted candidate list 
-        var sortedhour =sortSAsbyPercent(candidateList, hour.name);//takes in unsorted, sorts it.
+        var sortedhour =sortSAsbyPercent(hour.candidatelist, hour);//candidate list
+        if (sortedhour.length==0){
+            redflag.push(hour);
+        }
+        else{
+            alert(hour.numRequired+" > "+hour.candidatelist.length);
+        if (hour.numRequired>hour.candidatelist.length){
+            redflag.push(hour);
+        }
+        else{
+          
         for(var i=0;i<hour.numRequired;i++){
             hour.workingHours.push(sortedhour[0]); 
-            sortedhour[0].workingHours.push(hour);
-            sortedhour.shift();
-        }
+            sortedhour[0].workingHours.push(hour.name);
+            sortedhour.shift(); 
+        } 
+       
+        if (sortedhour.length>0){
         sortedhour.forEach(function(sa){
             hour.sublist.push(sa);
         })
+    }
+    
         updatepercent(listofSAs);
+    }
+    
+    }//end of else
     })
+    // redflag.forEach(function(flag){
+    //     alert(flag.name);
+    // })
+   
 
 }
 
