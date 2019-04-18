@@ -19,12 +19,12 @@ include ("connect.php");
 include ("session.php");
 
 
-$sql = "INSERT INTO sas(name, greenAvail, yellowAvail, minHr,maxHr,vetStatus)
- VALUES ('$user_check','$green','$yellow',$min,$max,'$status')";
+$sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow',minHr=$min, maxHr=$max, vetStatus='$status'
+ WHERE fname='$user_check'";
 
 
 if ($link->query($sql) === TRUE){
-  echo 'Assistant Availability submitted added successfully';
+  echo 'Assistant Availability submitted successfully';
 } else {
     echo 'Error: '.$sql ."<br>". $link->error;
 }

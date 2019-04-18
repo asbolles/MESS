@@ -1,6 +1,7 @@
 html 
 {
      background-color: darkslategray;
+     padding-left: 2.76in;
     
 }
 
@@ -78,16 +79,23 @@ td, tr
 td
 {
      text-align: center;
-     
-
 }
-table
-{
-     padding-left: 50px;
-     padding-left: 2.9in;
+.input
+{    
+    
 }
 .newassistant
 {
-     padding-left: 2.67in;
-     color: white;
+     width: 27%;
+     background-color: brown;
+}
+.editassistant
+{
+     background-color: royalblue;
+     width: 27%;
+}
+.removeassistant
+{
+     background-color: green;
+     width: 27%;
 }

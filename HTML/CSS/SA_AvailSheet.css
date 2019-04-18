@@ -47,12 +47,12 @@ h1, h2
     font-size: 14pt;
     margin: 10px;
     padding-left: 5px;
-    width: 60%;
+    width:80%;
 }
 .class{
-    width: 100%;
+    width: 112%;
     padding-left: 5pt;
-    padding-bottom: 10pt;`
+    padding-bottom: 10pt;
     }
     .hours
     {
@@ -74,7 +74,7 @@ h1, h2
     }
     .status
     {
-        width: 60%;
+        width: 80%;
         text-align: center;
         Border: 2pt solid orange;
         padding: 10pt;
@@ -106,10 +106,12 @@ h1, h2
     {
         text-align: left;
         color: white;
+        width: 40ch;
     }
     .preferred
     {
         background-color: green;
+        width: 40%;
     }
     .available
     {
@@ -206,6 +208,11 @@ input[type=number]
         background-color: white;
         font-size: 13pt;
     }
-    .bottom{
-        padding: 1in;
+    .bottom
+    {
+       
+    }
+    .button
+    {
+       margin-right: 30px; 
     }

@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/EditListOfStudents.css" />
+   
 </head>
 <body>
 
+</body>
+</html>
 <?php
-$id = filter_input(INPUT_POST, 'id');
-$firstname = filter_input(INPUT_POST, 'firstname');
-$lastname = filter_input(INPUT_POST, 'lastname');
-$username = filter_input(INPUT_POST, 'username');
-$password = filter_input(INPUT_POST, 'password');
+
+$name = filter_input(INPUT_POST, 'fname');
 
 include("connect.php");
 
-$id=$_POST['$td'];
-$sql = "DELETE FROM users WHERE id VALUES ('$id');";
+$sql="DELETE FROM users WHERE fname = '$name';";
 
+$sql2="DELETE FROM sas WHERE fname = '$name';";
+
+echo $sql; 
 if ($link->query($sql) === TRUE){
-    echo "Assistant Removed";
-} else {
-    echo 'Error: '.$sql ."<br>". $link->error;
+    if($link->query($sql2)=== TRUE){
+        echo 'Assistant was removed successfully';
+    }else{
+        echo 'Error: '.$sql ."<br>". $link->error;
+    }
+}else{
+   echo 'Error: '.$sql ."<br>". $link->error;
 }
+echo '<script>window.location.href = "MESS_assistants.php";</script>';
 
 $link->close();
 ?>

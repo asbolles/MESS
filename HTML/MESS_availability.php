@@ -28,7 +28,7 @@
         ?>
     </h2>
 
-    <!-- <div class = "intro">
+ <div class = "intro">
         <p>---INSTRUCTIONS----</p>
         <p>Click on the shift that you can work on the day week to cycle through the options of availability.</p>
         <p>When done filling out the tables and satisfied, click Submit.</p>
@@ -36,8 +36,8 @@
         <p>Note: Student Assistants are mostly needed on M - W - F</p>
         <p>Please select what your Assistant Status is for this semester.<br>
         Rookie - Newly hired assistant<br>
-        Veteran - Returning assistant from previous semtester
-    </div> -->
+        Veteran - Returning assistant from previous semtester</p>
+    </div>
     <form method ="post" action="Submit_SA_availability.php">
     <table class = 'class'>
         <tr>
@@ -68,6 +68,9 @@
                 </div>
             </td>
             <td>
+                <button onclick="compileInfo(document.getElementById('min').value)" class = "button">Submit Schedule Availability</button>
+            </td>
+            <td>
                 <table class="legend">
                     <tr>
                         <td class="preferred">Preferred</td>
@@ -85,18 +88,13 @@
                         <td class="text"> Shift that you cannot work</td>
                     </tr>
                 </table>
-            </td>
-            <!--onsubmit="compileInfo(document.getElementById('min').value)"||||<input type = "submit" class = "button" value ="Submit Semester Availability">-->
-              <button onclick="compileInfo(document.getElementById('min').value)">test</button>
-           <td></td>
+           </td>
         </tr>
     </table>
     <input type="text" hidden id="JSgreen" name="PHPgreen" value = "green value">
     <input type="text" hidden id="JSyellow" name="PHPyellow" value = "yellow value">
     </form>
         
- 
-   <!---->
     <table class = "chart">
         <tr>
             <td>
