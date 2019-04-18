@@ -54,6 +54,8 @@ function compileInfo(min){
     availInfo[1].forEach(function(avail){
         yellowAvail +=avail+",";
     });
+    greenAvail = greenAvail.substring(0, greenAvail.length - 1);
+    yellowAvail = yellowAvail.substring(0, yellowAvail.length - 1);
     //(min, max, vet, availInfo[0],availInfo[1])
     finalCompile(greenAvail,yellowAvail);
 }
