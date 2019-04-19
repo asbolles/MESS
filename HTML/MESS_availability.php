@@ -62,8 +62,8 @@
                 <div class="status"> 
                     Please indicate your Assistant Status
                     <select name="Status" id="vet1"> 
-                        <option value = "rookie">Rookie</option>
-                        <option value = "veteran">Veteran</option>
+                        <option value = "Rookie">Rookie</option>
+                        <option value = "Veteran">Veteran</option>
                     </select>
                 </div>
             </td>

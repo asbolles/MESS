@@ -192,7 +192,6 @@ function median (SA){
 function algorithm(listofSAs, listofHours){
     var sortedhourList=sortHours(listofHours,listofSAs);
     assignSAs(sortedhourList,listofSAs);
-    
 }
 
 function sortHours(arrayofHours,listofSAs){
@@ -222,7 +221,6 @@ function assignSAs(sortedHours,listofSAs){
             redflag.push(hour);
         }
         else{
-            alert(hour.numRequired+" > "+hour.candidatelist.length);
         if (hour.numRequired>hour.candidatelist.length){
             redflag.push(hour);
         }
@@ -245,9 +243,9 @@ function assignSAs(sortedHours,listofSAs){
     
     }//end of else
     })
-    // redflag.forEach(function(flag){
-    //     alert(flag.name);
-    // })
+    //  redflag.forEach(function(flag){
+    //      alert("Error with Day: "+flag.name.charAt(0)+'\ntime: '+flag.name.charAt(1)+flag.name.charAt(2)+":"+flag.name.charAt(3)+flag.name.charAt(4));
+    //  })
    
 
 }
