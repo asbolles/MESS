@@ -4,9 +4,28 @@
     <meta charset="utf-8">
     <title>Finalized Schedule - MESS</title>
     <link rel="stylesheet" href="CSS/Finalized.css">
+    <script src="../Data/finalized.js"></script>
 </head>
 <body>
+    <script>
+        var F18 = ["Fall 18", "Anna:M0800,W0800,F0800,M1100,W1100,F1100,F0200,T0330,R0330|Shanelle:M0900,W0900,F0900,M1000,W1000,F1000,M1200,W1200,F1200,M0100,W0100,F0100,W0200,T0330,R0330|Holly:M0800,W0800,F0800,M0900,W0900,F0900,M0100,W0100,F0100,M0300,W0300,F0300,M0400,W0400,F0400,T0330,R0330|Kevin:M1100,W1100,F1100,W0200,M0300,W0300,F0300|Max:M1100,W1100,F1100,M1200,W1200,F1200,M0300,W0300,F0300,T0200,R0200|Peyton:M1200,W1200,F1200,M0100,W0100,F0100,M0400,W0400,F0400|Carisa:M0500,W0500|Monzur:M0200,W0200,M0500,W0500,T0200,R0200","111-1,108-1,111-2,108-2,111-3,108-3,111-4,108-4,111-6,111-5,108-5,112-4","Gonzalez,Frazee,Hiatt,Frazee,Whitehair,Dickin,Whitehair,Cromer,Welch,Welch,Cromer,Pearson","M0800,M0900,M1000,M1100,M1200,M0100,M0200,M0300,M0400,M0500,W0800,W0900,W1000,W1100,W1200,W0100,W0200,W0300,W0400,W0500,F0800,F0900,F1000,F1100,F1200,F0100,F0200,F0300,F0400,F0500,T0200,T0330,R0200,R0330"];
+        var F19 = ["Fall 19", "Shanelle:M0900,W0900,F0900,M1000,W1000,F1000,M1200,W1200,F1200,M0100,W0100,F0100,W0200,T0330,R0330|Holly:M0800,W0800,F0800,M0900,W0900,F0900,M0100,W0100,F0100,M0300,W0300,F0300,M0400,W0400,F0400,T0330,R0330|Kevin:M1100,W1100,F1100,W0200,M0300,W0300,F0300|Max:M1100,W1100,F1100,M1200,W1200,F1200,M0300,W0300,F0300,T0200,R0200|Peyton:M1200,W1200,F1200,M0100,W0100,F0100,M0400,W0400,F0400|Carisa:M0500,W0500|Monzur:M0200,W0200,M0500,W0500,T0200,R0200","111-1,108-1,111-2,108-2,111-3,108-3,111-4,108-4,111-6,111-5,108-5,112-4","Gonzalez,Frazee,Hiatt,Frazee,Whitehair,Dickin,Whitehair,Cromer,Welch,Welch,Cromer,Pearson","M0800,M0900,M1000,M1100,M1200,M0100,M0200,M0300,M0400,M0500,W0800,W0900,W1000,W1100,W1200,W0100,W0200,W0300,W0400,W0500,F0800,F0900,F1000,F1100,F1200,F0100,F0200,F0300,F0400,F0500,T0200,T0330,R0200,R0330"];
+        var Semesterlist=[F19,F18];
+        function findsemester(){
+            var mainsemester=Semesterlist[0];
+            var e = document.getElementById("terms");
+            var string = e.options[e.selectedIndex].text;
+            Semesterlist.forEach(function(semester){
+                if(semester[0]==string){
+                   mainsemester=semester;
+                }
+            });
+            CreateTable(mainsemester);
+        }
+</script>
 
+
+    
     <div class="sidebar">
         <img src="Images/MESS Logo.jpg"/>
         <a href="MESS_finalized.html">Semester Schedule</a><br>
@@ -17,74 +36,23 @@
     </div>
     <h1 class="header">Finalized Schedule</h1>
     <h2>Term: Fall 2019</h2>
+    <script>
+    document.write(' <select name="terms" id="terms">');
+        Semesterlist.forEach(function(semester){
+            document.write('<option value="'+semester[0]+'">'+semester[0]+'</option>');
+        });
+        //CreateTable(eval(document.getElementById(terms).value))
+    </script>
    
-    <table style="width:90%" class="chart">
-        <tr>
-            <th colspan="3" class='shrink'>Course Info</th>
-            <th colspan="3" class='shrink'>Class Duration</th> 
-            <script>
-                var titles =["Anna","Austin","Evan","Sam","Maria","Queen",]
-                var Anna=[2,1,1,2,0,1,0,2,2,2];
-                var Austin=[0,1,1,2,0,1,0,2,2,2];
-                var Evan=[0,1,1,2,0,1,0,2,2,2];
-                var Sam=[0,1,1,2,0,1,0,2,2,2];
-                var Maria=[0,1,1,2,0,1,0,2,2,2];
-                var Queen=[0,1,1,2,0,1,0,2,2,2];
-                var SAs =[Anna,Austin,Evan,Sam,Maria,Queen];
-                var Sect=["1","1","1","1","1","1","1","1","1","1"];
-                var Instuctor=["Stark", "jones","gonsolez","Christine","Ross","Stark", "jones","gonsolez","Christine","Ross"]
-                var Start=["8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00","8:00"];
-                var end=["8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50","8:50"];
-                var days=["MWF","MWF","MWF","MWF","MWF","MWF","MWF","MWF","TR","TR"];
-                var numbers=[1,3,3,2,1,3,2,1,2,1];
-                var subs=[1,3,3,2,1,3,2,1,2,1];
-                document.write(" <th colspan="+(titles.length+2)+" class='shrink'>Student Assistants</th> </tr>")
-                document.write("<tr><td class='shrink'>Course</td><td class='shrink'>Section</td><td class='shrink'>Instructor</td><td class='shrink'>Start Time</td><td class='shrink'>End time</td><td class='shrink'>Days</td>");
-                titles.forEach(function(title){
-                    document.write("<th>"+title+"</th>")
-                })
-                document.write("<th class='shrink'>#</th><th class='shrink'>Subs</th>")
-                document.write("<tr>");
-                    var RowCounter=0;
-                    var hold=0;
-                    for(i=0;i<Anna.length;i++){
-                        if(days[RowCounter]=="TR"&& hold==0){
-                            SAs.forEach(function(sa){
-                                document.write("<td class='inbetween'>between</td>");
-                            })
-                            document.write("<td class='inbetween' colspan='6'></td>");
-                            document.write("<td class='inbetween' colspan='2'></td></tr><tr>");
-                            hold=1;
-                        }
-                        
-                        document.write("<td class='shrink'>math</td><td class='shrink'>"+Sect[i]+"</td><td class='shrink'>"+Instuctor[i]+"</td><td class='shrink'>"+Start[i]+"</td><td class='shrink'>"+end[i]+"</td><td class='shrink'>"+days[i]+"</td>")  
-
-                            CreateChart(RowCounter);
-                        RowCounter++; 
-                    }
-                    document.write("<td class='inbetween3' colspan='5'>between</td>")
-                    document.write(" <tr><td colspan='5' rowspan='3' class='inbetween2'></td><td>Hours requested</td><td>1-3</td><td>1-3</td><td>1-3</td><td>1-3</td><td>1-3</td><td>1-3</td></tr><tr><td>Hours filled</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>")
-                
-                document.write("</tr>");
-                function CreateChart(RowCounter){
-                    SAs.forEach(function(sa){
-                        if (sa[RowCounter]==0){
-                        document.write("<td class='box red'>Red</td>")
-                    }
-                    if (sa[RowCounter]==1){
-                        document.write("<td class='box yellow'>Yellow</td>")
-                    }
-                    if (sa[RowCounter]==2){
-                        document.write("<td class='box green'>Green</td>")
-                    }
-                    })
-                    document.write("<td>"+numbers[RowCounter]+"</td><td>"+subs[RowCounter]+"</td>");
-                    document.write("</tr><tr>");
-                    
-                }
-                </script>
-        </table>
         
+    </select>
+    <button onclick="findsemester()">Show Semester</button>
+    <br>
+    <div id="tableLocation">
+
+    </div>        
+                
+
         <!-- <div class="footer">
             <img src="Images/Copyright.jpg" class="footer" alt="Copyright"; width:100%;/>
         </div> -->

@@ -15,7 +15,6 @@ $min = filter_input(INPUT_POST, "Min");
 $max = filter_input(INPUT_POST, "Max");
 $status = filter_input(INPUT_POST, "Status");
 
-include ("connect.php");
 include ("session.php");
 
 
