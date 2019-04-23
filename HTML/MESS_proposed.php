@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="em">
 <head>
@@ -107,7 +103,8 @@ for(i =0; i<nameArray.length;i++){
         boxlist[i].removeAttribute("onclick");
     }
    }
-
+  alert(testing);
+  alert(listOfHours.length);
     algorithm(listofSa, listOfHours);
 </script>
     <div class="sidebar">
