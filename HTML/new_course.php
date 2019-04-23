@@ -31,7 +31,7 @@ VALUES ( '$course',$section, '$instructor', '$days','$start','$end',$sa)";
         echo 'Error: '.$sql ."<br>". $link->error;
     }
 
-    //echo '<script>window.location.href = "MESS_courses.php";</script>';
+    echo '<script>window.location.href = "MESS_courses.php";</script>';
 
     $link->close();
     
