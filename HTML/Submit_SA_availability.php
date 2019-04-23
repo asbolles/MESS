@@ -17,8 +17,8 @@ $max = filter_input(INPUT_POST, "Max");
 include ("session.php");
 
 
-$sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow',minHr=$min, maxHr=$max,
- WHERE username='$user_check'";
+$sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow', minHr='$min', maxHr='$max'
+ WHERE username ='$user_check'";
 
 
 if ($link->query($sql) === TRUE){
