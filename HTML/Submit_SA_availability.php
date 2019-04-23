@@ -23,6 +23,7 @@ $sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow', minHr='$min', 
 
 if ($link->query($sql) === TRUE){
   echo 'Assistant Availability submitted successfully';
+  header("Location: MESS_personal.html");
 } else {
     echo 'Error: '.$sql ."<br>". $link->error;
 }

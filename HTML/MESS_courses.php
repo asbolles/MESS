@@ -9,7 +9,7 @@
 <body>
     <div class="sidebar">
         <img src="Images/MESS Logo.jpg"/>
-        <a href="MESS_finalized.html">Semester Schedule</a><br>
+        <a href="MESS_finalized.php">Semester Schedule</a><br>
         <a href="MESS_master.php">Master Schedule</a><br>
         <a href="MESS_assistants.php">Student Assistants</a><br>
         <a href="MESS_courses.php">Start New Semester</a>        
