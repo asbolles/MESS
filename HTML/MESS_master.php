@@ -41,51 +41,51 @@
 </table>
 
 <?php
-DEFINE ('DB_USER', 'MESS');
-DEFINE ('DB_PASD', 'mess');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'mess_test');
-$link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
-if (!$link) {
-    die('error connecting to database');
-}
+    DEFINE ('DB_USER', 'MESS');
+    DEFINE ('DB_PASD', 'mess');
+    DEFINE ('DB_HOST', 'localhost');
+    DEFINE ('DB_NAME', 'mess_test');
+    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
+    if (!$link) {
+        die('error connecting to database');
+    }
 
 
-$sql = "SELECT * FROM Courses";
+    $sql = "SELECT * FROM Courses";
 
-$result = $link->query($sql) or die("error getting course data");
+    $result = $link->query($sql) or die("error getting course data");
 
 
-echo "<table style='width:70%'>";
-echo "<tr>
-<th>Course</th>
-<th>Section</th>
-<th>Instructor</th>
-<th>Days</th>
-<th>Start Time</th>
-<th>End Time</th>
-<th>#SAs</th>";
+    echo "<table style='width:70%'>";
+    echo "<tr>
+    <th>Course</th>
+    <th>Section</th>
+    <th>Instructor</th>
+    <th>Days</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>#SAs</th>";
 
-while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-    echo "<tr><td>";
-    echo $row['Course'];
-    echo "</td><td>";
-    echo $row['Section'];
-    echo "</td><td>";
-    echo $row['Instructor'];
-    echo "</td><td>";
-    echo $row['Days'];
-    echo "</td><td>";
-    echo $row['Start'];
-    echo "</td><td>";
-    echo $row['End'];
-    echo "</td><td>";
-    echo $row['#ofSAs'];
-    echo "</td><td>";
-    echo "</td></tr>";};
-echo "</table>";
-mysqli_close($link);
-?>
+    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        echo "<tr><td>";
+        echo $row['Course'];
+        echo "</td><td>";
+        echo $row['Section'];
+        echo "</td><td>";
+        echo $row['Instructor'];
+        echo "</td><td>";
+        echo $row['Days'];
+        echo "</td><td>";
+        echo $row['Start'];
+        echo "</td><td>";
+            echo $row['End'];
+        echo "</td><td>";
+        echo $row['#ofSAs'];
+        echo "</td><td>";
+        echo "</td></tr>";};
+    echo "</table>";
+    mysqli_close($link);
+    ?>
 <div class="php">
 </div>
 <div>
