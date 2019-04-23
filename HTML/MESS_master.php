@@ -30,6 +30,9 @@
 
 </div>
 
+<div  id='tableLocation'><!-- dont get rid of this div. its where the table outputs too-->
+</div>
+
 <p></p>
 <table>
     <td>
