@@ -79,7 +79,7 @@
         echo "</td><td>";
             echo $row['End'];
         echo "</td><td>";
-        echo $row['#ofSAs'];
+        echo $row['SAs'];
         echo "</td><td>";
         echo "</td></tr>";};
     echo "</table>";
