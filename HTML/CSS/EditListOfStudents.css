@@ -84,6 +84,15 @@ td
 {    
     
 }
+
+.personalButton{
+     position: center;
+     margin-left: 25%;
+     margin-top: 10%;
+     width: 45%;
+     height: 250px; 
+}
+
 .newassistant
 {
      width: 27%;
