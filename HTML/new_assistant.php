@@ -19,13 +19,13 @@ include("connect.php");
 $sql = "INSERT INTO users (fname, username, password, vetStatus) 
 VALUES ('$name','$username','$password','$status');";
 
-$sql2 = "INSERT INTO sas(fname) VALUES ('$name');";
+$sql2 = "INSERT INTO sas (fname) VALUES ('$name');";
 
 if ($link->query($sql) === TRUE){
     if($link->query($sql2) === TRUE){
         echo 'New assistant added successfully';
     }else{
-        echo 'Error: '.$sql ."<br>". $link->error;
+        echo 'Error: '.$sql2 ."<br>". $link->error;
     }
 } else {
     echo 'Error: '.$sql ."<br>". $link->error;
