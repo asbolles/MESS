@@ -68,7 +68,7 @@ mysqli_close($link);
                 New Assistant Name: <input type="text" name="fname"><br>
                 Create Username: <input type="text" name="username"><br>
                 Create Password: <input type="text" name="password"><br>
-                <br>Veteren Status: <select name="Status"> 
+                <br>Veteren Status: <select> 
                     <option value = "rookie">Rookie</option>
                     <option value = "veteran">Veteran</option>
                 </select>
