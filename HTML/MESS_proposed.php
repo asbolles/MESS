@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="em">
 <head>
@@ -20,7 +24,6 @@
        $yellowArray=array();
        $minhourArray=array();
        $maxhourArray=array();
-       $vetArray=array();
        $workingArray=array();
        
        
@@ -28,7 +31,7 @@
             // output data of each row
             
             while($row = $result->fetch_assoc()){
-                $nameArray[] = $row['fname'];
+                $nameArray[] = $row['username'];
                 $greenArray[] = $row['greenAvail'];
                 $yellowArray[] = $row['yellowAvail'];
                 $minhourArray[] = $row['minHr'];
