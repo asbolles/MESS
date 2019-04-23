@@ -15,7 +15,7 @@ include("connect.php");
 
 $sql="DELETE FROM users WHERE fname = '$name';";
 
-$sql2="DELETE FROM sas WHERE fname = '$name';";
+$sql2="DELETE FROM sas WHERE username = '$name';";
 
 echo $sql; 
 if ($link->query($sql) === TRUE){
