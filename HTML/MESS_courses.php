@@ -39,7 +39,7 @@
         <td>
             <form method = "post" action= "new_course.php">
                 <form method = "post" action="delete_course.php">
-            <table style="width:100%" >
+            <table style="width:60%" >
                 <tr>
                     <th>Course</th>
                     <th>Section</th>
@@ -99,21 +99,47 @@
                                value = "#SAs" />
                       </p></td>
                 </tr>
-
+                <tr>
+                    <td>
+                    <input type = "submit"value="Add Class"></form>
+                    </td>
+                <tr>
             </table>
+            <table>
+                <tr>
+                    <td>
+                        <form method = post action = remove_course.php>
+                        <?php
+                DEFINE ('DB_USER', 'MESS');
+                DEFINE ('DB_PASD', 'mess');
+                DEFINE ('DB_HOST', 'csums.dhcp.bsu.edu');
+                DEFINE ('DB_NAME', 'mess');
+                $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
+                if (!$link) {
+                    die('error connecting to database');
+                }
+                $sql = "SELECT ID FROM Courses;";
+                $result = $link->query($sql) or die("error getting data");
+                echo "<br>Select Course ID to remove: <select id = cid name ='cid'>";
+                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                    echo "<option value='" . $row[ID] ."'>" . $row[ID] ."</option>";
+                }
+                echo "</select>";
+                mysqli_close($link);
+                ?>
+                        <br><input type = "submit"value="Delete Class">
+                        
+                    <td>
+                </tr>
             
-            <div id="courseListingTable"></div>
+            </table>
         </td>
     </table>
     <table>
         </td><tr>
-            <input type = "submit"value="Add Class">
-            <input type = "submit"value="Delete Class">
-            <button onclick="window.location.href=delete_course.php;">Save All Changes</button>
         </tr></td>
     </table>
-</form>
-<button onclick="location.href = 'delete_course.php';">Save All Changes</button>
+
 
     <?php
 DEFINE ('DB_USER', 'MESS');
@@ -132,6 +158,7 @@ $result = $link->query($sql) or die("error getting course data");
 
 echo "<table style='width:90%'>";
 echo "<tr>
+<th>ID</th>
 <th>Course</th>
 <th>Section</th>
 <th>Instructor</th>
@@ -141,22 +168,24 @@ echo "<tr>
 <th>#SAs</th>";
 
 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-    echo "<tr><td>";
+    echo "<tr><td class = 'entry'>";
+    echo $row['ID'];
+    echo "</td><td class = 'entry'>";
     echo $row['Course'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['Section'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['Instructor'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['Days'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['Start'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['End'];
-    echo "</td><td>";
+    echo "</td><td class = 'entry'>";
     echo $row['SAs'];
-    echo "</td><td>";
-    echo "</td><td><input type = checkbox name = 'check'></checkbox></td></tr>";};
+    echo "</td></tr>";
+    };
 echo "</table>";
 mysqli_close($link);
 ?>

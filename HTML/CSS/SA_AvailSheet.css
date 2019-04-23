@@ -208,9 +208,12 @@ input[type=number]
         background-color: white;
         font-size: 13pt;
     }
-    .bottom
+    .entry
     {
-       
+       text-align: center;
+       border: 1pt solid black;
+       background-color: whitesmoke;
+       color: black;
     }
     .button
     {
