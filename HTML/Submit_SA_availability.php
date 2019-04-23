@@ -13,13 +13,12 @@ $green = filter_input(INPUT_POST, "PHPgreen");
 $yellow = filter_input(INPUT_POST, "PHPyellow");
 $min = filter_input(INPUT_POST, "Min");
 $max = filter_input(INPUT_POST, "Max");
-$status = filter_input(INPUT_POST, "Status");
 
 include ("session.php");
 
 
-$sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow',minHr=$min, maxHr=$max, vetStatus='$status'
- WHERE fname='$user_check'";
+$sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow', minHr='$min', maxHr='$max'
+ WHERE username ='$user_check'";
 
 
 if ($link->query($sql) === TRUE){

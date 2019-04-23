@@ -153,20 +153,7 @@ function sortbyDays(current,comparison,hour){
     return returned;
 }
 function sortbyVetstatus(current,comparison){
-   var returned =null;
-    if (comparison.vetStatus==true && current.vetStatus==true){
-        return current;
-    }
-    else if (current.vetStatus==true){
-        returned = current;
-    }
-    else if (comparison.vetStatus==true){
-        returned = comparison;
-    }
-    else if (comparison.vetStatus==false && current.vetStatus==false){
-        return comparison;
-    }
-    return returned;
+    return current;
     
 }
 
@@ -176,6 +163,7 @@ function updatepercent(listofSAs){
    
     listofSAs.forEach(function(sa){
         var num =median(sa);
+        //alert(sa.name);
         sa.percent =(sa.workingHours.length)/num; 
         
     });
@@ -189,7 +177,9 @@ function median (SA){
 }
 
 //main function***********************************************************************************************************
+var testing = "thsdfsdf";
 function algorithm(listofSAs, listofHours){
+    alert("test");
     var sortedhourList=sortHours(listofHours,listofSAs);
     assignSAs(sortedhourList,listofSAs);
 }
@@ -228,8 +218,8 @@ function assignSAs(sortedHours,listofSAs){
           
         for(var i=0;i<hour.numRequired;i++){
             hour.workingHours.push(sortedhour[0]); 
-            alert(sortedhour[0].name);
-            sortedhour[0].workingHours.push("w800");
+            //alert(sortedhour[0].workingHours.length);
+            sortedhour[0].workingHours.push(hour.name);
             sortedhour.shift(); 
         } 
        
