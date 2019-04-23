@@ -228,7 +228,8 @@ function assignSAs(sortedHours,listofSAs){
           
         for(var i=0;i<hour.numRequired;i++){
             hour.workingHours.push(sortedhour[0]); 
-            sortedhour[0].workingHours.push(hour.name);
+            alert(sortedhour[0].name);
+            sortedhour[0].workingHours.push("w800");
             sortedhour.shift(); 
         } 
        
