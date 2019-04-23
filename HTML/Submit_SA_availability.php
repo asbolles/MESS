@@ -18,7 +18,7 @@ include ("session.php");
 
 
 $sql = "UPDATE sas SET greenAvail='$green',yellowAvail='$yellow',minHr=$min, maxHr=$max,
- WHERE fname='$user_check'";
+ WHERE username='$user_check'";
 
 
 if ($link->query($sql) === TRUE){
