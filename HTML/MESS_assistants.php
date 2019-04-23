@@ -82,10 +82,7 @@ mysqli_close($link);
                 <p>To edit an existing assistant's veteran status or password, select their name in the drodown box. Select their new veteran status and new password the Click Submit Changes to update their info. </p>
                 
                 <?php
-                DEFINE ('DB_USER', 'MESS');
-                DEFINE ('DB_PASD', 'mess');
-                DEFINE ('DB_HOST', 'csums.dhcp.bsu.edu');
-                DEFINE ('DB_NAME', 'mess');
+                
                 $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
                 if (!$link) {
                     die('error connecting to database');
@@ -113,10 +110,7 @@ mysqli_close($link);
             <h3>Remove Assistant</h3>
                 <p>To remove an existing assistant, select their name from the dropdown box and click remove. Removing an assistant will delete all of their data from MESS. </p>
                 <?php
-                DEFINE ('DB_USER', 'MESS');
-                DEFINE ('DB_PASD', 'mess');
-                DEFINE ('DB_HOST', 'csums.dhcp.bsu.edu');
-                DEFINE ('DB_NAME', 'mess');
+                
                 $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
                 if (!$link) {
                     die('error connecting to database');
