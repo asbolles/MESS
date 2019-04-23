@@ -23,7 +23,7 @@
        $workingArray=array();
        
        
-        if (sizeof($result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
             // output data of each row
             
             while($row = $result->fetch_assoc()){
