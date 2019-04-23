@@ -33,7 +33,7 @@
                 $yellowArray[] = $row['yellowAvail'];
                 $minhourArray[] = $row['minHr'];
                 $maxhourArray[] =$row['maxHr'];
-                $vetArray[] =$row['vetStatus'];
+                
                 $workingArray[]=$row["workingHours"];
             }
         }
@@ -49,16 +49,18 @@ var greenArray = <?php echo '["' . implode('", "', $greenArray) . '"]' ?>;
 var yellowArray = <?php echo '["' . implode('", "', $yellowArray) . '"]' ?>;
 var minhourArray = <?php echo '["' . implode('", "', $minhourArray) . '"]' ?>;
 var maxhourArray = <?php echo '["' . implode('", "', $maxhourArray) . '"]' ?>;
-var vetArray = <?php echo '["' . implode('", "', $vetArray) . '"]' ?>;
 var workingArray = <?php echo '["' . implode('", "', $workingArray) . '"]' ?>;
+var workingArrays =[];
+workingArray.forEach(function(working){
+    workingArrays.push(working.split(','));
+})
 for(i =0; i<nameArray.length;i++){
-    listofSa[i]=new SA ( nameArray[i],greenArray[i],yellowArray[i],minhourArray[i],maxhourArray[i],vetArray[i],workingArray[i]);
+    listofSa[i]=new SA (nameArray[i],greenArray[i],yellowArray[i],minhourArray[i],maxhourArray[i],workingArrays[i]);
 }
 </script>
 
     <script>//this is for the color changing. DO NOT MESS WITH THIS
     function changePage(){  
-        alert("test");
     var boxlist=document.getElementsByClassName("box");
     for(i=0;i<boxlist.length;i++){
         boxlist[i].onclick=function(e){
@@ -83,18 +85,24 @@ for(i =0; i<nameArray.length;i++){
     }//end of changepage
    function collectData(){
     listofSa.forEach(function(sa){
-        var greenlist=document.getElementsByClassName(sa);
-        greenlist.forEach(function(element){
-            if (element.classList.includes("green")){
-                alert(element.id);
+        var greenlist=document.getElementsByClassName(sa.name);
+        sa.workingList=[];
+        for (i=0;i<greenlist.length;i++){
+            if (greenlist[i].classList.contains("green")){
+                sa.workingList.push(greenlist[i].id);
             }
-            else if (element.classList.includes("yellow")){
-                alert(element.yellow);
+            else if (greenlist[i].classList.contains("yellow")){
+                
             }
-        })
-
-
-    })
+            else{
+                alert("red");
+            }
+        }
+    });
+    var boxlist=document.getElementsByClassName("box");
+    for(i=0;i<boxlist.length;i++){
+        boxlist[i].removeAttribute("onclick");
+    }
    }
 
     algorithm(listofSa, listOfHours);
