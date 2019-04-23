@@ -10,8 +10,8 @@
     <img src="Images/MESS Logo.jpg"/>
     <a href="MESS_finalized.html">Semester Schedule</a><br>
     <a href="MESS_master.php">Master Schedule</a><br>
-    <a href="MESS_assistants.html">Student Assistants</a><br>
-    <a href="MESS_courses.html">Start New Semester</a>
+    <a href="MESS_assistants.php">Student Assistants</a><br>
+    <a href="MESS_courses.php">Start New Semester</a>
     <a href="logout.php">Logout</a>
 </div>
 <h1 class="header">Edit Student Assistants</h1>
@@ -68,7 +68,7 @@ mysqli_close($link);
                 New Assistant Name: <input type="text" name="fname"><br>
                 Create Username: <input type="text" name="username"><br>
                 Create Password: <input type="text" name="password"><br>
-                <br>Veteren Status: <select name="Status"> 
+                <br>Veteren Status: <select> 
                     <option value = "rookie">Rookie</option>
                     <option value = "veteran">Veteran</option>
                 </select>
