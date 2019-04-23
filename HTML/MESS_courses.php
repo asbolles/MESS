@@ -118,7 +118,7 @@
                 if (!$link) {
                     die('error connecting to database');
                 }
-                $sql = "SELECT ID FROM Courses;";
+                $sql = "SELECT ID FROM courses;";
                 $result = $link->query($sql) or die("error getting data");
                 echo "<br>Select Course ID to remove: <select id = cid name ='cid'>";
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){

@@ -15,7 +15,7 @@
     
     include ("connect.php");
 
-    $sql = "DELETE FROM Courses WHERE ID = '$courseID'";
+    $sql = "DELETE FROM courses WHERE ID = '$courseID'";
    echo $sql;
     if ($link->query($sql) === TRUE){
         echo 'course removed successfully';

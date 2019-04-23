@@ -22,7 +22,7 @@
     
     include ("connect.php");
 
-$sql = "INSERT INTO Courses(Course,Section,Instructor,Days,Start,End,SAs) 
+$sql = "INSERT INTO courses(Course,Section,Instructor,Days,Start,End,SAs) 
 VALUES ( '$course',$section, '$instructor', '$days','$start','$end',$sa)";
    
     if ($link->query($sql) === TRUE){
