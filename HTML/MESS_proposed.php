@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Proposed Schedule - MESS</title>
     <link rel="stylesheet" href="CSS/Proposed_Schedule.css"/>
-    <script src="../JavaScript/MESS_algorithm.js"></script>
     <script src="../Data/data.js"></script>
+    <script src="../JavaScript/MESS_algorithm.js"></script>
+    
 </head>
 <body>
 <?php
@@ -55,12 +56,9 @@ for(i =0; i<nameArray.length;i++){
 }
 </script>
 
-
-
-
-
     <script>//this is for the color changing. DO NOT MESS WITH THIS
-    function changePage(){
+    function changePage(){  
+        alert("test");
     var boxlist=document.getElementsByClassName("box");
     for(i=0;i<boxlist.length;i++){
         boxlist[i].onclick=function(e){
@@ -81,8 +79,24 @@ for(i =0; i<nameArray.length;i++){
             }
         }
     }
-    }
-   
+    
+    }//end of changepage
+   function collectData(){
+    listofSa.forEach(function(sa){
+        var greenlist=document.getElementsByClassName(sa);
+        greenlist.forEach(function(element){
+            if (element.classList.includes("green")){
+                alert(element.id);
+            }
+            else if (element.classList.includes("yellow")){
+                alert(element.yellow);
+            }
+        })
+
+
+    })
+   }
+
     algorithm(listofSa, listOfHours);
 </script>
     <div class="sidebar">
@@ -95,6 +109,8 @@ for(i =0; i<nameArray.length;i++){
     </div>
     <h1>Proposed Schedule</h1>
     <h2>Term: Fall 2019</h2>
+    <button onclick="changePage()" id="test">test</button>
+    <button  id="done" onclick="collectData()">done</button>
  <table >
      <tr>
          <th>Courses</th><th>times</th><th>Days</th>
@@ -117,15 +133,15 @@ for(i =0; i<nameArray.length;i++){
             listofSa.forEach(function(sa){
                 if(sa.workingHours.includes(listOfHours[i].name)){
                 //make green
-                    document.write("<td class='green'>green</td>")
+                    document.write("<td class='"+sa.name+" box green' id='"+listOfHours[i].name+"'>green</td>")
                 }
                 else if (listOfHours[i].sublist.includes(sa)){
                 //make yellow
-                document.write("<td class='yellow'>yellow</td>")
+                document.write("<td class='"+sa.name+" box yellow' id='"+listOfHours[i].name+"'>yellow</td>")
                 }
                 else{
                 //make red
-                document.write("<td class='red'>red</td>")
+                document.write("<td class='box red'>red</td>")
                 }
             })
         }
