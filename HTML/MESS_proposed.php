@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="CSS/Proposed_Schedule.css"/>
     <script src="../Data/data.js"></script>
     <script src="../JavaScript/MESS_algorithm.js"></script>
+    <script src="../JavaScript/proposed.js"></script>
+
     
 </head>
 <body>
@@ -82,29 +84,8 @@ for(i =0; i<nameArray.length;i++){
     }
     
     }//end of changepage
-   function collectData(){
-    listofSa.forEach(function(sa){
-        var greenlist=document.getElementsByClassName(sa.name);
-        sa.workingList=[];
-        for (i=0;i<greenlist.length;i++){
-            if (greenlist[i].classList.contains("green")){
-                sa.workingList.push(greenlist[i].id);
-            }
-            else if (greenlist[i].classList.contains("yellow")){
-                
-            }
-            else{
-                alert("red");
-            }
-        }
-    });
-    var boxlist=document.getElementsByClassName("box");
-    for(i=0;i<boxlist.length;i++){
-        boxlist[i].removeAttribute("onclick");
-    }
-   }
-  alert(testing);
-  alert(listOfHours.length);
+   
+ 
     algorithm(listofSa, listOfHours);
 </script>
     <div class="sidebar">
@@ -126,6 +107,28 @@ for(i =0; i<nameArray.length;i++){
         listofSa.forEach(function(sa) {
             document.write("<th>"+sa.name+"</th>");
         });
+
+
+        function collectData(){
+    listofSa.forEach(function(sa){
+        var greenlist=document.getElementsByClassName(sa.name);
+        sa.workingHours=[];
+        for (i=0;i<greenlist.length;i++){
+            greenlist[i].onclick=null;
+            if (greenlist[i].classList.contains("green")){
+                sa.workingHours.push(greenlist[i].id+"");
+            }
+            else if (greenlist[i].classList.contains("yellow")){
+                
+            }
+            else{
+                //alert("red");
+            }
+        }
+    });
+    
+    
+   }
         </script></tr>
         <script>
             for(i=0;i<listOfHours.length;i++){
@@ -149,7 +152,7 @@ for(i =0; i<nameArray.length;i++){
                 }
                 else{
                 //make red
-                document.write("<td class='box red'>red</td>")
+                document.write("<td class='"+sa.name+" box red'>red</td>")
                 }
             })
         }

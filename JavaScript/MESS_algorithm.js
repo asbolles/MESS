@@ -177,9 +177,7 @@ function median (SA){
 }
 
 //main function***********************************************************************************************************
-var testing = "thsdfsdf";
 function algorithm(listofSAs, listofHours){
-    alert("test");
     var sortedhourList=sortHours(listofHours,listofSAs);
     assignSAs(sortedhourList,listofSAs);
 }
