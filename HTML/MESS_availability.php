@@ -36,7 +36,7 @@
         <p>Note: Student Assistants are mostly needed on M - W - F</p>
         <p>Please select what your Assistant Status is for this semester.<br>
         Rookie - Newly hired assistant<br>
-        Veteran - Returning assistant from previous semtester</p>
+        Veteran - Returning assistant from previous semester</p>
     </div>
     <form method ="post" action="Submit_SA_availability.php">
     <table class = 'class'>
@@ -106,43 +106,43 @@
                         <td class = "test">Friday(F)</td>
                     </tr>
                     <tr>
-                        <td class = "test">8:00-8:50</td>
+                        <td class = "test">8:00am-8:50am</td>
                         <td class="box red" id="M0800">red</td>
                         <td class="box red" id="W0800">red</td>
                         <td class="box red" id="F0800">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">9:00-9:50</td>
+                        <td class = "test">9:00am-9:50am</td>
                         <td class="box red" id="M0900">red</td>
                         <td class="box red" id="W0900">red</td>
                         <td class="box red" id="F0900">red</td>
                     </tr>
                     <tr>
-                        <td class = "test"> 10:00-10:50</td>
+                        <td class = "test"> 10:00am-10:50am</td>
                         <td class="box red" id="M1000">red</td>
                         <td class="box red" id="W1000">red</td>
                         <td class="box red" id="F1000">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">11:00-11:50</td>
+                        <td class = "test">11:00am-11:50am</td>
                         <td class="box red" id="M1100">red</td>
                         <td class="box red" id="W1100">red</td>
                         <td class="box red" id="F1100">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">12:00-12:50</td>
+                        <td class = "test">12:00pm-12:50pm</td>
                         <td class="box red" id="M1200">red</td>
                         <td class="box red" id="W1200">red</td>
                         <td class="box red" id="F1200">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">1:00-1:50</td>
+                        <td class = "test">1:00pm-1:50pm</td>
                         <td class="box red" id="M0100">red</td>
                         <td class="box red" id="W0100">red</td>
                         <td class="box red" id="F0100">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">2:00-2:50</td>
+                        <td class = "test">2:00pm-2:50pm</td>
                         <td class="box red" id="M0200">red</td>
                         <td class="box red" id="W0200">red</td>
                         <td class="box red" id="F0200">red</td>
@@ -154,13 +154,13 @@
                         <td class="box red" id="F0300">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">4:00-4:50</td>
+                        <td class = "test">4:00pm-4:50pm</td>
                         <td class="box red" id="M0400">red</td>
                         <td class="box red" id="W0400">red</td>
                         <td class="box red" id="F0400">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">5:00-6:15</td>
+                        <td class = "test">5:00pm-6:15pm</td>
                         <td class="box red" id="M0500">red</td>
                         <td class="box red" id="W0500">red</td>
                         <td class="box red" id="F0500">red</td>
@@ -175,37 +175,37 @@
                         <td class = "test">Thursday(R)</td>
                     </tr>
                     <tr>
-                        <td class = "test">8:00-9:15</td>
+                        <td class = "test">8:00am-9:15am</td>
                         <td class="box red" id="T0800">red</td>
                         <td class="box red" id="R0800">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">9:30-10:45</td>
+                        <td class = "test">9:30am-10:45am</td>
                         <td class="box red" id="T0930">red</td>
                         <td class="box red" id="R0930">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">11:00-12:15</td>
+                        <td class = "test">11:00am-12:15pm</td>
                         <td class="box red" id="T1100">red</td>
                         <td class="box red" id="R1100">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">12:30-1:45</td>
+                        <td class = "test">12:30pm-1:45pm</td>
                         <td class="box red" id="T1230">red</td>
                         <td class="box red" id="R1230">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">2:00-3:15</td>
+                        <td class = "test">2:00pm-3:15pm</td>
                         <td class="box red" id="T0200">red</td>
                         <td class="box red" id="R0200">red</td>
                     </tr>
                     <tr>
-                        <td class = "test">3:30-4:45</td>
+                        <td class = "test">3:30pm-4:45pm</td>
                         <td class="box red" id="T0330">red</td>
                         <td class="box red" id="R0330">red</td>
                     </tr>
                     <tr>
-                        <td class = "test"> 5:00-6:15</td>
+                        <td class = "test"> 5:00pm-6:15pm</td>
                         <td class="box red" id="T0500">red</td>
                         <td class="box red" id="R0500">red</td>
                     </tr>
