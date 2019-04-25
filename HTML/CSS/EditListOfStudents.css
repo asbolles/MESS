@@ -4,7 +4,9 @@ html
      padding-left: 2.76in;
     
 }
-
+.space{
+     padding: 1in;
+}
 img.center
 {
      display: block;
@@ -13,14 +15,6 @@ img.center
      width: 40%;
 }
 
-.footer
-{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding-left: 2in;
-    padding-right: 2in;
-}
 
 h1.header
 {

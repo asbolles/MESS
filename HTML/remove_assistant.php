@@ -9,11 +9,12 @@
 </html>
 <?php
 
-$name = filter_input(INPUT_POST, 'fname');
+$name = filter_input(INPUT_POST, 'user');
+
 
 include("connect.php");
 
-$sql="DELETE FROM users WHERE fname = '$name';";
+$sql="DELETE FROM users WHERE username = '$name';";
 
 $sql2="DELETE FROM sas WHERE username = '$name';";
 

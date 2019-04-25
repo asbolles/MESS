@@ -115,12 +115,12 @@ mysqli_close($link);
                 if (!$link) {
                     die('error connecting to database');
                 }
-                $sql = "SELECT fname FROM users;";
+                $sql = "SELECT username FROM users;";//sam
                 $result = $link->query($sql) or die("error getting data");
-                echo "<select name='fname'>";
+                echo "<select name='user'>";
                 
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "<option value='" . $row['fname'] ."'>" . $row['fname'] ."</option>";
+                    echo "<option value='" . $row['username'] ."'>" . $row['username'] ."</option>";
                 }
                 echo "</select>";
                 mysqli_close($link);
@@ -130,9 +130,8 @@ mysqli_close($link);
             </form>
     </tr> 
 </table>
-<div class="footer">
-    <img src="Images/Copyright.jpg" class="footer" alt="Copyright"; width='100%';/>
-</div>
+<p class="space"></p>
+
 <script>
     function okToDelete() {
     var txt;
