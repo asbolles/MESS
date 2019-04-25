@@ -17,31 +17,59 @@
         $result = $link->query($sql) or die('error connecting');
        
        
+        $sql2 = "SELECT * FROM courses";
+        $result2 = $link->query($sql2) or die('error connecting');
+       //first sql
        $nameArray =array();
        $greenArray=array();
        $yellowArray=array();
        $minhourArray=array();
        $maxhourArray=array();
        $workingArray=array();
+
+       //start of second sql
+       $courseArray=array();
+       $sectionArray=array();
+       $instructorArray=array();
+       $daysArray=array();
+       $startArray=array();
+       $endArray=array();
+       $sasArray=array();
        
-       
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
+        
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        
+        while($row = $result->fetch_assoc()){
+            $nameArray[] = $row['username'];
+            $greenArray[] = $row['greenAvail'];
+            $yellowArray[] = $row['yellowAvail'];
+            $minhourArray[] = $row['minHr'];
+            $maxhourArray[] =$row['maxHr'];
             
-            while($row = $result->fetch_assoc()){
-                $nameArray[] = $row['username'];
-                $greenArray[] = $row['greenAvail'];
-                $yellowArray[] = $row['yellowAvail'];
-                $minhourArray[] = $row['minHr'];
-                $maxhourArray[] =$row['maxHr'];
-                
-                $workingArray[]=$row["workingHours"];
-            }
+            $workingArray[]=$row["workingHours"];
         }
-        else{
-        echo "0 results";
-       
     }
+    else{
+    echo "0 results";
+    }
+    if (mysqli_num_rows($result2) > 0) {
+        // output data of each row
+        
+        while($row = $result2->fetch_assoc()){
+            $courseArray[] = $row['Course'];
+            $sectionArray[] = $row['Section'];
+            $instructorArray[] = $row['Instructor'];
+            $daysArray[] = $row['Days'];
+            $startArray[] = $row['Start'];
+            $endArray[] =$row['End'];
+            $sasArray[]=$row["SAs"];
+        }
+    }
+    else{
+    echo "0 results";
+   
+}
         mysqli_close($link);
         ?>
 <script>
@@ -54,9 +82,34 @@ var workingArray = <?php echo '["' . implode('", "', $workingArray) . '"]' ?>;
 var workingArrays =[];
 workingArray.forEach(function(working){
     workingArrays.push(working.split(','));
-})
+});
 for(i =0; i<nameArray.length;i++){
     listofSa[i]=new SA (nameArray[i],greenArray[i],yellowArray[i],minhourArray[i],maxhourArray[i],workingArrays[i]);
+}
+
+var courseArray = <?php echo '["' . implode('", "', $courseArray) . '"]' ?>;
+var sectionArray = <?php echo '["' . implode('", "', $sectionArray) . '"]' ?>;
+var instructorArray = <?php echo '["' . implode('", "', $instructorArray) . '"]' ?>;
+var daysArray = <?php echo '["' . implode('", "', $daysArray) . '"]' ?>;
+var startArray = <?php echo '["' . implode('", "', $startArray) . '"]' ?>;
+var endArray = <?php echo '["' . implode('", "', $endArray) . '"]' ?>;
+var sasArray = <?php echo '["' . implode('", "', $sasArray) . '"]' ?>;
+var sasArrays =[];
+sasArray.forEach(function(sas){
+    sasArrays.push(parseInt(sas));
+});
+
+
+for(i=0;i<courseArray.length;i++){
+    if (daysArray[i]="MWF"){
+        listOfHours[i]= new hour('M'+startArray[i],[],sasArrays[i],0);
+        listOfHours[i]= new hour('W'+startArray[i],[],sasArrays[i],0);
+        listOfHours[i]= new hour('F'+startArray[i],[],sasArrays[i],0);
+    }
+    else if (daysArray[i]="TR"){
+        listOfHours[i]= new hour('T'+startArray[i],[],sasArrays[i],0);
+        listOfHours[i]= new hour('R'+startArray[i],[],sasArrays[i],0);
+    }
 }
 </script>
 
@@ -98,8 +151,8 @@ for(i =0; i<nameArray.length;i++){
     </div>
     <h1>Proposed Schedule</h1>
     <h2>Term: Fall 2019</h2>
-    <button onclick="changePage()" id="test">test</button>
-    <button  id="done" onclick="collectData()">done</button>
+    <button onclick="changePage()" id="test">Edit</button>
+    <button  id="done" onclick="collectData()">Save</button>
  <table >
      <tr>
          <th>Courses</th><th>times</th><th>Days</th>
@@ -119,11 +172,9 @@ for(i =0; i<nameArray.length;i++){
                 sa.workingHours.push(greenlist[i].id+"");
             }
             else if (greenlist[i].classList.contains("yellow")){
-                
+                //add  the addsublist function
             }
-            else{
-                //alert("red");
-            }
+            
         }
     });
     
@@ -163,8 +214,8 @@ for(i =0; i<nameArray.length;i++){
        <script>
         //
         </script>
-                <button onclick="changePage()">Edit</button>
-                    <button onclick="algorithm(listofSa, listOfHours)">should be Finalize, is not</button>
+        <br>
+               
       </Div>
       <div>
         <image>
