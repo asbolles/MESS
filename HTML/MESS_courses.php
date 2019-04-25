@@ -2,7 +2,7 @@
 <html lang="em">
 <head>
     <meta charset="utf-8">
-    <title>Start New Semester - MESS</title>
+    <title>Courses - MESS</title>
     <link rel="stylesheet" href="CSS/SA_AvailSheet.css" />
     <script type="text/javascript" src="../Data/Functions.js"></script>
 </head>
@@ -12,29 +12,11 @@
         <a href="MESS_finalized.php">Semester Schedule</a><br>
         <a href="MESS_master.php">Master Schedule</a><br>
         <a href="MESS_assistants.php">Student Assistants</a><br>
-        <a href="MESS_courses.php">Start New Semester</a>        
+        <a href="MESS_courses.php">Courses</a>        
         <a href="logout.php">Logout</a>
     </div>
-    <h1 class="header">Add New Semester</h1>
-    <table style="width:100%">
-        <tr>
-            <td>Current term: [term of finalized schedule] </td>
-            <td>Coordinator: [Coordinator name]</td>
-        </tr>
-       
-        <tr>
-            <table style="width:30%" class="returning">
-                <tr class="returning">
-                    <td class="question">What term are you planning for?</td>
-                    <td colspan="2" class="answer">Fall</td>
-                    <td class="box"><input type="checkbox"></td>
-                    <td class="space"></td>
-                    <td class="answer">Spring</td>
-                    <td class="box"><input type="checkbox"></td>
-                </tr>
-            </table>
-        </tr>
-    </table>
+    <h1 class="header">Courses</h1>
+  
     <table style="width:100%">
         <td>
             <form method = "post" action= "new_course.php">
