@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="CSS/Proposed_Schedule.css"/>
     <script src="../Data/data.js"></script>
     <script src="../JavaScript/MESS_algorithm.js"></script>
-    <script src="../JavaScript/proposed.js"></script>
 
     
 </head>
