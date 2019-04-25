@@ -18,21 +18,24 @@
 <table style="width:97%">
     <tr>
         <th><h2 class="topL">Term: Fall 2019</h2></th>
-        <th><h2 class="topR">Cordinator Name: Holly Dicken</h2></th>
+        <th><h2 class="topR">Cordinator Name: <?php
+        include "session.php";
+        $query = "SELECT fname FROM users WHERE username = '$user_check'";
+        $result = $link->query($query) or die('error getting name');
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        echo $user_check;
+        mysqli_close($link);
+        ?></h2></th>
     </tr>
 </table>
 
 <?php
 
-DEFINE ('DB_USER', 'MESS');
-DEFINE ('DB_PASD', 'mess');
-DEFINE ('DB_HOST', 'csums.dhcp.bsu.edu');
-DEFINE ('DB_NAME', 'mess');
+
 $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
 if (!$link) {
     die('error connecting to database');
 }
-echo 'connection established <br>';
 
 $sql = "SELECT username, password, fname, vetStatus FROM users";
 
@@ -65,6 +68,7 @@ mysqli_close($link);
             <form method="post" action="new_assistant.php">
                 <h3>Add New Assistant</h3>
                 <p>To add a new assistant to the list, you need to create a username and password for the assistant to login with.</p>
+                <h3>Username Cannot be changed.</h3>
                 New Assistant Name: <input type="text" name="fname"><br>
                 Create Username: <input type="text" name="username"><br>
                 Create Password: <input type="text" name="password"><br>
@@ -80,6 +84,7 @@ mysqli_close($link);
             <form method="post" action = "edit_assistant.php" >
                 <h3>Edit Assistant</h3>
                 <p>To edit an existing assistant's veteran status or password, select their name in the drodown box. Select their new veteran status and new password the Click Submit Changes to update their info. </p>
+                <h3>Both fields will be changed.</h3>
                 
                 <?php
                 
