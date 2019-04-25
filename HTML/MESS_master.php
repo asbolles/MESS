@@ -130,18 +130,16 @@ for(i=0;i<courseArray.length;i++){
 </table>
 
 </div>
+<p></p>
 
 <div  id='tableLocation'><!-- dont get rid of this div. its where the table outputs too-->
 </div>
 
 <p></p>
-<table>
-    <td>
-        <tr>
-            View: <button onclick="createMon('M')">Mon</button> | <button onclick="createTues('T')">Tues</button> | <button onclick="createMon('W')">Weds</button> | <button onclick="createTues('R')">Thurs</button> | <button onclick="createMon('W')">Fri</button> | <button onclick="createFull()">Full</button>
-        </tr>
-    </td><tr><button onclick="changePage()">Edit Availibility</button><button onclick="window.location.href='MESS_proposed.html'">Request Proposed Schedule</button></tr>
-</table>
+    View: <button onclick="createMon('M')">Mon</button> | <button onclick="createTues('T')">Tues</button> | <button onclick="createMon('W')">Weds</button> | <button onclick="createTues('R')">Thurs</button> | <button onclick="createMon('W')">Fri</button> | <button onclick="createFull()">Full</button>
+
+    <button onclick="changePage()">Edit Availibility</button><button onclick="window.location.href='MESS_proposed.php'">Request Proposed Schedule</button>
+    <p></p>
 
 <?php
  
@@ -152,7 +150,7 @@ for(i=0;i<courseArray.length;i++){
     $result3 = $link->query($sql3) or die("error getting course data");
 
 
-    echo "<table style='width:70%'>";
+    echo "<table id='rocketship' style='width:70%'>";
     echo "<tr>
     <th>Course</th>
     <th>Section</th>

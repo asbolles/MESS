@@ -7,5 +7,4 @@ $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
 if (!$link) {
     die('error connecting to database');
 }
-echo ("Connection Established");
 ?>

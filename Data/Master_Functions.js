@@ -22,18 +22,6 @@ for(i=0;i<boxlist.length;i++){
 }
 }//end of changepage
 
-//begin MESS_courses buttons
-function addClassListing(){
-    var div = document.getElementById('courseListingTable');
-    div.innerHTML = "<table><tr><td><select id = 'course'><option value = 'MATH 108'>MATH 108</option><option value = 'MATH 111'>MATH 111</option><option value = 'MATH 112'>MATH 112</option><option value = 'Other'>Other</option></select></td><td><p><input type = 'number' min='1' max='30' value='1' step='1' onkeydown='return false' id = 'section' value = 'Section' /></p></td><td><p><input type = 'text' id = 'instructor' value = 'Instructor' /></p></td><td><select id = 'days'><option value = 'MWF'>MWF</option><option value = 'TR'>TR</option><option value = 'MW'>MW</option></select></td>  <td><select id = 'start'><option value = '8'>8:00</option><option value = '9'>9:00</option><option value = '10'>10:00</option><option value = '11'>11:00</option><option value = '12'>12:00</option><option value = '13'>1:00</option><option value = '14'>2:00</option><option value = '15'>3:00</option><option value = '16'>4:00</option><option value = '17'>5:00</option></select></td><td><p><input type = 'number' min='1' max='5' value='3' step='1' onkeydown='return false' id = 'numsa' value = '#SAs' /></p></td></tr></table>";
-}
-function deleteClassListing(){
-
-}
-function saveClassListing(){
-
-}
-//end MESS_courses buttons
 
 function createFull(){
     var div = document.getElementById('tableLocation');
@@ -58,7 +46,7 @@ function tues(weekday){
     })
     div += "<tr>";
     div += "<td class='test'>Times</td>";
-    div += "<td class='test'>Course Info</td>"
+    
     titles.forEach(function(title){
         div +="<td class='test'>"+title+"</td>";
     })
@@ -111,7 +99,6 @@ function mon(weekday){
     })
     div += "<tr>";
     div += "<td class='test'>Times</td>";
-    div += "<td class='test'>Course Info</td>"
     titles.forEach(function(title){
         div +="<td class='test'>"+title+"</td>";
     })

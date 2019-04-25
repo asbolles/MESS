@@ -4,6 +4,10 @@ html{
 }
 table{
     width: 98%;
+    border-collapse: collapse;
+}
+#rocketship{
+
 }
 .sidebar{
     height: 100%;
@@ -124,5 +128,7 @@ th, tr, table{
 }
 .php
 {
+    border-collapse: collapse;
+
     padding-bottom: 1in;
 }
