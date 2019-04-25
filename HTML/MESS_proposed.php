@@ -99,7 +99,7 @@ sasArray.forEach(function(sas){
     sasArrays.push(parseInt(sas));
 });
 
-
+listOfHours.length=0;
 for(i=0;i<courseArray.length;i++){
     if (daysArray[i]="MWF"){
         listOfHours[i]= new hour('M'+startArray[i],[],sasArrays[i],0);
