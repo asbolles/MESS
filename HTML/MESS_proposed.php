@@ -205,7 +205,6 @@ for(i=0;i<courseArray.length;i++){
        courseArray.forEach(function(courses){
             course+=courses+",";
        });
-       alert(listOfHours.length);
        listOfHours.forEach(function(time){
            times+=time.name+",";
        });
@@ -214,7 +213,6 @@ for(i=0;i<courseArray.length;i++){
        listofSa.forEach(function(sa){
         working += sa.name;
         working += ":";
-        //alert(sa.workingHours.length);
         if (sa.workingHours.length==1){//idk why its 1 but it is
 
         }
@@ -269,7 +267,7 @@ for(i=0;i<courseArray.length;i++){
                     day="TR";
                 }
                 document.write("<tr><td></td><td>"+listOfHours[i].name.charAt(1)+listOfHours[i].name.charAt(2)+":"+listOfHours[i].name.charAt(3)+listOfHours[i].name.charAt(4)+"</td><td>"+day+"</td>");
-            //alert(listofSa[0].name);
+            
             listofSa.forEach(function(sa){
                 if(sa.workingHours.includes(listOfHours[i].name)){
                 //make green
