@@ -36,10 +36,6 @@ $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
 if (!$link) {
     die('error connecting to database');
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 98c974af7b200c30f0a65a89f5cc34d92784cd8c
 
 $sql = "SELECT username, password, fname, vetStatus FROM users";
 
