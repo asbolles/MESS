@@ -16,7 +16,7 @@ $instruct = filter_input(INPUT_POST, "instruct");
 $course = filter_input(INPUT_POST, "course");
 $times = filter_input(INPUT_POST, "time");
 
-include ("session");
+include ("session.php");
 
 $sql = "INSERT INTO finalized (year, SAList, courseinfo, instructors, times) 
 VALUES ('$year','$working','$course','$instruct','$times')";
