@@ -11,7 +11,7 @@
     <a href="MESS_finalized.php">Semester Schedule</a><br>
     <a href="MESS_master.php">Master Schedule</a><br>
     <a href="MESS_assistants.php">Student Assistants</a><br>
-    <a href="MESS_courses.php">Start New Semester</a>
+    <a href="MESS_courses.php">Courses</a>
     <a href="logout.php">Logout</a>
 </div>
 <h1 class="header">Edit Student Assistants</h1>

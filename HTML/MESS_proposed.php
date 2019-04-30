@@ -145,7 +145,7 @@ for(i=0;i<courseArray.length;i++){
         <a href="MESS_finalized.php">Semester Schedule</a><br>
         <a href="MESS_master.php">Master Schedule</a><br>
         <a href="MESS_assistants.php">Student Assistants</a><br>
-        <a href="MESS_courses.php">Start New Schedule</a><br>
+        <a href="MESS_courses.php">Courses</a><br>
         <a href="logout.php">Logout</a>
     </div><!------------------------------------------------------------------------------------------------->
     <h1>Proposed Schedule</h1>
