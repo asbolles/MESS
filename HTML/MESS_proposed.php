@@ -152,9 +152,18 @@ for(i=0;i<courseArray.length;i++){
     <h2>Term: Fall 2019</h2>
     <button onclick="changePage()" id="test">Edit</button>
     <button  id="done" onclick="collectData()">Save</button>
+    
+    <form id="myform" method="POST" action="finalAction.php">
+        <input type="text" hidden name="year" id="yearele">
+        <input type="text" hidden name="working" id="workingele">
+        <input type="text" hidden name="instruct" id="instructele">
+        <input type="text" hidden name="course" id="courseele">
+        <input type="text" hidden name="time" id="timesele">
+        
     <caption>Year Name:</caption>
     <input type="text" id="year">
     <input type="submit" form="myform" />
+    </form>
     <br>
  <table>
      <tr>
@@ -252,13 +261,7 @@ for(i=0;i<courseArray.length;i++){
   
 
         </script>
-        <form id="myform" method="POST" action="finalAction.php">
-        <input hidden name="year" id="yearele">
-        <input hidden name="working" id="workingele">
-        <input hidden name="instruct" id="instructele">
-        <input hidden name="course" id="courseele">
-        <input hidden name="time" id="timesele">
-        </form>
+       
 
         
  </table>

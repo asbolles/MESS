@@ -146,8 +146,10 @@ for(i=0;i<courseArray.length;i++){
  $link = mysqli_connect(DB_HOST, DB_USER, DB_PASD, DB_NAME);
 
     $sql3 = "SELECT * FROM Courses";
+    $sql4 = "SELECT * FROM sas";
 
     $result3 = $link->query($sql3) or die("error getting course data");
+    $result4 = $link->query($sql4) or die("error getting course data");
 
 
     echo "<table id='rocketship' style='width:70%'>";
@@ -178,8 +180,20 @@ for(i=0;i<courseArray.length;i++){
         echo "</td><td>";
         echo "</td></tr>";};
     echo "</table>";
+    echo "<table style='width:70%' id='hours'>";
+    echo "<th>Name</th><th>Min hours</th><th>Max hours</th>";
+    while($row4 = mysqli_fetch_array($result4, MYSQLI_ASSOC)){
+        echo "<tr><td>";
+        echo $row4['username'];
+        echo "</td><td>";
+        echo $row4['minHr'];
+        echo "</td><td>";
+        echo $row4['maxHr'];
+        echo "</td></tr>";};
+    echo "</table>";
     mysqli_close($link);
     ?>
+    
 <div class="php">
 </div>
 <div>
