@@ -60,9 +60,7 @@ function tues(weekday){
     })    
     for(i=0;i<tuesdays.length;i++){
         div +="<tr>";
-        
         div +="<td class='days'>"+timesStartTR[counter]+" - "+timesEndTR[counter]+"</td>";
-        div +="<td></td>";
         div +=createChartTues(counter,tuesdays);
         counter++;
      
@@ -113,7 +111,6 @@ function mon(weekday){
     for(i=0;i<mondays.length;i++){
         div +="<tr>";
         div +="<td class='days'>"+timesStartMWF[counter]+" - "+timesEndMWF[counter]+"</td>";
-        div +="<td></td>";
         div +=createChartMon(counter,mondays);
         counter++;
      
@@ -126,6 +123,7 @@ return div;
 
 function createChartMon(classesCounter, mondays){
     var div ="";
+
     listofSa.forEach(function(sa){
         var greenAV=sa.green.split(",");
         var yellowAV= sa.yellow.split(",");
@@ -172,7 +170,6 @@ function FullMWF(){
                 div +="<td class='days'>"+timesStartMWF[counter]+" - "+timesEndMWF[counter]+"</td>";
                 div +=CreateChartMWF(counter,classesCounter);
                 counter++;
-                
                 classesCounter=counter*3;
                 div +="</tr>"; 
             }
@@ -225,7 +222,7 @@ function FullTR(){
         div +="<tr class='test'><td>Day of the Week</<td>";
             titles.forEach(function(title){
                 daysTR.forEach(function(day){
-                div +="<td>"+day+"</td>";
+                // div +="<td>"+day+"</td>";
             })    
         }) 
 
