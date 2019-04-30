@@ -21,16 +21,16 @@ include ("session.php");
 $sql = "INSERT INTO finalized (year, SAList, courseinfo, instructors, times) 
 VALUES ('$year','$working','$course','$instruct','$times')";
 
-echo ($sql);
 
-//if ($link->query($sql) === TRUE){
-    //echo 'New assistant added successfully';
-    //} else {
-    //    echo 'Error: '.$sql ."<br>". $link->error;
-//}
 
-//echo '<script>window.location.href = "MESS_assistants.php";</script>';
+if ($link->query($sql) === TRUE){
+    echo 'New assistant added successfully';
+    } else {
+        echo 'Error: '.$sql ."<br>". $link->error;
+}
 
-//$link->close();
+echo '<script>window.location.href = "MESS_finalized.php";</script>';
+
+$link->close();
 
 ?>
