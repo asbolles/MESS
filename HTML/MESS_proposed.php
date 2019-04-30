@@ -214,6 +214,7 @@ for(i=0;i<courseArray.length;i++){
         sa.workingHours.forEach(function(work){
             working +=work+",";
         });//workinglist end
+        working= working.substring(0, working.length - 1);
         working+="|";
     });//listofSa end
    
