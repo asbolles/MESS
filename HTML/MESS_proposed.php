@@ -154,7 +154,7 @@ for(i=0;i<courseArray.length;i++){
     <button  id="done" onclick="collectData()">Save</button>
     
     <form id="myform" method="POST" action="finalAction.php">
-        <input type="text" hidden name="year" id="yearele">
+        <input type="text" hidden name="year" id="yearele" value="testing">
         <input type="text" hidden name="working" id="workingele">
         <input type="text" hidden name="instruct" id="instructele">
         <input type="text" hidden name="course" id="courseele">
