@@ -21,7 +21,7 @@ include ("session.php");
 $sql = "INSERT INTO finalized (year, SAList, courseinfo, instructors, times) 
 VALUES ('$year','$working','$course','$instruct','$times')";
 
-
+echo ($sql);
 
 if ($link->query($sql) === TRUE){
     echo 'New assistant added successfully';

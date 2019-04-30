@@ -101,9 +101,9 @@ sasArray.forEach(function(sas){
 listOfHours.length=0;
 for(i=0;i<courseArray.length;i++){
     if (daysArray[i]="MWF"){
-        listOfHours[i]= new hour('M'+startArray[i],[],sasArrays[i],0);
-        listOfHours[i]= new hour('W'+startArray[i],[],sasArrays[i],0);
-        listOfHours[i]= new hour('F'+startArray[i],[],sasArrays[i],0);
+        listOfHours.push(new hour('M'+startArray[i],[],sasArrays[i],0));
+        listOfHours.push (new hour('W'+startArray[i],[],sasArrays[i],0));
+        listOfHours.push( new hour('F'+startArray[i],[],sasArrays[i],0));
     }
     else if (daysArray[i]="TR"){
         listOfHours[i]= new hour('T'+startArray[i],[],sasArrays[i],0);
@@ -205,16 +205,33 @@ for(i=0;i<courseArray.length;i++){
        courseArray.forEach(function(courses){
             course+=courses+",";
        });
-       startArray.forEach(function(time){
-           times+=time+",";
+       alert(listOfHours.length);
+       listOfHours.forEach(function(time){
+           times+=time.name+",";
        });
+
        
        listofSa.forEach(function(sa){
-           working +=sa.name+":";
+        working += sa.name;
+        working += ":";
+        //alert(sa.workingHours.length);
+        if (sa.workingHours.length==1){//idk why its 1 but it is
+
+        }
+        else{
+        for(var i=0;i<sa.workingHours.length;i++){
+            if (i==0){
+
+            }
+            else{
+                working += sa.workingHours[i]+",";
+            }
+        }
         sa.workingHours.forEach(function(work){
-            working +=work+",";
+
         });//workinglist end
         working= working.substring(0, working.length - 1);
+    }
         working+="|";
     });//listofSa end
    
@@ -243,7 +260,7 @@ for(i=0;i<courseArray.length;i++){
     
         </script></tr>
         <script>
-            for(i=0;i<listOfHours.length;i++){
+            for(i=0;i<listOfHours.length;i=i+3){
                 var day="";
                 if (listOfHours[i].name.charAt(0)=="M"||listOfHours[i].name.charAt(0)=="W"||listOfHours[i].name.charAt(0)=="F"){
                     day="MWF";

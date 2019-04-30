@@ -49,6 +49,7 @@ for(i =0; i<yearArray.length;i++){
     var semester= [yearArray[i],SAlistArray[i],courseInfoArray[i],instructorsArray[i],timesArray[i]];
     Semesterlist.push(semester);
 }
+
 </script>
 
 <body>
@@ -56,6 +57,7 @@ for(i =0; i<yearArray.length;i++){
        
         
         function findsemester(){
+            
             var mainsemester=Semesterlist[0];
             var e = document.getElementById("terms");
             var string = e.options[e.selectedIndex].text;
