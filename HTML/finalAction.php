@@ -27,7 +27,7 @@ echo ($sql);
     //echo 'New assistant added successfully';
     //} else {
     //    echo 'Error: '.$sql ."<br>". $link->error;
-}
+//}
 
 //echo '<script>window.location.href = "MESS_assistants.php";</script>';
 
