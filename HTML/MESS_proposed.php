@@ -162,7 +162,7 @@ for(i=0;i<courseArray.length;i++){
         
     <caption>Year Name:</caption>
     <input type="text" id="year">
-    <input type="submit" form="myform" />
+    <button onclick="finalize()">Submit</button>
     </form>
     <br>
  <table>
@@ -192,7 +192,8 @@ for(i=0;i<courseArray.length;i++){
 
    }
    function finalize(){
-       var year = document.getElementById("year");
+      
+       var year = document.getElementById("year").value;
        var working ="";
        var instruct ="";
        var course = "";
@@ -200,19 +201,27 @@ for(i=0;i<courseArray.length;i++){
        instructorArray.forEach(function(instructor){
             instruct +=instructor+",";
        });
+       
        courseArray.forEach(function(courses){
             course+=courses+",";
        });
        startArray.forEach(function(time){
            times+=time+",";
-       })
+       });
+       
        listofSa.forEach(function(sa){
            working +=sa.name+":";
-        sa.workinglist.forEach(function(work){
+        sa.workingHours.forEach(function(work){
             working +=work;
         });//workinglist end
         working+="|";
     });//listofSa end
+   
+    
+    working= working.substring(0, working.length - 1);
+    instruct= instruct.substring(0, instruct.length - 1);
+    course= course.substring(0, course.length - 1);
+    times= times.substring(0, times.length - 1);
 
     document.getElementById("yearele").value = year;
     document.getElementById("workingele").value = working;
