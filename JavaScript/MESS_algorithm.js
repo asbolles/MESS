@@ -165,7 +165,7 @@ function updatepercent(listofSAs){
         var num =median(sa);
         //alert(sa.name);
         sa.percent =(sa.workingHours.length)/num; 
-        
+        //alert(sa.percent);
     });
 }
 

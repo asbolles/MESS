@@ -147,12 +147,16 @@ for(i=0;i<courseArray.length;i++){
         <a href="MESS_assistants.php">Student Assistants</a><br>
         <a href="MESS_courses.php">Start New Schedule</a><br>
         <a href="logout.php">Logout</a>
-    </div>
+    </div><!------------------------------------------------------------------------------------------------->
     <h1>Proposed Schedule</h1>
     <h2>Term: Fall 2019</h2>
     <button onclick="changePage()" id="test">Edit</button>
     <button  id="done" onclick="collectData()">Save</button>
- <table >
+    <caption>Year Name:</caption>
+    <input type="text" id="year">
+    <input type="submit" form="myform" />
+    <br>
+ <table>
      <tr>
          <th>Courses</th><th>times</th><th>Days</th>
          <script>
@@ -176,9 +180,49 @@ for(i=0;i<courseArray.length;i++){
             
         }
     });
-    
-    
+
    }
+   function finalize(){
+       var year = document.getElementById("year");
+       var working ="";
+       var instruct ="";
+       var course = "";
+       var times="";
+       instructorArray.forEach(function(instructor){
+            instruct +=instructor+",";
+       });
+       courseArray.forEach(function(courses){
+            course+=courses+",";
+       });
+       startArray.forEach(function(time){
+           times+=time+",";
+       })
+       listofSa.forEach(function(sa){
+           working +=sa.name+":";
+        sa.workinglist.forEach(function(work){
+            working +=work;
+        });//workinglist end
+        working+="|";
+    });//listofSa end
+
+    document.getElementById("yearele").classList.add(year)
+    document.getElementById("workingele").classList.add(working)
+    document.getElementById("instructele").classList.add(instruct)
+    document.getElementById("courseele").classList.add(course)
+    document.getElementById("timesele").classList.add(times);
+
+
+
+
+
+}
+       
+//year(fall18)
+//saList("anna:W0800|sam:W0800");
+//courseinfo("111-2,112-2")
+//instructor("gonzoles,stark")
+//times("M0800,W0800")
+    
         </script></tr>
         <script>
             for(i=0;i<listOfHours.length;i++){
@@ -206,7 +250,17 @@ for(i=0;i<courseArray.length;i++){
                 }
             })
         }
+  
+
         </script>
+        <form id="myform" method="POST" action="finalAction.php">
+        <input hidden name="year" id="yearele">
+        <input hidden name="working" id="workingele">
+        <input hidden name="instruct" id="instructele">
+        <input hidden name="course" id="courseele">
+        <input hidden name="time" id="timesele">
+        </form>
+
         
  </table>
       <Div id="buttons">

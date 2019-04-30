@@ -136,7 +136,6 @@ mysqli_close($link);
     </tr> 
 </table>
 <p class="space"></p>
-
 <script>
     function okToDelete() {
     var txt;
