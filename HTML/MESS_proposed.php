@@ -212,7 +212,7 @@ for(i=0;i<courseArray.length;i++){
        listofSa.forEach(function(sa){
            working +=sa.name+":";
         sa.workingHours.forEach(function(work){
-            working +=work;
+            working +=work+",";
         });//workinglist end
         working+="|";
     });//listofSa end
