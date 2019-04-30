@@ -205,12 +205,11 @@ for(i=0;i<courseArray.length;i++){
         working+="|";
     });//listofSa end
 
-    document.getElementById("yearele").classList.add(year)
-    document.getElementById("workingele").classList.add(working)
-    document.getElementById("instructele").classList.add(instruct)
-    document.getElementById("courseele").classList.add(course)
-    document.getElementById("timesele").classList.add(times);
-
+    document.getElementById("yearele").value = year;
+    document.getElementById("workingele").value = working;
+    document.getElementById("instructele").value = instruct;
+    document.getElementById("courseele").value = course;
+    document.getElementById("timesele").value = times;
 
 
 
